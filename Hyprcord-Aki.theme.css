@@ -8,33 +8,33 @@
  */
 
 /* -------------------- IMPORT ClearVision-Aki -------------------- */
-@import url(https://raw.githubusercontent.com/Getbricked/ClearVision-Aki/refs/heads/main/Themes/mainBD.css);
+@import url(https://getbricked.github.io/ClearVision-Aki/Themes/mainBD.css);
 /* User Pop Up */
-@import url(https://raw.githubusercontent.com/Getbricked/ClearVision-Aki/refs/heads/main/Themes/User_Pop.css);
+@import url(https://getbricked.github.io/ClearVision-Aki/Themes/User_Pop.css);
 
 /* Nameplate */
-@import url(https://raw.githubusercontent.com/Getbricked/ClearVision-Aki/refs/heads/main/Themes/Nameplate.css);
+@import url(https://getbricked.github.io/ClearVision-Aki/Themes/Nameplate.css);
 
 /* Settings */
-@import url(https://raw.githubusercontent.com/Getbricked/ClearVision-Aki/refs/heads/main/Themes/Settings.css);
+@import url(https://getbricked.github.io/ClearVision-Aki/Themes/Settings.css);
 
 /* -------------------- IMPORT Hyprcord -------------------- */
-@import url(https://raw.githubusercontent.com/Getbricked/ClearVision-Aki/refs/heads/Hyprcord/main.css);
+@import url(https://getbricked.github.io/Hyprcord/Hyprcord.css);
 
 /* Chat Panel */
-@import url(https://raw.githubusercontent.com/Getbricked/ClearVision-Aki/refs/heads/Hyprcord/Aki-Edition/Chat_Panel.css);
+@import url(https://getbricked.github.io/Hyprcord/Aki-Edition/Chat_Panel.css);
 
 /* User Panel */
-@import url(https://raw.githubusercontent.com/Getbricked/ClearVision-Aki/refs/heads/Hyprcord/Aki-Edition/User_Panel.css);
+@import url(https://getbricked.github.io/Hyprcord/Aki-Edition/User_Panel.css);
 
 /* Server */
-@import url(https://raw.githubusercontent.com/Getbricked/ClearVision-Aki/refs/heads/Hyprcord/Aki-Edition/Server.css);
+@import url(https://getbricked.github.io/Hyprcord/Aki-Edition/Server.css);
 
 /* DM */
-@import url(https://raw.githubusercontent.com/Getbricked/ClearVision-Aki/refs/heads/Hyprcord/Aki-Edition/DM.css);
+@import url(https://getbricked.github.io/Hyprcord/Aki-Edition/DM.css);
 
 /* Member List */
-@import url(https://raw.githubusercontent.com/Getbricked/ClearVision-Aki/refs/heads/Hyprcord/Aki-Edition/Member_List.css);
+@import url(https://getbricked.github.io/Hyprcord/Aki-Edition/Member_List.css);
 
 /* SETTINGS */
 :root {

@@ -7,14 +7,20 @@
  * @invite dHaSxn3
  */
 
-/* IMPORT ClearVision V7 */
-@import url(https://raw.githubusercontent.com/ClearVision/ClearVision-v7/refs/heads/master/ClearVision-v7-Vencord.css);
+/* ServerColumns addon */
+@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/ServerColumns/ServerColumns.css);
 
-/* IMPORT Hyprcord */
-@import url(https://getbricked.github.io/ClearVision-Aki/main.css);
+/* IMPORT SOURCE (Themes) */
+@import url(https://getbricked.github.io/Hyprcord/Themes/forum.css);
+@import url(https://getbricked.github.io/Hyprcord/Themes/nameplate.css);
+@import url(https://getbricked.github.io/Hyprcord/Themes/server.css);
+@import url(https://getbricked.github.io/Hyprcord/Themes/global.css);
 
 /* SETTINGS */
 :root {
+    /* Tweak in case using ServerColumn addon (only work for 1 column) */
+    --columns: 1;
+
     /* Global margin for everything default is 20px */
     --global-margin: 20px;
 
