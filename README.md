@@ -19,7 +19,7 @@ This theme is inspired by **Jugom** and the **Hyprland window manager**.
 #### **For Vencord:**
 
 - **[Hyprcord Core](https://getbricked.github.io/Hyprcord/Hyprcord.css)** `Hyprcord.css`
-  _(Core + ClearVision v7 default theme)_
+  _(Core can be use along with your ClearVision v7)_
 
 - **[Hyprcord Aki](https://getbricked.github.io/Hyprcord/Hyprcord-Aki.css)** `Hyprcord-Aki.css`
   _(Core + ClearVision Aki theme)_
@@ -27,7 +27,7 @@ This theme is inspired by **Jugom** and the **Hyprland window manager**.
 #### **For BetterDiscord:**
 
 - **[Hyprcord Core](https://getbricked.github.io/Hyprcord/Hyprcord.theme.css)** `Hyprcord.theme.css`
-  _(Core + ClearVision v7 default theme)_
+  _(Core can be use along with your ClearVision v7)_
 
 - **[Hyprcord Aki](https://getbricked.github.io/Hyprcord/Hyprcord-Aki.theme.css)** `Hyprcord-Aki.theme.css`
   _(Core + ClearVision Aki theme)_
