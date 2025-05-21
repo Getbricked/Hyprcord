@@ -1,0 +1,88 @@
+/* ------------------- CHAT ------------------- */
+/* Chat input */
+.visual-refresh .form_f75fb0 {
+    padding-left: var(--global-margin);
+    padding-right: var(--global-margin);
+}
+
+/* Right click on msg */
+.menu_c1e9c4 {
+    border-radius: 10px;
+    border: var(--border) !important;
+}
+
+/* On hover msg */
+.message__5126c.selected__5126c .buttonsInner__5126c,
+.mouse-mode .message__5126c:hover .buttonsInner__5126c {
+    border: var(--border);
+    border-radius: 10px;
+}
+
+/* Emoji + GIF + Stickers Box */
+.visual-refresh .contentWrapper__08434 {
+    border: var(--border);
+    border-radius: 10px;
+}
+
+/* Chat contents */
+.scrollerInner__36d07 {
+    padding-left: calc(var(--global-margin) - var(--space-xs));
+}
+
+/* Search result panel */
+.visual-refresh .searchResultsWrap_a9e706 {
+    margin-top: var(--global-margin);
+    margin-left: var(--global-margin);
+    border-radius: 10px;
+    border: var(--border);
+}
+
+/* Thread full screen */
+.visual-refresh .modal__9a792 {
+    border: var(--border);
+}
+
+/* Notice */
+.visual-refresh .notice__6e2b9 {
+    border-radius: 10px;
+    margin-top: var(--global-margin);
+    border: var(--bordersize, 1px) solid;
+    margin-left: var(--global-margin);
+}
+
+/* Upload attachment in chat input */
+.upload_aa605f {
+    border-radius: 10px;
+    border: var(--border) !important;
+}
+
+/* Pinned message */
+.visual-refresh .messagesPopoutWrap__45690 {
+    border-radius: 10px;
+    border: var(--border);
+}
+
+/* ------------------- THREAD ------------------- */
+/* Thread in chat */
+.visual-refresh .browser_d98031 {
+    border-radius: 10px;
+    border: var(--border);
+}
+
+/* Thread */
+.visual-refresh .container__01ae2 {
+    border-radius: 10px;
+    border: var(--border);
+    margin-top: var(--global-margin);
+}
+
+.visual-refresh .container__01ae2 .container__9293f {
+    margin-left: var(--global-margin);
+    width: calc(100% - 2 * var(--global-margin));
+}
+
+.container__01ae2 .submitContainer_fb64c9 {
+    padding-top: var(--global-margin);
+    padding-bottom: var(--global-margin);
+    padding-left: calc(var(--global-margin) - 8px);
+}

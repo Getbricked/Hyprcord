@@ -1,0 +1,40 @@
+/* Activity panel border */
+.visual-refresh .panel__5dec7 {
+    border-bottom: 1px solid var(--main-color);
+}
+
+/* ------------------------ VOICE CHAT ------------------------ */
+/* Voice chat panel border */
+.panels_c48ade:not(:has(.container__4bbc6)) .wrapper_e131a9:has(.container_e131a9) {
+    border-bottom: 1px solid var(--main-color);
+}
+
+/* Voice chat button */
+.visual-refresh .button_e131a9.buttonColor_e131a9.buttonColor_e131a9 {
+    background: rgba(255, 255, 255, 0.089);
+}
+
+/* In voice chat streaming button */
+.visual-refresh .button_e131a9.buttonColor_e131a9.buttonActive_e131a9 {
+    background: hsl(from var(--success-color) h s l / 0.4);
+    color: var(--button-secondary-text);
+    border-color: hsl(from var(--success-color) h s l / 0.5);
+}
+
+/* Old User Panel */
+.visual-refresh .panels_c48ade {
+    width: calc(100% - 2 * var(--global-margin) - 1px * var(--guildsize) - 2 * calc(10px * var(--guildsize) / 50)) !important;
+    left: calc(var(--global-margin) + 1px * var(--guildsize) + 2 * calc(10px * var(--guildsize) / 50)) !important;
+}
+
+/* Span server list to the bottom */
+nav.guilds_c48ade,
+.visual-refresh .scroller_ef3116 {
+    margin-bottom: 0 !important;
+}
+
+/* Nameplate fix */
+.panels_c48ade .container__4bbc6 {
+    width: 104.1%;
+    border-top-right-radius: 8px;
+}

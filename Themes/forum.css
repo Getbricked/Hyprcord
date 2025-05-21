@@ -1,0 +1,26 @@
+/* ------------------- FORUM ------------------- */
+
+/* Forum container + header */
+.visual-refresh .container_f369db,
+.visual-refresh .container__9293f {
+    border-radius: 10px;
+    border: var(--border);
+    margin-top: var(--global-margin);
+}
+
+/* Left side */
+.visual-refresh .chat_f75fb0.threadSidebarOpen_f75fb0 {
+    margin-right: calc(var(--global-margin) - var(--chat-resize-handle-width) - 1px);
+}
+
+/* Forum Notice */
+.visual-refresh .header__34c2c {
+    background: linear-gradient(360deg, var(--main-color) -100%, transparent);
+    border-radius: 10px;
+}
+
+/* Pinned thread in forum */
+.chatHeaderBar_a5700d {
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--main-color) 30%, transparent);
+}

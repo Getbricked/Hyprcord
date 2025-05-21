@@ -1,0 +1,66 @@
+/* ------------------- VOICE CALL ------------------- */
+/* Title */
+.visual-refresh .wrapper_cb9592 .title_f75fb0 {
+    border: none;
+    margin: 0px;
+}
+
+/* Fullscreen mode */
+.callContainer_cb9592 {
+    border: var(--border) !important;
+    border-radius: 8px;
+    margin-top: var(--global-margin);
+}
+
+/* Header */
+.visual-refresh .wrapper_cb9592 .container__9293f {
+    border-radius: 10px;
+    border: none;
+    margin-top: var(--global-margin);
+}
+
+/* Hide user */
+.wrapper_cb9592:has(.noBorder__2f4f7) .videoWrapper__6981d {
+    border: none;
+}
+
+/* Picture in picture + Fullscreen mode */
+.borderRadius__6341f,
+.videoWrapper__6981d {
+    border-radius: 8px;
+    border: var(--border);
+}
+
+/* Stage */
+.chat_f75fb0:has(.container__9aed4) {
+    margin-top: var(--global-margin);
+    border-radius: 10px;
+    border: var(--border) !important;
+}
+
+.container__9aed4 {
+    margin-top: calc(2 * var(--global-margin));
+    border-radius: 10px;
+    border: var(--border);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.tileContainer__71eb2 {
+    margin-top: calc(var(--global-margin) / 2);
+    border-radius: 10px;
+    border: var(--border);
+}
+
+/* Soundboard + Activities */
+.picker__09f65,
+.drawerSizingWrapper__9c62c {
+    border-radius: 10px;
+    border: var(--border);
+}
+
+/* Screenshare */
+.root__7f727 {
+    border-radius: 10px;
+    border: var(--border) !important;
+}

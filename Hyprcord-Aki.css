@@ -1,0 +1,46 @@
+/**
+ * @name ClearVision V7 Aki + Hyprcord
+ * @author Aki
+ * @version 7.0.1
+ * @description ClearVision V7 + Hyprland.
+ * @website https://clearvision.github.io
+ * @invite dHaSxn3
+ */
+
+/* -------------------- IMPORT ClearVision-Aki -------------------- */
+@import url(https://raw.githubusercontent.com/Getbricked/ClearVision-Aki/refs/heads/main/Themes/main.css);
+/* User Pop Up */
+@import url(https://raw.githubusercontent.com/Getbricked/ClearVision-Aki/refs/heads/main/Themes/User_Pop.css);
+
+/* Nameplate */
+@import url(https://raw.githubusercontent.com/Getbricked/ClearVision-Aki/refs/heads/main/Themes/Nameplate.css);
+
+/* Settings */
+@import url(https://raw.githubusercontent.com/Getbricked/ClearVision-Aki/refs/heads/main/Themes/Settings.css);
+
+/* -------------------- IMPORT Hyprcord -------------------- */
+@import url(https://raw.githubusercontent.com/Getbricked/ClearVision-Aki/refs/heads/Hyprcord/main.css);
+
+/* Chat Panel */
+@import url(https://raw.githubusercontent.com/Getbricked/ClearVision-Aki/refs/heads/Hyprcord/Aki-Edition/Chat_Panel.css);
+
+/* User Panel */
+@import url(https://raw.githubusercontent.com/Getbricked/ClearVision-Aki/refs/heads/Hyprcord/Aki-Edition/User_Panel.css);
+
+/* Server */
+@import url(https://raw.githubusercontent.com/Getbricked/ClearVision-Aki/refs/heads/Hyprcord/Aki-Edition/Server.css);
+
+/* DM */
+@import url(https://raw.githubusercontent.com/Getbricked/ClearVision-Aki/refs/heads/Hyprcord/Aki-Edition/DM.css);
+
+/* Member List */
+@import url(https://raw.githubusercontent.com/Getbricked/ClearVision-Aki/refs/heads/Hyprcord/Aki-Edition/Member_List.css);
+
+/* SETTINGS */
+:root {
+    /* Background image */
+    --background-image: url(https://i.imgur.com/zU7YY60.jpeg);
+    --global-margin: 20px;
+    --guildsize: 57;
+    --bordersize: 2px;
+}

@@ -1,0 +1,92 @@
+/* --------------------- In chat --------------------- */
+
+/* Link text */
+/* .markup__75297 .anchor_edefb8 {
+ color: black;
+ }  */
+
+/* SPOILER */
+.spoilerContent__54ab5,
+.spoilerMarkdownContent__54ab5,
+.hidden__54ab5 {
+    background: rgba(0, 0, 0, 1) !important;
+    padding: 5px;
+}
+
+/* Mention */
+.mentioned__5126c {
+    --background-mentioned: rgba(255, 229, 84, 0.15);
+    --background-mentioned-hover: rgba(255, 229, 84, 0.15);
+}
+
+/* Edit timestamp */
+.messageContent_c19a55 .timestamp_c19a55 time:after {
+    content: " (" attr(aria-label) ")";
+    font-size: 0.625rem;
+    font-weight: 400;
+}
+
+.messageContent_c19a55 .timestamp_c19a55 span {
+    display: none;
+}
+
+/* Inline code `` `` */
+.visual-refresh .markup__75297 code.inline {
+    background: rgba(0, 0, 0, 1);
+}
+
+/* Username in chat */
+.username_c19a55,
+.markup__75297 strong {
+    font-weight: 900;
+}
+
+/* Date Time divider in chat */
+.content__908e2 {
+    color: var(--main-color);
+}
+
+/* Divider for new chat */
+.unreadPill__908e2,
+.divider__908e2:has(.unreadPill__908e2) {
+    background-color: var(--main-color);
+}
+
+/* New chat top bar */
+.visual-refresh .newMessagesBar__0f481 {
+    border-radius: 10px;
+    background: linear-gradient(360deg, var(--main-color), transparent);
+    border: none;
+}
+
+/* Server Invite link display */
+.guildInviteContainer__083ae {
+    background: var(--card-shading);
+    border: 1px solid var(--main-color);
+}
+
+.footerContent__083ae {
+    background: none;
+}
+
+/* --------------------- Bottom --------------------- */
+
+/* Chat input */
+.scrollableContainer__74017,
+.themedBackground__74017 {
+    background: var(--card-shading);
+}
+
+/* WHO IS CHATTING */
+.text_b88801 {
+    font-size: 14px;
+}
+
+/* --------------------- Popout (right-click) --------------------- */
+
+/* More visible Delete Message button */
+.colorDanger_c1e9c4,
+.colorDanger_c1e9c4 .label_c1e9c4 {
+    color: rgb(255, 64, 64);
+    font-weight: 600;
+}

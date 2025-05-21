@@ -1,0 +1,86 @@
+/* ------------------- EMBED ------------------- */
+/* VC Shiki Code */
+.visual-refresh .markup__75297 code {
+    border-radius: 10px;
+    border: var(--border);
+    background: color-mix(in srgb, var(--main-color), transparent 95%);
+}
+
+/* Media item */
+.nonVisualMediaItem_f4758a {
+    background: color-mix(in srgb, var(--main-color), transparent 80%);
+    border-radius: 10px;
+}
+
+/* Voice message */
+.rippleContainer_a8e786 {
+    border-radius: 10px;
+    border: none;
+}
+
+/* Link embed */
+.visual-refresh .embedFull__623de {
+    border: var(--border) !important;
+    border-radius: 10px;
+    background: var(--card-shading);
+}
+
+/* Discord embed */
+.visual-refresh .wrapper_d5f3cd {
+    border-radius: 10px;
+    border: var(--border);
+}
+
+/* Image global */
+.embedMedia__623de {
+    border-radius: 10px;
+}
+
+/* Imagine inline and in grid */
+.inlineMediaEmbed__623de .originalLink_af017a,
+.mosaicItem__6c706 {
+    border: var(--border) !important;
+    box-sizing: border-box !important;
+    border-radius: 10px;
+}
+
+/* ------------------- MEDIA PREVIEW ------------------- */
+/* Top bar (under windows bar) */
+.topBar__6088c {
+    position: relative;
+    top: calc(var(--global-margin) * 2);
+}
+
+/* Tool buttons */
+.actionButtons_cc1819,
+.closeButton__6088c {
+    border: var(--border);
+}
+
+/* The picture */
+.mediaArea_e03578 {
+    position: relative;
+    top: calc(var(--global-margin) + 10px);
+    border: var(--border);
+    border-radius: 10px;
+}
+
+.zoomed_a22bfd {
+    border: var(--border);
+    border-radius: 10px;
+}
+
+.media_a22bfd {
+    border-radius: 10px;
+}
+
+/* Image Preview */
+.mediaArea_e03578 img {
+    border-radius: 10px;
+}
+
+/* Tag server preview + Emoji server preview */
+.container__86bf6,
+.visual-refresh .popoutContainer__0f481 {
+    border: var(--border);
+}

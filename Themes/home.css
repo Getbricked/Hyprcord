@@ -1,0 +1,67 @@
+/* ------------------- DIRRECT MESSAGE ------------------- */
+/* Show User Profile */
+.content_f75fb0 .inner_c0bea0 {
+    border-radius: 10px;
+}
+
+.content_f75fb0 .outer_c0bea0 {
+    border-radius: 10px;
+    border: var(--border);
+    margin-top: var(--global-margin);
+    margin-left: var(--global-margin);
+    height: calc(100% - var(--global-margin) - var(--bordersize) * 2);
+}
+
+/* ------------------- FRIENDS ------------------- */
+/* Now playing + Friend list */
+.nowPlayingColumn__133bf,
+.visual-refresh .peopleColumn__133bf {
+    border-radius: 10px;
+    border: var(--border);
+    margin-top: var(--global-margin);
+}
+
+/* Friend list */
+.visual-refresh .peopleColumn__133bf {
+    margin-right: var(--global-margin);
+}
+
+/* ------------------- SHOP ------------------- */
+/* Shop header + Shop + Nitro */
+.mainPageScroller_ca1a02,
+.visual-refresh .shop__08415,
+.mainPageScroller_ca1a02 {
+    border-radius: 10px;
+    margin-top: var(--global-margin);
+    border: var(--border);
+}
+
+.visual-refresh .shop__6db1d {
+    background: transparent;
+}
+
+/* ------------------- SETTINGS ------------------- */
+/* Sidebar */
+.visual-refresh .sidebarRegion__23e6b {
+    margin-right: var(--global-margin);
+}
+
+/* Content + Sidebar */
+.contentRegion__23e6b,
+.visual-refresh .sidebarRegion__23e6b {
+    border-radius: 10px;
+    border: var(--border);
+}
+
+/* Global */
+.visual-refresh .standardSidebarView__23e6b {
+    margin-top: calc(var(--global-margin) + var(--custom-app-top-bar-height));
+}
+
+/* Top bar */
+#app-mount:has(.show_c38106) .bar_c38106 {
+    border: var(--border);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: var(--global-margin);
+}

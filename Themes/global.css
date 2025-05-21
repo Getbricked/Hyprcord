@@ -1,0 +1,58 @@
+/* ------------------- IMPORT ------------------- */
+/* Chat */
+@import url(https://raw.githubusercontent.com/Getbricked/ClearVision-Aki/refs/heads/Hyprcord/Themes/chat.css);
+
+/* Embed + Media related */
+@import url(https://raw.githubusercontent.com/Getbricked/ClearVision-Aki/refs/heads/Hyprcord/Themes/embed.css);
+
+/* Home (Settings + Store etc) */
+@import url(https://raw.githubusercontent.com/Getbricked/ClearVision-Aki/refs/heads/Hyprcord/Themes/home.css);
+
+/* Voice chat */
+@import url(https://raw.githubusercontent.com/Getbricked/ClearVision-Aki/refs/heads/Hyprcord/Themes/voicecall.css);
+
+
+/* ------------------- GLOBAL ------------------- */
+/* Define border var */
+:root {
+    --border: var(--bordersize, 1px) solid var(--main-color);
+}
+
+/* Global margin (outside margin) */
+.visual-refresh #app-mount .layers__960e4 {
+    margin: var(--global-margin);
+}
+
+/* Top bar */
+#app-mount .container_c48ade .bar_c38106 {
+    border: var(--border);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 0px !important;
+}
+
+/* User panel */
+.visual-refresh .panels_c48ade {
+    border-radius: 10px;
+    border: var(--border);
+    padding: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: calc(100% - var(--global-margin)) !important;
+}
+
+/* Ctrl + K (Search bar) */
+.visual-refresh .quickswitcher_ac6cb0 {
+    border: var(--border);
+}
+
+/* Border user profile */
+.outer_c0bea0 {
+    border: var(--border);
+}
+
+/* Inbox (on top bar) */
+.visual-refresh .recentMentionsPopout__95796 {
+    border-radius: 10px;
+    border: var(--border);
+}

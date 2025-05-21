@@ -1,0 +1,23 @@
+/**
+ * @name ClearVision V7 Hyprcord
+ * @author Aki
+ * @version 7.0.1
+ * @description ClearVision V7 + Hyprland.
+ * @website https://clearvision.github.io
+ * @invite dHaSxn3
+ */
+
+/* IMPORT ClearVision V7 */
+@import url(https://raw.githubusercontent.com/ClearVision/ClearVision-v7/refs/heads/master/ClearVision-v7-BetterDiscord.theme.css);
+
+/* IMPORT Hyprcord */
+@import url(https://getbricked.github.io/ClearVision-Aki/main.css);
+
+/* SETTINGS */
+:root {
+    /* Global margin for everything default is 20px */
+    --global-margin: 20px;
+
+    /* The size of the border default is 1px */
+    --bordersize: 1px;
+}

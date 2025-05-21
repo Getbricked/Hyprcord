@@ -1,0 +1,41 @@
+/* Channel text */
+.theme-dark .name__2ea32 {
+    color: rgb(218, 218, 218);
+    text-shadow: #000000 0px 0px 1px;
+}
+
+/* Server list */
+.visual-refresh .scroller_ef3116 {
+    background: var(--card-shading);
+}
+
+/* Round servers icon */
+.icon__6e9f8 {
+    border-radius: 50%;
+}
+
+/* Server hover + selected */
+.wrapper__6e9f8.selected__6e9f8 .icon__6e9f8 {
+    border-radius: 10px;
+    transition: border-radius 0.5s ease;
+}
+
+/* Channels list + Server name above it*/
+.visual-refresh .container__2637a {
+    background: var(--card-shading);
+}
+
+/* Hide pill for home */
+.tutorialContainer__1f388 .listItem__650eb .item__58105 {
+    display: none;
+}
+
+/* Selected channel */
+.wrapper__2ea32.modeSelected__2ea32 .link__2ea32::before {
+    background: linear-gradient(to right, var(--hsl-main-color), transparent);
+}
+
+/* New badge in forum*/
+.newBadge_faa96b {
+    color: var(--text-normal);
+}

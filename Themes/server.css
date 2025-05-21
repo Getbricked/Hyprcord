@@ -1,0 +1,74 @@
+/* ------------------- IN SERVER ------------------- */
+/* Chat + Chat header + Member list + Server guide + Channels and roles*/
+.chatContent_f75fb0,
+.visual-refresh .title_f75fb0,
+.members_c8ffbb,
+.background__7449f :is(.scrollerBase_d125d2),
+.visual-refresh .container__0b563 {
+    border-radius: 10px;
+    border: var(--border);
+    margin-top: var(--global-margin);
+}
+
+/* Member list */
+.members_c8ffbb {
+    margin-left: var(--global-margin);
+}
+
+/* Members */
+.visual-refresh .mainTableContainer__09a38 {
+    border-radius: 10px;
+    border: var(--border);
+}
+
+/* ------------------- SERVER WITH BANNER ------------------- */
+.visual-refresh .header_f37cb1,
+.visual-refresh .bannerVisible_f37cb1 {
+    border-radius: 10px;
+}
+
+.visual-refresh .animatedContainer_f37cb1 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.headerEllipseForeground_f37cb1,
+.headerEllipseBackdrop_f37cb1,
+.headerGlass_f37cb1 {
+    display: none;
+}
+
+/* ------------------- OUTSIDE SERVER ------------------- */
+/* Server list */
+.visual-refresh .scroller_ef3116 {
+    border-radius: 10px;
+    border: var(--border) !important;
+    margin-top: var(--global-margin) !important;
+}
+
+/* Separator between DM and Servers */
+.visual-refresh .guildSeparator__252b6 {
+    background-color: var(--main-color);
+}
+
+/* Server folder */
+.isExpanded__48112 .folderGroupBackground__48112 {
+    background-color: var(--main-color);
+    opacity: 0.3;
+}
+
+.folderPreviewWrapper__48112 {
+    --custom-preview-background: color-mix(in srgb, var(--main-color), transparent 50%);
+}
+
+.folderIcon__48112 {
+    color: var(--main-color);
+}
+
+/* DM + Channel list */
+.visual-refresh .privateChannels__35e86,
+.visual-refresh .container__2637a {
+    border-radius: 10px;
+    border: var(--border);
+    margin: var(--global-margin);
+}
