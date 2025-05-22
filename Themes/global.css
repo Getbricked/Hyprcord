@@ -58,3 +58,46 @@
     border-radius: 10px;
     border: var(--border);
 }
+
+/* ------------------- WINDOWS BUTTON ------------------- */
+.winButtons_c38106 {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    background: none;
+}
+
+.winButton_c38106 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.winButton_c38106:hover {
+    opacity: 0.5;
+}
+
+/* Close button (red) */
+.winButtonClose_c38106 {
+    background: #ff5f57;
+}
+
+/* Minimize button (yellow) */
+.winButtonMinMax_c38106:nth-child(1) {
+    background: #ffbd2e;
+}
+
+/* Maximize button (green) */
+.winButtonMinMax_c38106:nth-child(2) {
+    background: #28c940;
+}
+
+/* Hide the Windows-style icons */
+.winButton_c38106 svg {
+    display: none;
+}
