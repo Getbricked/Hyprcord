@@ -39,29 +39,3 @@
 .visual-refresh .shop__6db1d {
     background: transparent;
 }
-
-/* ------------------- SETTINGS ------------------- */
-/* Sidebar */
-.visual-refresh .sidebarRegion__23e6b {
-    margin-right: var(--global-margin);
-}
-
-/* Content + Sidebar */
-.contentRegion__23e6b,
-.visual-refresh .sidebarRegion__23e6b {
-    border-radius: 10px;
-    border: var(--border);
-}
-
-/* Global */
-.visual-refresh .standardSidebarView__23e6b {
-    margin-top: calc(var(--global-margin) + var(--custom-app-top-bar-height));
-}
-
-/* Top bar */
-#app-mount:has(.show_c38106) .bar_c38106 {
-    border: var(--border);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    margin: var(--global-margin);
-}
