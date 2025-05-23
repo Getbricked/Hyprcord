@@ -59,6 +59,11 @@
     border: var(--border);
 }
 
+/* Vencord notification */
+.vc-notification-root {
+    border: var(--border);
+}
+
 /* ------------------- WINDOWS BUTTON ------------------- */
 .winButtons_c38106 {
     display: flex;
