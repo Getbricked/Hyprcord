@@ -73,3 +73,29 @@
     border: var(--border);
     margin: var(--global-margin);
 }
+
+/* Invite people + Privacy settings + Active thread */
+.root__49fc1:not(:has(.quickswitcher_ac6cb0), :has(.outer_c0bea0)) {
+    border-radius: 10px;
+    border: var(--border) !important;
+}
+
+/* Discover */
+.visual-refresh .container__551b0 {
+    border-radius: 10px;
+    border: var(--border);
+    margin: var(--global-margin);
+}
+
+.visual-refresh .container_a592e1 {
+    border-radius: 10px;
+    border: var(--border);
+    margin-top: var(--global-margin);
+}
+
+.gradient_e9ef78,
+.gradientBackground_e9ef78,
+.visual-refresh .scroller__23746,
+.backdrop__8a7fc {
+    border-radius: 10px;
+}
