@@ -109,3 +109,19 @@
 .backdrop__8a7fc {
     border-radius: 10px;
 }
+
+/* Server setting when click on web invitation link */
+.container__9b0f4 {
+    border-radius: 10px;
+    border: var(--border) !important;
+}
+
+.inviteSplash__9b0f4 {
+    border-radius: 10px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.visual-refresh .editProfileContainer__42179 {
+    border: var(--border);
+}
