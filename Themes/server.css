@@ -75,7 +75,7 @@
 }
 
 /* Server's option (right click on Server's header) */
-.rootWithShadow__49fc1,
+.rootWithShadow__49fc1:not(:has(.quickswitcher_ac6cb0)),
 .modal_a8217b,
 .modal_ac72c6 {
     border-radius: 10px !important;
