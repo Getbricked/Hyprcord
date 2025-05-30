@@ -36,10 +36,15 @@
     background: rgba(0, 0, 0, 1);
 }
 
-/* Username in chat */
+/* User display in chat */
 .username_c19a55,
 .markup__75297 strong {
     font-weight: 900;
+}
+
+/* Vencord username */
+.vc-smyn-suffix {
+    color: currentColor;
 }
 
 /* Date Time divider in chat */
