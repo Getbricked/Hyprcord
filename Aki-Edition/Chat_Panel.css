@@ -42,7 +42,7 @@
     font-weight: 900;
 }
 
-/* Vencord username */
+/* Vencord username plugin (to match color with role color) */
 .vc-smyn-suffix {
     color: currentColor;
 }
