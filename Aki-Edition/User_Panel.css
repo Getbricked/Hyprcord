@@ -15,6 +15,11 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+/* Soundboard */
+.visual-refresh .soundButton__9be63 {
+    border: 1px solid var(--main-color)
+}
+
 /* In voice chat streaming button */
 .visual-refresh .button_e131a9.buttonColor_e131a9.buttonActive_e131a9 {
     background: hsl(from var(--success-color) h s l / 0.4);
