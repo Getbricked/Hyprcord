@@ -49,26 +49,26 @@
 
 /* Date Time divider in chat */
 .content__908e2 {
-    color: var(--main-color);
+    color: var(--hsl-main-color);
 }
 
 /* Divider for new chat */
 .unreadPill__908e2,
 .divider__908e2:has(.unreadPill__908e2) {
-    background-color: var(--main-color);
+    background-color: var(--hsl-main-color);
 }
 
 /* New chat top bar */
 .visual-refresh .newMessagesBar__0f481 {
     border-radius: 10px;
-    background: linear-gradient(360deg, var(--main-color), transparent);
+    background: linear-gradient(360deg, var(--hsl-main-color), transparent);
     border: none;
 }
 
 /* Server Invite link display */
 .guildInviteContainer__083ae {
     background: var(--card-shading);
-    border: 1px solid var(--main-color);
+    border: 1px solid var(--hsl-main-color);
 }
 
 .footerContent__083ae {

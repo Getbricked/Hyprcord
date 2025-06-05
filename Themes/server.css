@@ -49,21 +49,21 @@
 
 /* Separator between DM and Servers */
 .visual-refresh .guildSeparator__252b6 {
-    background-color: var(--main-color);
+    background-color: var(--hsl-main-color);
 }
 
 /* Server folder */
 .isExpanded__48112 .folderGroupBackground__48112 {
-    background-color: var(--main-color);
+    background-color: var(--hsl-main-color);
     opacity: 0.3;
 }
 
 .folderPreviewWrapper__48112 {
-    --custom-preview-background: color-mix(in srgb, var(--main-color), transparent 50%);
+    --custom-preview-background: color-mix(in srgb, var(--hsl-main-color), transparent 50%);
 }
 
 .folderIcon__48112 {
-    color: var(--main-color);
+    color: var(--hsl-main-color);
 }
 
 /* DM + Channel list */

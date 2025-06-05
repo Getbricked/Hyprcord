@@ -3,12 +3,12 @@
 .visual-refresh .markup__75297 code {
     border-radius: 10px;
     border: var(--border);
-    background: color-mix(in srgb, var(--main-color), transparent 95%);
+    background: color-mix(in srgb, var(--hsl-main-color), transparent 95%);
 }
 
 /* Media item */
 .nonVisualMediaItem_f4758a {
-    background: color-mix(in srgb, var(--main-color), transparent 80%);
+    background: color-mix(in srgb, var(--hsl-main-color), transparent 80%);
     border-radius: 10px;
 }
 

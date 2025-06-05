@@ -1,9 +1,9 @@
 /* Role groups */
 .membersGroup_c8ffbb {
     background: rgba(32, 181, 255, 0.025);
-    color: var(--main-color);
+    color: var(--hsl-main-color);
     margin: auto;
-    border-top: 3px solid var(--main-color);
+    border-top: 3px solid var(--hsl-main-color);
 }
 
 /* Members list */

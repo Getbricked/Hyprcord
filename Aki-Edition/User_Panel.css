@@ -1,12 +1,12 @@
 /* Activity panel border */
 .visual-refresh .panel__5dec7 {
-    border-bottom: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--hsl-main-color);
 }
 
 /* ------------------------ VOICE CHAT ------------------------ */
 /* Voice chat panel border */
 .panels_c48ade:not(:has(.container__4bbc6)) .wrapper_e131a9:has(.container_e131a9) {
-    border-bottom: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--hsl-main-color);
 }
 
 /* Voice chat button */
@@ -17,7 +17,7 @@
 
 /* Soundboard */
 .visual-refresh .soundButton__9be63 {
-    border: 1px solid var(--main-color)
+    border: 1px solid var(--hsl-main-color)
 }
 
 /* In voice chat streaming button */

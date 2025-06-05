@@ -17,7 +17,7 @@
 /* ------------------- GLOBAL ------------------- */
 /* Define border var */
 :root {
-    --border: var(--bordersize, 1px) solid var(--main-color);
+    --border: var(--bordersize, 1px) solid var(--hsl-main-color);
 }
 
 /* Global margin (outside margin) */
