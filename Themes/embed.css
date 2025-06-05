@@ -14,8 +14,9 @@
 
 /* Voice message */
 .rippleContainer_a8e786,
-.visual-refresh .container_a8e786 {
-    border-radius: 10px;
+.visual-refresh .container_a8e786,
+.playing_a8e786 {
+    border-radius: 6px;
     border: none;
 }
 
