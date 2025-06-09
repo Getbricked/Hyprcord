@@ -21,6 +21,19 @@
     border: var(--border);
 }
 
+/* Onboard */
+.main_c08b38 {
+    border-radius: 10px;
+    border: var(--border);
+    margin-left: var(--global-margin);
+    margin-top: var(--global-margin);
+}
+
+/* Onboard questions prompt */
+.prompt_fe70ca {
+    border: var(--border);
+}
+
 /* ------------------- SERVER WITH BANNER ------------------- */
 .visual-refresh .header_f37cb1,
 .visual-refresh .bannerVisible_f37cb1 {
