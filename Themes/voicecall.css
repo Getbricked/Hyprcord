@@ -64,3 +64,21 @@
     border-radius: 10px;
     border: var(--border) !important;
 }
+
+/* Button in voice call */
+.buttonSection__1405b {
+    background: transparent;
+    border: var(--border);
+}
+
+.colorable_f1ceac.disconnect_f1ceac {
+    border: var(--border);
+    border-radius: 12px;
+}
+
+/* Change voice chat region */
+.theme-dark .quickSelectPopout_ebaca5 {
+    background: var(--hsl-popout-shading);
+    border: var(--border);
+    border-radius: 10px;
+}

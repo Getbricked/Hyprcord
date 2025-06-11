@@ -6,6 +6,11 @@
     background: color-mix(in srgb, var(--hsl-main-color), transparent 95%);
 }
 
+/* Copy button of shiki code */
+.vc-shiki-btn {
+    background-color: transparent !important;
+}
+
 /* Media item */
 .nonVisualMediaItem_f4758a {
     background: color-mix(in srgb, var(--hsl-main-color), transparent 80%);
