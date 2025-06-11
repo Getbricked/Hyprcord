@@ -72,8 +72,8 @@
 }
 
 .colorable_f1ceac.disconnect_f1ceac {
-    border: var(--border);
-    border-radius: 12px;
+    border: var(--border) !important;
+    border-radius: 12px !important;
 }
 
 /* Change voice chat region */
