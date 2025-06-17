@@ -25,6 +25,11 @@
     margin: var(--global-margin);
 }
 
+/* Content margin (everything except top bar) */
+.content_c48ade {
+    margin-top: 4px;
+}
+
 /* Top bar */
 #app-mount .container_c48ade .bar_c38106 {
     border: var(--border);

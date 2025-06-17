@@ -13,7 +13,7 @@
 
 /* Global */
 .visual-refresh .standardSidebarView__23e6b {
-    margin-top: calc(var(--global-margin) + var(--custom-app-top-bar-height));
+    margin-top: calc(var(--global-margin) + var(--custom-app-top-bar-height) + 4px);
 }
 
 /* Top bar */
@@ -22,4 +22,5 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     margin: var(--global-margin);
+    height: 10px;
 }
