@@ -24,6 +24,13 @@
     border-radius: 10px;
 }
 
+/* Reaction emoji */
+.wrapper_c0e32c,
+.wrapper_c0e32c.isBurstReactionPicker_c0e32c {
+    border: var(--border);
+    border-radius: 10px;
+}
+
 /* Chat contents */
 .scrollerInner__36d07 {
     padding-left: calc(var(--global-margin) - var(--space-xs));
