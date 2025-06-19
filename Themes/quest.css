@@ -1,0 +1,11 @@
+/* Claim reward */
+.claimedRootContainer_b0ba57 {
+    border: var(--border);
+    border-radius: 10px;
+}
+
+.headerContainer_b0ba57,
+.headerBackground_b0ba57 {
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+}
