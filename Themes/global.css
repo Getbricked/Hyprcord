@@ -17,6 +17,9 @@
 /* Quest */
 @import url(https://getbricked.github.io/Hyprcord/Themes/quest.css);
 
+/* Server Boost */
+@import url(https://getbricked.github.io/Hyprcord/Themes/serverboost.css);
+
 /* ------------------- GLOBAL ------------------- */
 /* Define border var */
 :root {
