@@ -67,7 +67,7 @@
 
 /* Button in voice call */
 .buttonSection__1405b {
-    background: transparent;
+    background: var(--hsl-card-shading);
     border: var(--border);
 }
 
