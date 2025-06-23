@@ -24,3 +24,8 @@
     border-radius: 10px;
     background: color-mix(in srgb, var(--hsl-main-color) 30%, transparent);
 }
+
+/* New thread image upload button */
+.uploadInput__94439 {
+    background-color: var(--background-secondary-alt);
+}

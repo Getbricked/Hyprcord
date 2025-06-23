@@ -30,3 +30,16 @@
 .container__98cbd.active__98cbd {
     border-color: var(--success-color);
 }
+
+/* Emoji/Image for role (Boost level 2) */
+.contentWrapper_d507dd {
+    background-color: var(--hsl-popout-shading);
+}
+
+.navButtonActive_d507dd {
+    background-color: var(--hsl-main-color);
+}
+
+.contentWrapper_d507dd #emoji-picker-tab-panel {
+    border: none;
+}
