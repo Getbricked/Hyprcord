@@ -19,7 +19,7 @@ This theme is inspired by **Jugom** and the **Hyprland window manager**.
 #### **For Vencord:**
 
 - **[Hyprcord Core](https://getbricked.github.io/Hyprcord/Hyprcord.css)** `Hyprcord.css`
-  _(Core can be use along with your ClearVision v7)_
+  _(Core needs to be used along with your ClearVision v7)_
 
 - **[Hyprcord Aki](https://getbricked.github.io/Hyprcord/Hyprcord-Aki.css)** `Hyprcord-Aki.css`
   _(Core + ClearVision Aki theme)_
@@ -27,12 +27,26 @@ This theme is inspired by **Jugom** and the **Hyprland window manager**.
 #### **For BetterDiscord:**
 
 - **[Hyprcord Core](https://getbricked.github.io/Hyprcord/Hyprcord.theme.css)** `Hyprcord.theme.css`
-  _(Core can be use along with your ClearVision v7)_
+  _(Core needs to be used along with your ClearVision v7)_
 
 - **[Hyprcord Aki](https://getbricked.github.io/Hyprcord/Hyprcord-Aki.theme.css)** `Hyprcord-Aki.theme.css`
   _(Core + ClearVision Aki theme)_
 
 ### 2. Place the Downloaded File in Your Themes Folder
+
+### For advanced users:
+
+Add the following line to your ClearVision theme file to import the theme:
+
+```css
+@import url("https://getbricked.github.io/Hyprcord/Hyprcord.css");
+```
+
+### For Online Theme Usage
+
+```
+https://getbricked.github.io/Hyprcord/Hyprcord.css
+```
 
 ## Basic Customization
 
@@ -53,6 +67,17 @@ To set a custom background image, replace the URL inside `url()` with the link t
 /* Global Margin */
 :root {
   --global-margin: 20px; /* Default is 20px */
+}
+```
+
+### 3. Change the Border
+
+Above is default border style, you can customize it by changing the `--bordersize` and `--hsl-main-color` variables.
+
+```css
+:root {
+  --border: var(--bordersize, 1px) solid var(--hsl-main-color);
+  --bordersize: 1px;
 }
 ```
 
