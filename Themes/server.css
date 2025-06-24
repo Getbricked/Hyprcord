@@ -34,6 +34,12 @@
     border: var(--border);
 }
 
+/* Server tag popout */
+.container_cdb3b1 {
+    background-color: var(--hsl-popout-shading);
+    border: var(--border);
+}
+
 /* ------------------- SERVER WITH BANNER ------------------- */
 .visual-refresh .header_f37cb1,
 .visual-refresh .bannerVisible_f37cb1 {
