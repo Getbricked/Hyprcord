@@ -34,6 +34,27 @@
     border: var(--border);
 }
 
+/* Onboard background */
+.fullBorderWithGradient_c08b38 {
+    background-color: transparent;
+}
+
+/* Onboard prompt question box */
+.prompt_fe70ca {
+    background-color: var(--hsl-card-shading);
+}
+
+/* Nav button under prompt questions */
+.navButtons_fe70ca {
+    background-color: var(--hsl-card-shading);
+}
+
+/* Rules in onboard */
+.termsFieldBody_fe70ca {
+    background-color: var(--hsl-card-shading);
+    border: var(--border);
+}
+
 /* Server tag popout */
 .container_cdb3b1 {
     background-color: var(--hsl-popout-shading);
