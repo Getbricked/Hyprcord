@@ -128,7 +128,6 @@
     background: transparent;
 }
 
-
 /* Discover */
 .visual-refresh .container__551b0 {
     border-radius: 10px;
@@ -149,6 +148,7 @@
     border-radius: 10px;
 }
 
+/* ------------------- Server Settings ------------------- */
 /* Server setting when click on web invitation link */
 .container__9b0f4 {
     border-radius: 10px;
@@ -163,4 +163,11 @@
 
 .visual-refresh .editProfileContainer__42179 {
     border: var(--border);
+}
+
+/* Onboard settings */
+.notice_a9b452,
+.review_a9b452,
+.onboardingStepContainer__28e57 {
+    background-color: var(--hsl-card-shading);
 }
