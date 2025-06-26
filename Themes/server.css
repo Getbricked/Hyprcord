@@ -171,3 +171,12 @@
 .onboardingStepContainer__28e57 {
     background-color: var(--hsl-card-shading);
 }
+
+/* ------------------- Mod View Plugin VC ------------------- */
+.guildSidebar_f75fb0 {
+    margin-top: var(--global-margin);
+}
+
+.guildSidebar_f75fb0 .outer_c0bea0 {
+    border-radius: 10px;
+}
