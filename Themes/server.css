@@ -177,6 +177,18 @@
     margin-top: var(--global-margin);
 }
 
+.guildSidebar_f75fb0 .sidebarContainer__656be {
+    margin-top: 0px;
+}
+
 .guildSidebar_f75fb0 .outer_c0bea0 {
+    border-radius: 10px;
+}
+
+.sidebarContainer__656be {
+    margin-top: var(--global-margin);
+}
+
+.sidebarContainer__656be .outer_c0bea0 {
     border-radius: 10px;
 }
