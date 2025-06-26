@@ -177,7 +177,7 @@
     margin-top: var(--global-margin);
 }
 
-.guildSidebar_f75fb0 .sidebarContainer__656be {
+.page_c48ade:has(.guildSidebar_f75fb0) .sidebarContainer__656be {
     margin-top: 0px;
 }
 
