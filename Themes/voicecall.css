@@ -82,3 +82,16 @@
     border: var(--border);
     border-radius: 10px;
 }
+
+/* Empty voice call */
+.wrapper_cb9592.sidebarOpen_cb9592 {
+
+    .callContainer_cb9592,
+    .callContent_cb9592 {
+        border-radius: 10px;
+    }
+}
+
+.container__01ae2 {
+    padding-left: calc(var(--global-margin) - var(--chat-resize-handle-width) - 2px);
+}
