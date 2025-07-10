@@ -11,6 +11,13 @@
     border: var(--border) !important;
 }
 
+/* Jump to present bar */
+.jumpToPresentBar__0f481 {
+    background: var(--hsl-popout-shading);
+    border: var(--border);
+    border-radius: 10px;
+}
+
 /* On hover msg */
 .message__5126c.selected__5126c .buttonsInner__5126c,
 .mouse-mode .message__5126c:hover .buttonsInner__5126c {
