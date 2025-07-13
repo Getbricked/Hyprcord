@@ -42,11 +42,6 @@
     font-weight: 900;
 }
 
-/* Vencord username plugin (to match color with role color) */
-.vc-smyn-suffix {
-    color: currentColor;
-}
-
 /* Date Time divider in chat */
 .content__908e2 {
     color: var(--hsl-main-color);
