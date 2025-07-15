@@ -100,3 +100,11 @@
     padding-bottom: var(--global-margin);
     padding-left: calc(var(--global-margin) - 8px);
 }
+
+/* Message requests spam */
+.hamBanner__6a41e {
+    background-color: var(--hsl-card-shading);
+    margin-top: var(--global-margin);
+    border-radius: 10px;
+    border: var(--border);
+}
