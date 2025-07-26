@@ -31,6 +31,12 @@
     background: var(--hsl-card-shading);
 }
 
+.visual-refresh .bannerVisible_f37cb1,
+.visual-refresh .header_f37cb1 {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
 /* Channel list */
 .scrollerBase__99f8c {
     border: var(--border);

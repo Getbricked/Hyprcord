@@ -84,8 +84,8 @@
 }
 
 /* DM + Channel list */
-.privateChannels__35e86,
-.container__2637a {
+.visual-refresh .privateChannels__35e86,
+.visual-refresh .container__2637a {
     border-radius: 10px;
     margin: var(--global-margin);
     margin-bottom: 0px;
