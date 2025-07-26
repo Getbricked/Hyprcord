@@ -5,6 +5,15 @@
     margin: 0px;
 }
 
+/* Call in DM */
+.wrapper_cb9592.minimum_cb9592 {
+    background: transparent;
+}
+
+.callContainer_cb9592 {
+    background: var(--hsl-card-shading) !important;
+}
+
 /* Fullscreen mode */
 .callContainer_cb9592 {
     border: var(--border) !important;
