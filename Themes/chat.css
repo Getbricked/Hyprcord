@@ -31,6 +31,11 @@
     border-radius: 10px;
 }
 
+/* Emoji */
+.contentWrapper__08434 #emoji-picker-tab-panel {
+    border: none;
+}
+
 /* Reaction emoji */
 .wrapper_c0e32c,
 .wrapper_c0e32c.isBurstReactionPicker_c0e32c {

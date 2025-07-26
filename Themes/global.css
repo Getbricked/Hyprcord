@@ -75,6 +75,29 @@
     border: var(--border);
 }
 
+/* DM */
+.privateChannels__35e86 {
+    border: none;
+    border-top: var(--border);
+    border-radius: 8px;
+    margin-bottom: var(--custom-app-panels-height) !important;
+}
+
+/* DM + Channel list */
+.privateChannels__35e86,
+.container__2637a {
+    border-radius: 10px;
+    margin: var(--global-margin);
+    margin-bottom: 0px;
+    background: none;
+}
+
+.privateChannels__35e86 .scrollerBase__99f8c {
+    border-radius: 10px;
+}
+
+
+
 /* ------------------- WINDOWS BUTTON ------------------- */
 .winButtons_c38106 {
     display: flex;
