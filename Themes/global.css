@@ -80,7 +80,6 @@
     border: none;
     border-top: var(--border);
     border-radius: 8px;
-    margin-bottom: var(--custom-app-panels-height) !important;
 }
 
 /* DM + Channel list */
@@ -89,7 +88,7 @@
     border-radius: 10px;
     margin: var(--global-margin);
     margin-bottom: 0px;
-    background: none !important;
+    background: none;
 }
 
 .privateChannels__35e86 .scrollerBase__99f8c {
