@@ -88,7 +88,7 @@
     border-radius: 10px;
     margin: var(--global-margin);
     margin-bottom: 0px;
-    background: none;
+    background: none !important;
 }
 
 .privateChannels__35e86 .scrollerBase__99f8c {
