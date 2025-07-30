@@ -20,6 +20,9 @@
 /* Server Boost */
 @import url(https://getbricked.github.io/Hyprcord/Themes/serverboost.css);
 
+/* Shop */
+@import url(https://getbricked.github.io/Hyprcord/Themes/shop.css);
+
 /* ------------------- GLOBAL ------------------- */
 /* Define border var */
 :root {
