@@ -6,6 +6,11 @@
     background: color-mix(in srgb, var(--hsl-main-color), transparent 95%);
 }
 
+.vc-shiki-root {
+    background-color: transparent !important;
+    color: transparent !important;
+}
+
 /* Copy button of shiki code */
 .vc-shiki-btn {
     background-color: transparent !important;
@@ -90,4 +95,5 @@
 .container__86bf6,
 .visual-refresh .popoutContainer__0f481 {
     border: var(--border);
+
 }
