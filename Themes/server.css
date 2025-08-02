@@ -50,6 +50,11 @@
     border: var(--border) !important;
 }
 
+/* Boost process bar */
+.progressContainer__0d0f9 {
+    background-color: var(--hsl-card-shading);
+}
+
 /* Active threads */
 .container_a8217b,
 .header_a8217b {
