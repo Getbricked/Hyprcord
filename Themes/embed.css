@@ -8,7 +8,6 @@
 
 .vc-shiki-root {
     background-color: transparent !important;
-    color: transparent !important;
 }
 
 /* Copy button of shiki code */
@@ -97,3 +96,4 @@
     border: var(--border);
 
 }
+
