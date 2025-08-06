@@ -16,6 +16,13 @@
     border: var(--border);
 }
 
+/* Rules to submit before enter */
+.container_b962dc {
+    border: var(--border);
+    border-radius: 10px;
+    background: var(--hsl-card-shading);
+}
+
 /* Members */
 .visual-refresh .mainTableContainer__09a38 {
     border-radius: 10px;
@@ -225,3 +232,4 @@
     border-radius: 10px;
 
 }
+
