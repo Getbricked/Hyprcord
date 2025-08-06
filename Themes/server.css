@@ -50,6 +50,13 @@
     border: var(--border) !important;
 }
 
+/* NSFW pop up */
+.content_f75fb0 .scroller__28a87  {
+    margin-top: var(--global-margin);
+    border: var(--border);
+    border-radius: 10px;
+}
+
 /* Boost process bar */
 .progressContainer__0d0f9 {
     background-color: var(--hsl-card-shading);
@@ -216,4 +223,5 @@
 
 .sidebarContainer__656be .outer_c0bea0 {
     border-radius: 10px;
+
 }
