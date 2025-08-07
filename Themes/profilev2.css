@@ -28,3 +28,8 @@
 .card__39ec2 {
     border: var(--border);
 }
+
+/* No nitro user */
+.outer_c0bea0:not(.custom-user-profile-theme) {
+    border: var(--border);
+}
