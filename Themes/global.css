@@ -23,6 +23,9 @@
 /* Shop */
 @import url(https://getbricked.github.io/Hyprcord/Themes/shop.css);
 
+/* Profile v2 */
+@import url(https://getbricked.github.io/Hyprcord/Themes/profilev2.css);
+
 /* ------------------- GLOBAL ------------------- */
 /* Define border var */
 :root {

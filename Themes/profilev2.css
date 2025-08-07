@@ -1,0 +1,30 @@
+/* Banner */
+.user-profile-modal-v2 :where(.banner__68edb) {
+    border-radius: 10px;
+}
+
+/* Inner profile */
+.profile__9c3be {
+    border: var(--border);
+}
+
+/* Big profile */
+.custom-user-profile-theme.user-profile-modal-v2 .inner_c0bea0 {
+    background: var(--hsl-card-shading);
+}
+
+/* Big background profile */
+.backgroundImage__9c3be {
+    background-size: 100%;
+    opacity: .7;
+    filter: none;
+}
+
+.backgroundImage__9c3be:after {
+    backdrop-filter: none;
+}
+
+/* Activities */
+.card__39ec2 {
+    border: var(--border);
+}
