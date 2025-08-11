@@ -33,3 +33,10 @@
 .outer_c0bea0:not(.custom-user-profile-theme) {
     border: var(--border);
 }
+
+/* Nitro user */
+.backgroundImage__9c3be {
+    background-image: var(--background-image) !important;
+    mask-image: none;
+    filter: brightness(0.6);
+}
