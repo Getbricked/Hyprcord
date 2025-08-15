@@ -99,6 +99,7 @@
 
 .privateChannels__35e86 .scrollerBase__99f8c {
     border-radius: 10px;
+    margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--global-margin));
 }
 
 
