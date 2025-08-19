@@ -146,3 +146,12 @@
 .winButton_c38106 svg {
     display: none;
 }
+
+/* User's status */
+.outer_ab8609 {
+    background: var(--hsl-card-shading);
+}
+
+.inner_ab8609 {
+    background: transparent;
+}
