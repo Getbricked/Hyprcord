@@ -76,6 +76,11 @@
     border: var(--border);
 }
 
+/* Inbox mentions */
+.recentMentionsPopout__95796 .messagesPopoutWrap__45690 {
+    border: none;
+}
+
 /* Vencord notification */
 .vc-notification-root {
     border: var(--border);
