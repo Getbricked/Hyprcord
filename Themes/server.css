@@ -36,7 +36,7 @@
     border-top-right-radius: 10px;
     border-bottom: none;
     width: calc(100% - 5px);
-    background: var(--hsl-card-shading);
+    /* background: var(--hsl-card-shading); */
 }
 
 /* Channel list */
@@ -45,7 +45,7 @@
     border-top: none;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    background: var(--hsl-card-shading);
+    /* background: var(--hsl-card-shading); */
     margin-bottom: var(--global-margin);
 }
 
@@ -58,7 +58,7 @@
 }
 
 /* NSFW pop up */
-.content_f75fb0 .scroller__28a87  {
+.content_f75fb0 .scroller__28a87 {
     margin-top: var(--global-margin);
     border: var(--border);
     border-radius: 10px;
@@ -145,7 +145,7 @@
 
 .bannerVisible_f37cb1 .header_f37cb1,
 .bannerVisible_f37cb1 .header_f37cb1:hover {
-    background: var(--hsl-card-shading);
+    /* background: var(--hsl-card-shading); */
 }
 
 .visual-refresh .animatedContainer_f37cb1 {
@@ -232,4 +232,3 @@
     border-radius: 10px;
 
 }
-
