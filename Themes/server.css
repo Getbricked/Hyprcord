@@ -35,7 +35,7 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom: none;
-    width: calc(100% - 5px);
+    width: calc(100% - 3px);
     /* background: var(--hsl-card-shading); */
 }
 
@@ -230,5 +230,6 @@
 
 .sidebarContainer__656be .outer_c0bea0 {
     border-radius: 10px;
+
 
 }
