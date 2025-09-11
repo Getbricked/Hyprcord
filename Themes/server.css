@@ -10,6 +10,11 @@
     margin-top: var(--global-margin);
 }
 
+/* Channel title */
+:is(.theme-dark,.theme-light) .themed__9293f {
+    background: transparent;
+}
+
 /* Member list */
 .members_c8ffbb {
     margin-left: var(--global-margin);
@@ -230,7 +235,6 @@
 
 .sidebarContainer__656be .outer_c0bea0 {
     border-radius: 10px;
-
-
 }
+
 
