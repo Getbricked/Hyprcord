@@ -1,0 +1,7 @@
+.align-chat-input .container__2637a {
+    padding-bottom: calc(var(--custom-app-panels-height, 0) + var(--space-xs) - 11px);
+}
+
+.align-chat-input .wrapper_ef3116 {
+    margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--space-xs) - 11px);
+}
