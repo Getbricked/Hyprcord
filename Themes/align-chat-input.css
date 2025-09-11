@@ -1,7 +1,9 @@
+/* DM list */
 .align-chat-input .container__2637a {
-    padding-bottom: calc(var(--custom-app-panels-height, 0) + var(--space-xs) - 11px);
+    padding-bottom: calc(var(--custom-app-panels-height, 0) + var(--space-xs) - 6px);
 }
 
+/* Server list */
 .align-chat-input .wrapper_ef3116 {
-    margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--space-xs) - 11px);
+    margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--space-xs) - 6px);
 }
