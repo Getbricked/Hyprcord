@@ -26,6 +26,9 @@
 /* Profile v2 */
 @import url(https://getbricked.github.io/Hyprcord/Themes/profilev2.css);
 
+/* Align Chat Input EXPERIMENT */
+@import url(https://getbricked.github.io/Hyprcord/Themes/align-chat-input.css);
+
 /* ------------------- GLOBAL ------------------- */
 /* Define border var */
 :root {
@@ -159,4 +162,5 @@
 
 .inner_ab8609 {
     background: transparent;
+
 }
