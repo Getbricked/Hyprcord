@@ -20,6 +20,8 @@
 :root {
     /* Tweak in case using ServerColumn addon (only work for 1 column) */
     --columns: 1;
+    --guildsize: 57;
+    --aligndms: 0;
 
     /* Global margin for everything default is 20px */
     --global-margin: 20px;
@@ -27,4 +29,5 @@
     /* The size and style of border (default is 1px and var(--bordersize, 1px) solid var(--hsl-main-color) */
     --bordersize: 1px;
     --border: var(--bordersize, 1px) solid var(--hsl-main-color);
+
 }
