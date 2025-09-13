@@ -11,7 +11,7 @@
 }
 
 /* Channel title */
-:is(.theme-dark,.theme-light) .themed__9293f {
+:is(.theme-dark, .theme-light) .themed__9293f {
     background: transparent;
 }
 
@@ -42,6 +42,13 @@
     border-bottom: none;
     width: calc(100% - 2 * var(--bordersize) - 1px);
     /* background: var(--hsl-card-shading); */
+}
+
+/* Server Notice/Events */
+.container__6e9be {
+    border-left: var(--border);
+    border-right: var(--border);
+    width: calc(100% - 2 * var(--bordersize) - 1px);
 }
 
 /* Channel list */
@@ -236,5 +243,3 @@
 .sidebarContainer__656be .outer_c0bea0 {
     border-radius: 10px;
 }
-
-
