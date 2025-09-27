@@ -92,7 +92,6 @@
 /* DM */
 .privateChannels__35e86 {
     border: none;
-    border-top: var(--border);
     border-radius: 8px;
 }
 
@@ -105,7 +104,8 @@
     background: none !important;
 }
 
-.privateChannels__35e86 .scrollerBase__99f8c {
+.privateChannels__35e86 .scrollerBase_d125d2 {
+    border: var(--border);
     border-radius: 10px;
     margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--global-margin));
 }

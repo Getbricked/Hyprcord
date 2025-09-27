@@ -52,13 +52,12 @@
 }
 
 /* Channel list */
-.sidebarList_c48ade .scrollerBase__99f8c {
+.container__2637a .scrollerBase_d125d2 {
     border: var(--border);
     border-top: none;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
-    /* background: var(--hsl-card-shading); */
-    margin-bottom: var(--global-margin);
+    margin-bottom: calc(8px + var(--global-margin));
 }
 
 /* Server's option (right click on Server's header) */
@@ -155,10 +154,10 @@
     border-bottom-right-radius: 0px;
 }
 
-.bannerVisible_f37cb1 .header_f37cb1,
+/* .bannerVisible_f37cb1 .header_f37cb1,
 .bannerVisible_f37cb1 .header_f37cb1:hover {
-    /* background: var(--hsl-card-shading); */
-}
+    background: var(--hsl-card-shading);
+} */
 
 .visual-refresh .animatedContainer_f37cb1 {
     border-top-left-radius: 10px;
