@@ -110,7 +110,11 @@
     margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--global-margin));
 }
 
-
+/* "Leaving discord" dialog when click on a link */
+.container__8a031 {
+    background: var(--hsl-background-shading);
+    border: var(--border);
+}
 
 /* ------------------- WINDOWS BUTTON ------------------- */
 .winButtons_c38106 {
