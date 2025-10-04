@@ -17,7 +17,7 @@
 
 /* Soundboard */
 .visual-refresh .soundButton__9be63 {
-    border: 1px solid var(--hsl-main-color)
+    border: var(--border)
 }
 
 /* In voice chat streaming button */
@@ -45,4 +45,3 @@ nav.guilds_c48ade,
     border-top-right-radius: 8px;
 
 }
-
