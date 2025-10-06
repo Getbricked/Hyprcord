@@ -20,8 +20,8 @@
     --background-mentioned-hover: rgba(255, 229, 84, 0.15);
 }
 
-/* Edit timestamp */
-.messageContent_c19a55 .timestamp_c19a55 time:after {
+/* Edit timestamp (patched by discord) */
+/* .messageContent_c19a55 .timestamp_c19a55 time:after {
     content: " (" attr(aria-label) ")";
     font-size: 0.625rem;
     font-weight: 400;
@@ -29,7 +29,7 @@
 
 .messageContent_c19a55 .timestamp_c19a55 span {
     display: none;
-}
+} */
 
 /* Inline code `` `` */
 .visual-refresh .markup__75297 code.inline {
