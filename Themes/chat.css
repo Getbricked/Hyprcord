@@ -119,7 +119,7 @@
     display: none;
 }
 
-.messageContent_c19a55 .timestamp_c19a55>.hiddenVisually_b18fe2 {
+.message__5126c:not(.systemMessage__5126c) .messageContent_c19a55 .timestamp_c19a55>.hiddenVisually_b18fe2 {
     height: auto;
     clip: unset;
     clip-path: unset;
