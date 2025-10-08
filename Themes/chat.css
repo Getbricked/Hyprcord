@@ -113,3 +113,24 @@
     border-radius: 10px;
     border: var(--border);
 }
+
+/* Edited timestamp */
+.edited_c19a55 {
+    display: none;
+}
+
+.messageContent_c19a55 .timestamp_c19a55>.hiddenVisually_b18fe2 {
+    height: auto;
+    clip: unset;
+    clip-path: unset;
+    position: unset;
+    font-size: 0.625rem;
+}
+
+.messageContent_c19a55 .timestamp_c19a55>.hiddenVisually_b18fe2::before {
+    content: "(edited ";
+}
+
+.messageContent_c19a55 .timestamp_c19a55>.hiddenVisually_b18fe2::after {
+    content: ")";
+}
