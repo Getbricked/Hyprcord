@@ -43,3 +43,17 @@
     width: 104.1%;
     border-top-right-radius: 8px;
 }
+
+/* Old buttons on panel */
+.buttonChevron__37e49 {
+    display: none !important;
+}
+
+.buttons__37e49 {
+    gap: 15px;
+}
+
+button.button__67645,
+span.button__67645 {
+    width: 20px;
+}
