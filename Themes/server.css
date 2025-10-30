@@ -176,7 +176,6 @@
     border-radius: 10px;
     border: var(--border) !important;
     margin-top: var(--global-margin) !important;
-    margin-bottom: var(--global-margin) !important;
 }
 
 /* Separator between DM and Servers */
