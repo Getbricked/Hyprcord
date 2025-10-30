@@ -61,6 +61,8 @@
     padding-left: 5px;
     padding-right: 5px;
     width: calc(100% - var(--global-margin)) !important;
+    z-index: 0;
+    background: transparent;
 }
 
 /* Ctrl + K (Search bar) */
