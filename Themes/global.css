@@ -46,7 +46,7 @@
 }
 
 /* Top bar */
-#app-mount .container_c48ade .bar_c38106 {
+#app-mount:not(:has(.show_c38106)) .bar_c38106 {
     border: var(--border);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -54,7 +54,7 @@
 }
 
 /* User panel */
-.visual-refresh .panels_c48ade {
+.visual-refresh .panels__5e434 {
     border-radius: 10px;
     border: var(--border);
     padding: 0px;
@@ -96,7 +96,7 @@
 }
 
 /* DM + Channel list */
-.visual-refresh .privateChannels__35e86,
+.visual-refresh .privateChannels_e6b769,
 .visual-refresh .container__2637a {
     border-radius: 10px;
     margin: var(--global-margin);
@@ -104,7 +104,7 @@
     background: none !important;
 }
 
-.privateChannels__35e86 .scrollerBase_d125d2 {
+.privateChannels_e6b769 .scrollerBase_d125d2 {
     border: var(--border);
     border-radius: 10px;
     margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--global-margin));
