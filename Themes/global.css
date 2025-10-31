@@ -53,6 +53,10 @@
     margin: 0px !important;
 }
 
+.bar_c38106 {
+    background: var(--hsl-background-shading);
+}
+
 /* User panel */
 .visual-refresh .panels__5e434 {
     border-radius: 10px;
@@ -62,6 +66,12 @@
     padding-right: 5px;
     width: calc(100% - var(--global-margin)) !important;
     z-index: 0;
+}
+
+/* Server List */
+.visual-refresh .scroller_ef3116 {
+    background: var(--hsl-background-shading);
+    margin-bottom: var(--global-margin) !important;
 }
 
 /* Ctrl + K (Search bar) */
@@ -102,12 +112,17 @@
     border-radius: 10px;
     margin: var(--global-margin);
     margin-bottom: 0px;
+    background: transparent;
 }
 
 .privateChannels_e6b769 .scrollerBase_d125d2 {
     border: var(--border);
     border-radius: 10px;
     margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--global-margin));
+}
+
+.sidebarList__5e434 .scrollerBase_d125d2 {
+    background: var(--hsl-background-shading);
 }
 
 /* "Leaving discord" dialog when click on a link */

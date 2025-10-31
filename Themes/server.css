@@ -36,7 +36,7 @@
     border-top-right-radius: 10px;
     border-bottom: none;
     width: calc(100% - 2 * var(--bordersize) - 1px);
-    /* background: var(--hsl-card-shading); */
+    background: var(--hsl-background-shading);
 }
 
 /* Server Notice/Events */
