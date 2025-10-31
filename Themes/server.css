@@ -166,12 +166,6 @@
 }
 
 /* ------------------- OUTSIDE SERVER ------------------- */
-/* Server list */
-.visual-refresh .scroller_ef3116 {
-    border-radius: 10px;
-    border: var(--border) !important;
-    margin-top: var(--global-margin) !important;
-}
 
 /* Separator between DM and Servers */
 .visual-refresh .guildSeparator__252b6 {
