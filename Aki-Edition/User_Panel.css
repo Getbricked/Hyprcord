@@ -31,6 +31,7 @@
 .visual-refresh .panels__5e434 {
     width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) - 2 * var(--global-margin)) !important;
     left: calc(var(--global-margin) + 1px * var(--guildsize) + 2 * calc(10px * var(--guildsize) / 50)) !important;
+    background: transparent;
 }
 
 /* Span server list to the bottom */

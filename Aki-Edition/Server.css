@@ -38,3 +38,8 @@
 .newBadge_faa96b {
     color: var(--text-normal);
 }
+
+/* Channel title */
+:is(.theme-dark, .theme-light) .themed__9293f {
+    background: transparent;
+}

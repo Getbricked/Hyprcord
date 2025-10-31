@@ -11,6 +11,12 @@
     background: var(--card-shading);
 } */
 
+/* DM + Channel list */
+.visual-refresh .privateChannels_e6b769,
+.visual-refresh .container__2637a {
+    background: transparent !important;
+}
+
 /* Usernames in servers */
 .username__5d473 {
     font-size: 15px;

@@ -62,7 +62,6 @@
     padding-right: 5px;
     width: calc(100% - var(--global-margin)) !important;
     z-index: 0;
-    background: transparent;
 }
 
 /* Ctrl + K (Search bar) */
@@ -103,7 +102,6 @@
     border-radius: 10px;
     margin: var(--global-margin);
     margin-bottom: 0px;
-    background: none !important;
 }
 
 .privateChannels_e6b769 .scrollerBase_d125d2 {
