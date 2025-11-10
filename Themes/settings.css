@@ -17,7 +17,7 @@
 }
 
 /* Top bar */
-#app-mount:has(.show_c38106) .bar_c38106 {
+#app-mount:has(.show_c38106)>.bar_c38106 {
     border: var(--border);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
