@@ -68,12 +68,6 @@
     border: var(--border);
 }
 
-/* Screenshare */
-.root__7f727 {
-    border-radius: 10px;
-    border: var(--border) !important;
-}
-
 /* Button in voice call */
 .buttonSection__1405b {
     background: var(--hsl-card-shading);
