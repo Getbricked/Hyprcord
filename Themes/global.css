@@ -36,29 +36,29 @@
 }
 
 /* Global margin (outside margin) */
-.visual-refresh #app-mount .layers__960e4 {
+.visual-refresh #app-mount ._960e4207cea8323e-layers {
     margin: var(--global-margin);
 }
 
 /* Content margin (everything except top bar) */
-.content_c48ade {
+._5e434347c823b592-content {
     margin-top: 4px;
 }
 
 /* Top bar */
-#app-mount:not(:has(.show_c38106)) .bar_c38106 {
+#app-mount:not(:has(.c38106a3f0c3ca76-show)) .c38106a3f0c3ca76-bar {
     border: var(--border);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     margin: 0px !important;
 }
 
-.bar_c38106 {
+.c38106a3f0c3ca76-bar {
     background: var(--hsl-background-shading);
 }
 
 /* User panel */
-.visual-refresh .panels__5e434 {
+.visual-refresh ._5e434347c823b592-panels {
     border-radius: 10px;
     border: var(--border);
     padding: 0px;
@@ -69,7 +69,7 @@
 }
 
 /* Server List */
-.visual-refresh .scroller_ef3116 {
+.visual-refresh .ef3116c2da186559-scroller {
     background: var(--hsl-background-shading);
     border-radius: 10px;
     border: var(--border) !important;
@@ -78,23 +78,23 @@
 }
 
 /* Ctrl + K (Search bar) */
-.visual-refresh .quickswitcher_ac6cb0 {
+.visual-refresh .ac6cb02cd15b4b3b-quickswitcher {
     border: var(--border);
 }
 
 /* Border user profile */
-.outer_c0bea0 {
+.c0bea05627c5dc35-outer {
     border: var(--border);
 }
 
 /* Inbox (on top bar) */
-.visual-refresh .recentMentionsPopout__95796 {
+.visual-refresh ._957962c2bd49881b-recentMentionsPopout {
     border-radius: 10px;
     border: var(--border);
 }
 
 /* Inbox mentions */
-.recentMentionsPopout__95796 .messagesPopoutWrap__45690 {
+._957962c2bd49881b-recentMentionsPopout .e8b59c4b335dd2fc-messagesPopoutWrap {
     border: none;
 }
 
@@ -104,38 +104,38 @@
 }
 
 /* DM */
-.privateChannels__35e86 {
+.e6b7699ce8339e1c-privateChannels {
     border: none;
     border-radius: 8px;
 }
 
 /* DM + Channel list */
-.visual-refresh .privateChannels_e6b769,
-.visual-refresh .container__2637a {
+.visual-refresh .e6b7699ce8339e1c-privateChannels,
+.visual-refresh ._2637a2609f343032-container {
     border-radius: 10px;
     margin: var(--global-margin);
     margin-bottom: 0px;
     background: transparent;
 }
 
-.privateChannels_e6b769 .scrollerBase_d125d2 {
+.e6b7699ce8339e1c-privateChannels .d125d22cdfd32cfe-scrollerBase {
     border: var(--border);
     border-radius: 10px;
     margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--global-margin));
 }
 
-.sidebarList__5e434 .scrollerBase_d125d2 {
+._5e434347c823b592-sidebarList .d125d22cdfd32cfe-scrollerBase {
     background: var(--hsl-background-shading);
 }
 
 /* "Leaving discord" dialog when click on a link */
-.container__8a031 {
+._8a031a135bfcb9ba-container {
     background: var(--hsl-background-shading);
     border: var(--border);
 }
 
 /* ------------------- WINDOWS BUTTON ------------------- */
-.winButtons_c38106 {
+.c38106a3f0c3ca76-winButtons {
     display: flex;
     align-items: center;
     gap: 15px;
@@ -143,7 +143,7 @@
     background: none;
 }
 
-.winButton_c38106 {
+.c38106a3f0c3ca76-winButton {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -153,36 +153,36 @@
     cursor: pointer;
 }
 
-.winButton_c38106:hover {
+.c38106a3f0c3ca76-winButton:hover {
     opacity: 0.5;
 }
 
 /* Close button (red) */
-.winButtonClose_c38106 {
+.c38106a3f0c3ca76-winButtonClose {
     background: #ff5f57;
 }
 
 /* Minimize button (yellow) */
-.winButtonMinMax_c38106:nth-child(1) {
+.c38106a3f0c3ca76-winButtonMinMax:nth-child(1) {
     background: #ffbd2e;
 }
 
 /* Maximize button (green) */
-.winButtonMinMax_c38106:nth-child(2) {
+.c38106a3f0c3ca76-winButtonMinMax:nth-child(2) {
     background: #28c940;
 }
 
 /* Hide the Windows-style icons */
-.winButton_c38106 svg {
+.c38106a3f0c3ca76-winButton svg {
     display: none;
 }
 
 /* User's status */
-.outer_ab8609 {
+.ab86098b36386ff7-outer {
     background: var(--hsl-card-shading);
 }
 
-.inner_ab8609 {
+.ab86098b36386ff7-inner {
     background: transparent;
 
 }

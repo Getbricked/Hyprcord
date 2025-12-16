@@ -1,55 +1,55 @@
 /* ------------------- CHAT ------------------- */
 /* Chat input */
-.visual-refresh .form_f75fb0 {
+.visual-refresh .f75fb00fb7356cbe-form {
     padding-left: var(--global-margin);
     padding-right: var(--global-margin);
 }
 
 /* Right click on msg */
-.menu_c1e9c4 {
+.c1e9c47c23f12ca3-menu {
     border-radius: 10px;
     border: var(--border) !important;
 }
 
 /* Jump to present bar */
-.jumpToPresentBar__0f481 {
+._0f481cbbd7530492-jumpToPresentBar {
     background: var(--hsl-popout-shading);
     border: var(--border);
     border-radius: 10px;
 }
 
 /* On hover msg */
-.message__5126c.selected__5126c .buttonsInner__5126c,
-.mouse-mode .message__5126c:hover .buttonsInner__5126c {
+._5126c0cd07f243a0-message._5126c0cd07f243a0-selected ._5126c0cd07f243a0-buttonsInner,
+.mouse-mode ._5126c0cd07f243a0-message:hover ._5126c0cd07f243a0-buttonsInner {
     border: var(--border);
     border-radius: 10px;
 }
 
 /* Emoji + GIF + Stickers Box */
-.visual-refresh .contentWrapper__08434 {
+.visual-refresh ._084343c4f11eaaab-contentWrapper {
     border: var(--border);
     border-radius: 10px;
 }
 
 /* Emoji */
-.contentWrapper__08434 #emoji-picker-tab-panel {
+._084343c4f11eaaab-contentWrapper #emoji-picker-tab-panel {
     border: none;
 }
 
 /* Reaction emoji */
-.wrapper_c0e32c,
-.wrapper_c0e32c.isBurstReactionPicker_c0e32c {
+.c0e32c5cffed3d9f-wrapper,
+.c0e32c5cffed3d9f-wrapper.c0e32c5cffed3d9f-isBurstReactionPicker {
     border: var(--border);
     border-radius: 10px;
 }
 
 /* Chat contents */
-.scrollerInner__36d07 {
+._36d072eab2b2e737-scrollerInner {
     padding-left: calc(var(--global-margin) - var(--space-xs));
 }
 
 /* Search result panel */
-.visual-refresh .searchResultsWrap_a9e706 {
+.visual-refresh .a9e7064fdee8e9b0-searchResultsWrap {
     margin-top: var(--global-margin);
     margin-left: var(--global-margin);
     border-radius: 10px;
@@ -57,7 +57,7 @@
 }
 
 /* Notice */
-.visual-refresh .notice__6e2b9 {
+.visual-refresh ._6e2b9359c6f84cfd-notice {
     border-radius: 10px;
     margin-top: var(--global-margin);
     border: var(--bordersize, 1px) solid;
@@ -65,20 +65,20 @@
 }
 
 /* Upload attachment in chat input */
-.upload_aa605f {
+.aa605f19898fe32e-upload {
     border-radius: 10px;
     border: var(--border) !important;
 }
 
 /* Pinned message */
-.visual-refresh .messagesPopoutWrap_e8b59c {
+.visual-refresh .e8b59c4b335dd2fc-messagesPopoutWrap {
     border-radius: 10px;
     border: var(--border);
 }
 
 /* ------------------- THREAD ------------------- */
 /* Thread in chat */
-.visual-refresh .browser_d98031 {
+.visual-refresh .d98031d9a3e08b09-browser {
     border-radius: 10px;
     border: var(--border);
 }
@@ -89,25 +89,25 @@
 }
 
 /* Create a new thread */
-.visual-refresh .container__01ae2:not(:has(.layerContainer_da8173)) {
+.visual-refresh ._01ae244280823725-container:not(:has(._59d0d7075b521375-layerContainer)) {
     border-radius: 10px;
     border: var(--border);
     margin-top: var(--global-margin);
 }
 
-.visual-refresh .container__01ae2:not(:has(.layerContainer_da8173)) .container__9293f {
+.visual-refresh ._01ae244280823725-container:not(:has(._59d0d7075b521375-layerContainer)) ._9293f6b2fc12398a-container {
     margin-left: var(--global-margin);
     width: calc(100% - 2 * var(--global-margin));
 }
 
-.container__01ae2 .submitContainer_fb64c9 {
+._01ae244280823725-container .fb64c9a451c49797-submitContainer {
     padding-top: var(--global-margin);
     padding-bottom: var(--global-margin);
     padding-left: calc(var(--global-margin) - 8px);
 }
 
 /* Message requests spam */
-.hamBanner__6a41e {
+._6a41ee0bd29b83e9-hamBanner {
     background-color: var(--hsl-card-shading);
     margin-top: var(--global-margin);
     border-radius: 10px;
@@ -115,11 +115,11 @@
 }
 
 /* Edited timestamp */
-.edited_c19a55 {
+.c19a557985eb7793-edited {
     display: none;
 }
 
-.message__5126c:not(.systemMessage__5126c) .messageContent_c19a55 .timestamp_c19a55>.hiddenVisually_b18fe2 {
+._5126c0cd07f243a0-message:not(._5126c0cd07f243a0-systemMessage) .c19a557985eb7793-messageContent .c19a557985eb7793-timestamp>.b18fe29d6fe8dd82-hiddenVisually {
     height: auto;
     clip: unset;
     clip-path: unset;
@@ -127,10 +127,10 @@
     font-size: 0.625rem;
 }
 
-.messageContent_c19a55 .timestamp_c19a55>.hiddenVisually_b18fe2::before {
+.c19a557985eb7793-messageContent .c19a557985eb7793-timestamp>.b18fe29d6fe8dd82-hiddenVisually::before {
     content: "(edited ";
 }
 
-.messageContent_c19a55 .timestamp_c19a55>.hiddenVisually_b18fe2::after {
+.c19a557985eb7793-messageContent .c19a557985eb7793-timestamp>.b18fe29d6fe8dd82-hiddenVisually::after {
     content: ")";
 }

@@ -1,5 +1,5 @@
 /* Friends List Header Fix */
-.visual-refresh .headerText__99e7c {
+.visual-refresh ._99e7cad8d4c55236-headerText {
     display: flex;
     text-transform: uppercase;
     font-size: 14.5px;
@@ -8,8 +8,8 @@
 }
 
 /* DM Username Color and Size */
-.linkButtonIcon__972a0,
-.name__20a53 {
+._972a0d22c8afa7f0-linkButtonIcon,
+._20a53846fe2e8513-name {
     font-size: 14px;
     text-shadow: #000000 0px 0px 2px;
     font-weight: 700;
@@ -18,11 +18,11 @@
 }
 
 /* Friends List size */
-.username__0a06e {
+._0a06ed6ea040aa1b-username {
     font-size: 15px;
 }
 
-.subtext__0a06e {
+.sub_0a06ed6ea040aa1b-text {
     color: white;
 }
 
@@ -31,6 +31,6 @@
 }
 
 /* Selected Interactive in DM */
-.visual-refresh .interactive__972a0.interactiveSelected__972a0::before {
+.visual-refresh ._972a0d22c8afa7f0-interactive._972a0d22c8afa7f0-interactiveSelected::before {
     background: linear-gradient(to right, var(--hsl-main-color), transparent);
 }

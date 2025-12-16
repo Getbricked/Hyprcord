@@ -1,23 +1,23 @@
 /* ------------------- SETTINGS ------------------- */
 /* Sidebar */
-.visual-refresh .sidebarRegion__23e6b {
+.visual-refresh ._23e6b439306f125a-sidebarRegion {
     margin-right: var(--global-margin);
 }
 
 /* Content + Sidebar */
-.contentRegion__23e6b,
-.visual-refresh .sidebarRegion__23e6b {
+._23e6b439306f125a-contentRegion,
+.visual-refresh ._23e6b439306f125a-sidebarRegion {
     border-radius: 10px;
     border: var(--border);
 }
 
 /* Global */
-.visual-refresh .standardSidebarView__23e6b {
+.visual-refresh ._23e6b439306f125a-standardSidebarView {
     margin-top: calc(var(--global-margin) + var(--custom-app-top-bar-height) + 4px);
 }
 
 /* Top bar */
-#app-mount:has(.show_c38106)>.bar_c38106 {
+#app-mount:has(.c38106a3f0c3ca76-show)>.c38106a3f0c3ca76-bar {
     border: var(--border);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 10px;

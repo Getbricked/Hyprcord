@@ -1,10 +1,10 @@
 /* ------------------- DIRRECT MESSAGE ------------------- */
 /* Show User Profile */
-.content_f75fb0 .inner_c0bea0 {
+.f75fb00fb7356cbe-content .c0bea05627c5dc35-inner {
     border-radius: 10px;
 }
 
-.content_f75fb0 .outer_c0bea0 {
+.f75fb00fb7356cbe-content .c0bea05627c5dc35-outer {
     border-radius: 10px;
     border: var(--border);
     margin-top: var(--global-margin);
@@ -14,28 +14,28 @@
 
 /* ------------------- FRIENDS ------------------- */
 /* Now playing + Friend list */
-.nowPlayingColumn__133bf,
-.visual-refresh .peopleColumn__133bf {
+._133bf5eea8e33a34-nowPlayingColumn,
+.visual-refresh ._133bf5eea8e33a34-peopleColumn {
     border-radius: 10px;
     border: var(--border);
     margin-top: var(--global-margin);
 }
 
 /* Friend list */
-.visual-refresh .peopleColumn__133bf {
+.visual-refresh ._133bf5eea8e33a34-peopleColumn {
     margin-right: var(--global-margin);
 }
 
 /* ------------------- SHOP ------------------- */
 /* Shop header + Shop + Nitro */
-.mainPageScroller_ca1a02,
-.visual-refresh .shop__08415,
-.mainPageScroller_ca1a02 {
+.ca1a02dcad190ff8-mainPageScroller,
+.visual-refresh ._084152b107f71237-shop,
+.ca1a02dcad190ff8-mainPageScroller {
     border-radius: 10px;
     margin-top: var(--global-margin);
     border: var(--border);
 }
 
-.visual-refresh .shop__6db1d {
+.visual-refresh ._6db1d32c47b6ad72-shop {
     background: transparent;
 }

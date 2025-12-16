@@ -1,5 +1,5 @@
 /* Role groups */
-.membersGroup_c8ffbb {
+.c8ffbb79449f399c-membersGroup {
     background: rgba(32, 181, 255, 0.025);
     color: var(--hsl-main-color);
     margin: auto;
@@ -7,44 +7,44 @@
 }
 
 /* Members list */
-/* .visual-refresh .members_c8ffbb {
+/* .visual-refresh .c8ffbb79449f399c-members {
     background: var(--card-shading);
 } */
 
 /* DM + Channel list */
-.visual-refresh .privateChannels_e6b769,
-.visual-refresh .container__2637a {
+.visual-refresh .e6b7699ce8339e1c-privateChannels,
+.visual-refresh ._2637a2609f343032-container {
     background: transparent !important;
 }
 
 /* Usernames in servers */
-.username__5d473 {
+._5d473ecff348c314-username {
     font-size: 15px;
     font-weight: 600;
 }
 
 /* Selected user with role color */
-.nameContainer__703b9[style^="color:"]:after {
+._703b91fc872193e8-nameContainer[style^="color:"]:after {
     background: linear-gradient(to right, currentColor, transparent) !important;
 }
 
 /* Selected user with no role color */
-.nameContainer__703b9:after {
+._703b91fc872193e8-nameContainer:after {
     background: linear-gradient(to right, var(--hsl-main-color), transparent) !important;
 }
 
 /* Selected user with gradient color */
-.nameContainer__703b9:has(.threeColorGradient_e5de78):after,
-.nameContainer__703b9:has(.twoColorGradient_e5de78):after {
+._703b91fc872193e8-nameContainer:has(.e5de7811b2777bfa-threeColorGradient):after,
+._703b91fc872193e8-nameContainer:has(.e5de7811b2777bfa-twoColorGradient):after {
     background: linear-gradient(to right, rgba(255, 255, 255, 0.6), transparent) !important;
 }
 
 /* Fix tag on username */
-.username__703b9 {
+._703b91fc872193e8-username {
     overflow: hidden;
 }
 
 /* Tag and Owner only on hover */
-.memberInner__5d473 :not(.selected, :hover) :is(.clanTag__5d473, .ownerIcon__5d473) {
+._5d473ecff348c314-memberInner :not(.selected, :hover) :is(._5d473ecff348c314-clanTag, ._5d473ecff348c314-ownerIcon) {
     display: none
 }

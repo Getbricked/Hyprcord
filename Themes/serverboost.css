@@ -1,18 +1,18 @@
 /* ------------------- SERVER BOOST (NEW) ------------------- */
 /* Content Container */
-.contentContainer__89463 {
+._8946359d8adb1488-contentContainer {
     margin-top: var(--global-margin);
     border-radius: 10px;
     border: var(--border);
 }
 
 /* Active boost */
-.container__98cbd.active__98cbd {
+._5573a546299c96e8-container._5573a546299c96e8-active {
     border-color: var(--success-color);
 }
 
 /* Emoji/Image for role (Boost level 2) */
-.contentWrapper_d507dd {
+.d507dd94ed2580e5-contentWrapper {
     background-color: var(--hsl-popout-shading);
 }
 
@@ -20,6 +20,6 @@
     background-color: var(--hsl-main-color);
 }
 
-.contentWrapper_d507dd #emoji-picker-tab-panel {
+.d507dd94ed2580e5-contentWrapper #emoji-picker-tab-panel {
     border: none;
 }

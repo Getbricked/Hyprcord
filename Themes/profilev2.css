@@ -1,41 +1,41 @@
 /* Banner */
-.user-profile-modal-v2 :where(.banner__68edb) {
+.user-profile-modal-v2 :where(._68edb95846a37624-banner) {
     border-radius: 10px;
 }
 
 /* Inner profile */
-.profile__9c3be {
+._9c3bea41fd465666-profile {
     border: var(--border);
 }
 
 /* Big profile */
-.custom-user-profile-theme.user-profile-modal-v2 .inner_c0bea0 {
+.custom-user-profile-theme.user-profile-modal-v2 .c0bea05627c5dc35-inner {
     background: var(--hsl-card-shading);
 }
 
 /* Big background profile */
-.backgroundImage__9c3be {
+._9c3bea41fd465666-backgroundImage {
     background-size: 100%;
     opacity: .7;
     filter: none;
 }
 
-.backgroundImage__9c3be:after {
+._9c3bea41fd465666-backgroundImage:after {
     backdrop-filter: none;
 }
 
 /* Activities */
-.card__39ec2 {
+._39ec2e3dfb4fd2f2-card {
     border: var(--border);
 }
 
 /* No nitro user */
-.outer_c0bea0:not(.custom-user-profile-theme) {
+.c0bea05627c5dc35-outer:not(.custom-user-profile-theme) {
     border: var(--border);
 }
 
 /* Nitro user */
-.backgroundImage__9c3be {
+._9c3bea41fd465666-backgroundImage {
     background-image: var(--background-image) !important;
     mask-image: none;
     filter: brightness(0.6);

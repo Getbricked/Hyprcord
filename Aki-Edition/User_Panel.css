@@ -1,60 +1,60 @@
 /* Activity panel border */
-.visual-refresh .panel__5dec7 {
+.visual-refresh ._5dec784a68542d60-panel {
     border-bottom: 1px solid var(--hsl-main-color);
 }
 
 /* ------------------------ VOICE CHAT ------------------------ */
 /* Voice chat panel border */
-.panels__5e434:not(:has(.container__4bbc6)) .wrapper_e131a9:has(.container_e131a9) {
+._5e434347c823b592-panels:not(:has(._4bbc6dc06e75ad52-container)) .e131a99484292a19-wrapper:has(.e131a99484292a19-container) {
     border-bottom: 1px solid var(--hsl-main-color);
 }
 
 /* Voice chat button */
-.visual-refresh .button_e131a9.buttonColor_e131a9.buttonColor_e131a9 {
+.visual-refresh .e131a99484292a19-button.e131a99484292a19-buttonColor.e131a99484292a19-buttonColor {
     background: rgba(255, 255, 255, 0.089);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* Soundboard */
-.visual-refresh .soundButton__9be63 {
+.visual-refresh ._9be63f0b86033228-soundButton {
     border: var(--border)
 }
 
 /* In voice chat streaming button */
-.visual-refresh .button_e131a9.buttonColor_e131a9.buttonActive_e131a9 {
+.visual-refresh .e131a99484292a19-button.e131a99484292a19-buttonColor.e131a99484292a19-buttonActive {
     background: hsl(from var(--success-color) h s l / 0.4);
     color: var(--button-secondary-text);
     border-color: hsl(from var(--success-color) h s l / 0.5);
 }
 
 /* Old User Panel */
-.visual-refresh .panels__5e434 {
+.visual-refresh ._5e434347c823b592-panels {
     width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) - 2 * var(--global-margin)) !important;
     left: calc(var(--global-margin) + 1px * var(--guildsize) + 2 * calc(10px * var(--guildsize) / 50)) !important;
     background: transparent;
 }
 
 /* Span server list to the bottom */
-.guilds__5e434 {
+._5e434347c823b592-guilds {
     margin-bottom: 0px;
 }
 
 /* Nameplate fix */
-.panels__5e434 .container__4bbc6 {
+._5e434347c823b592-panels ._4bbc6dc06e75ad52-container {
     width: 104.1%;
     border-top-right-radius: 8px;
 }
 
 /* Old buttons on panel */
-.buttonChevron__37e49 {
+._37e49614b9f110a9-buttonChevron {
     display: none !important;
 }
 
-.buttons__37e49 {
+._37e49614b9f110a9-buttons {
     gap: 15px;
 }
 
-button.button__67645,
-span.button__67645 {
+button._67645e1530f1195d-button,
+span._67645e1530f1195d-button {
     width: 20px;
 }

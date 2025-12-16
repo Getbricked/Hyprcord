@@ -1,93 +1,93 @@
 /* --------------------- In chat --------------------- */
 
 /* Link text */
-/* .markup__75297 .anchor_edefb8 {
+/* ._752971923a1e6683-markup .edefb8e22d63c542-anchor {
  color: black;
  }  */
 
 /* SPOILER */
-.spoilerContent__54ab5,
-.spoilerMarkdownContent__54ab5,
-.hidden__54ab5 {
+._299eb87491f4b6d1-spoilerContent,
+._299eb87491f4b6d1-spoilerMarkdownContent,
+._299eb87491f4b6d1-hidden {
     background: rgba(0, 0, 0, 1) !important;
     padding: 5px;
     border-radius: 4px;
 }
 
 /* Mention */
-.mentioned__5126c {
+._5126c0cd07f243a0-mentioned {
     --background-mentioned: rgba(255, 229, 84, 0.15);
     --background-mentioned-hover: rgba(255, 229, 84, 0.15);
 }
 
 /* Edit timestamp (patched by discord) */
-/* .messageContent_c19a55 .timestamp_c19a55 time:after {
+/* .c19a557985eb7793-messageContent .c19a557985eb7793-timestamp time:after {
     content: " (" attr(aria-label) ")";
     font-size: 0.625rem;
     font-weight: 400;
 }
 
-.messageContent_c19a55 .timestamp_c19a55 span {
+.c19a557985eb7793-messageContent .c19a557985eb7793-timestamp span {
     display: none;
 } */
 
 /* Inline code `` `` */
-.visual-refresh .markup__75297 code.inline {
+.visual-refresh ._752971923a1e6683-markup code.inline {
     background: rgba(0, 0, 0, 1);
 }
 
 /* User display in chat */
-.username_c19a55,
-.markup__75297 strong {
+.c19a557985eb7793-username,
+._752971923a1e6683-markup strong {
     font-weight: 900;
 }
 
 /* Date Time divider in chat */
-.content__908e2 {
+._908e20001ad67812-content {
     color: var(--hsl-main-color);
 }
 
 /* Divider for new chat */
-.unreadPill__908e2,
-.divider__908e2:has(.unreadPill__908e2) {
+._908e20001ad67812-unreadPill,
+._908e20001ad67812-divider:has(._908e20001ad67812-unreadPill) {
     background-color: var(--hsl-main-color);
 }
 
 /* New chat top bar */
-.visual-refresh .newMessagesBar__0f481 {
+.visual-refresh ._0f481cbbd7530492-newMessagesBar {
     border-radius: 10px;
     background: linear-gradient(360deg, var(--hsl-main-color), transparent);
     border: none;
 }
 
 /* Server Invite link display */
-.guildInviteContainer__083ae {
+._083ae98ea5145b08-guildInviteContainer {
     background: var(--card-shading);
     border: 1px solid var(--hsl-main-color);
 }
 
-.footerContent__083ae {
+._083ae98ea5145b08-footerContent {
     background: none;
 }
 
 /* --------------------- Bottom --------------------- */
 
 /* Chat input */
-.scrollableContainer__74017,
-.themedBackground__74017 {
+._740174f3d6a2c8fe-scrollableContainer,
+._740174f3d6a2c8fe-themedBackground {
     background: var(--card-shading);
 }
 
 /* WHO IS CHATTING */
-.text_b88801 {
+.b8880176888cc928-text {
     font-size: 14px;
 }
 
 /* --------------------- Popout (right-click) --------------------- */
 
 /* More visible Delete Message button */
-.colorDanger_c1e9c4,
-.colorDanger_c1e9c4 .label_c1e9c4 {
+.c1e9c47c23f12ca3-colorDanger,
+.c1e9c47c23f12ca3-colorDanger .c1e9c47c23f12ca3-label {
     color: rgb(255, 64, 64);
     font-weight: 600;
 }
