@@ -7,8 +7,8 @@
  * @invite dHaSxn3
  */
 
-/* ServerColumns addon */
-@import url(https://mwittrien.github.io/BetterDiscordAddons/Themes/ServerColumns/ServerColumns.css);
+/* ServerColumns addon temp fix */
+@import url(https://gist.githubusercontent.com/Getbricked/76a9c00c854146ed39a11c72969dfb71/raw/d07cde506695f8029d5d33b6f8fc80b46b3892ae/ServerColumns-temp.css); 
 
 /* IMPORT SOURCE (Themes) */
 @import url(https://getbricked.github.io/Hyprcord/Themes/forum.css);
