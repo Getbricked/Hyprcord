@@ -1,0 +1,43 @@
+@use "../backend" as *;
+
+// ------------------- DIRECT MESSAGE -------------------
+// Show User Profile
+#{c(main server content)} #{c(main profile modalInner)} {
+    border-radius: cv('hyprcord.radius');
+}
+
+#{c(main server content)} #{c(main profile modalOuter)} {
+    border-radius: cv('hyprcord.radius');
+    border: cv('hyprcord.border');
+    margin-top: cv('hyprcord.margin');
+    margin-left: cv('hyprcord.margin');
+    height: calc(100% - var(--global-margin) - var(--bordersize) * 2);
+}
+
+// ------------------- FRIENDS -------------------
+// Now playing + Friend list
+#{c(main friendsDM nowPlayingColumn)},
+#{c(main visualRefresh)} #{c(main friendsDM peopleColumn)} {
+    border-radius: cv('hyprcord.radius');
+    border: cv('hyprcord.border');
+    margin-top: cv('hyprcord.margin');
+}
+
+// Friend list
+#{c(main visualRefresh)} #{c(main friendsDM peopleColumn)} {
+    margin-right: cv('hyprcord.margin');
+}
+
+// ------------------- SHOP -------------------
+// Shop header + Shop + Nitro
+#{c(main shop mainPageScroller)},
+#{c(main visualRefresh)} #{c(main shop shop)},
+#{c(main shop mainPageScroller)} {
+    border-radius: cv('hyprcord.radius');
+    margin-top: cv('hyprcord.margin');
+    border: cv('hyprcord.border');
+}
+
+#{c(main visualRefresh)} #{c(main shop shop)} {
+    background: transparent;
+}

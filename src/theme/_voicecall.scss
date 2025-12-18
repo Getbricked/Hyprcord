@@ -1,0 +1,103 @@
+@use "../backend" as *;
+
+// ------------------- VOICE CALL -------------------
+
+// Title
+#{c(main visualRefresh)} #{c(main voiceCall wrapper)} #{c(main server title)} {
+    border: none;
+    margin: 0px;
+}
+
+// Call in DM
+#{c(main voiceCall wrapper)}#{c(main voiceCall minimum)} {
+    background: transparent;
+}
+
+#{c(main voiceCall callContainer)} {
+    background: var(--hsl-card-shading) !important;
+}
+
+// Fullscreen mode
+#{c(main voiceCall callContainer)} {
+    border: cv('hyprcord.border') !important;
+    border-radius: 8px;
+    margin-top: cv('hyprcord.margin');
+}
+
+// Header
+#{c(main visualRefresh)} #{c(main voiceCall wrapper)} #{c(main header container)} {
+    border-radius: cv('hyprcord.radius');
+    border: none;
+    margin-top: cv('hyprcord.margin');
+}
+
+// Hide user
+#{c(main voiceCall wrapper)}:has(#{c(main voiceCall noBorder)}) #{c(main voiceCall videoWrapper)} {
+    border: none;
+}
+
+// Picture in picture + Fullscreen mode
+#{c(main voiceCall borderRadius)},
+#{c(main voiceCall videoWrapper)} {
+    border-radius: 8px;
+    border: cv('hyprcord.border');
+}
+
+// Stage
+#{c(main server chatContent)}:has(#{c(main voiceCall stageContainer)}) {
+    margin-top: cv('hyprcord.margin');
+    border-radius: cv('hyprcord.radius');
+    border: cv('hyprcord.border') !important;
+}
+
+#{c(main voiceCall stageContainer)} {
+    margin-top: calc(2 * var(--global-margin));
+    border-radius: cv('hyprcord.radius');
+    border: cv('hyprcord.border');
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#{c(main voiceCall tileContainer)} {
+    margin-top: calc(var(--global-margin) / 2);
+    border-radius: cv('hyprcord.radius');
+    border: cv('hyprcord.border');
+}
+
+// Soundboard + Activities
+#{c(main voiceCall soundboardPicker)},
+#{c(main voiceCall drawerSizingWrapper)} {
+    border-radius: cv('hyprcord.radius');
+    border: cv('hyprcord.border');
+}
+
+// Button in voice call
+#{c(main voiceCall buttonSection)} {
+    background: var(--hsl-card-shading);
+    border: cv('hyprcord.border');
+}
+
+#{c(main voiceCall colorable)}#{c(main voiceCall disconnect)} {
+    border: cv('hyprcord.border') !important;
+    border-radius: 12px !important;
+}
+
+// Change voice chat region
+.theme-dark #{c(main voiceCall quickSelectPopout)} {
+    background: var(--hsl-popout-shading);
+    border: cv('hyprcord.border');
+    border-radius: cv('hyprcord.radius');
+}
+
+// Empty voice call
+#{c(main voiceCall wrapper)}#{c(main voiceCall wrapperSidebarOpen)} {
+
+    #{c(main voiceCall callContainer)},
+    #{c(main voiceCall callContent)} {
+        border-radius: cv('hyprcord.radius');
+    }
+}
+
+#{c(main thread container)} {
+    padding-left: calc(var(--global-margin) - var(--chat-resize-handle-width) - 2px);
+}

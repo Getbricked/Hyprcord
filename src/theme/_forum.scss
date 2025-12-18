@@ -1,0 +1,33 @@
+@use "../backend" as *;
+
+// ------------------- FORUM -------------------
+
+// Forum container + header
+#{c(main visualRefresh)} #{c(main forum container)},
+#{c(main visualRefresh)} #{c(main header container)} {
+    border-radius: cv('hyprcord.radius');
+    border: cv('hyprcord.border');
+    margin-top: cv('hyprcord.margin');
+}
+
+// Left side
+#{c(main visualRefresh)} #{c(main chat chat)}#{c(main chat threadSidebarOpen)} {
+    margin-right: calc(var(--global-margin) - var(--chat-resize-handle-width) - 1px);
+}
+
+// Forum Notice
+#{c(main visualRefresh)} #{c(main forum noticeHeader)} {
+    background: linear-gradient(360deg, var(--hsl-main-color) -100%, transparent);
+    border-radius: cv('hyprcord.radius');
+}
+
+// Pinned thread in forum
+#{c(main visualRefresh)} #{c(main forum chatHeaderBar)} {
+    border-radius: cv('hyprcord.radius');
+    background: color-mix(in srgb, var(--hsl-main-color) 30%, transparent);
+}
+
+// New thread image upload button
+#{c(main visualRefresh)} #{c(main forum uploadInput)} {
+    background-color: var(--background-secondary-alt);
+}

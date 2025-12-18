@@ -1,0 +1,24 @@
+{
+  "name": "hyprcord",
+  "description": "ClearVision v7 Hyprcord theme",
+  "license": "Apache-2.0",
+  "author": "Getbricked",
+  "main": "index.js",
+  "scripts": {
+    "test": "sass src:test --load-path=src --style=expanded --no-source-map",
+    "build": "pnpm run build-u && pnpm run build-m && pnpm run build-dist",
+    "build-u": "sass src:public-unminified --load-path=src --style=expanded --no-source-map && postcss public-unminified/*.css -d public-unminified/ -u autoprefixer --no-map",
+    "build-m": "sass src:public --load-path=src --style=compressed --no-source-map && postcss public/*.css -d public/ -u autoprefixer --no-map",
+    "build-dist": "sass dist:. --load-path=src --style=expanded --no-source-map",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "npm": "^8.19.4",
+    "pnpm": "^7.33.7",
+    "postcss": "^8.5.1",
+    "postcss-cli": "^10.1.0",
+    "prettier": "^3.5.1",
+    "sass": "^1.83.4"
+  }
+}

@@ -1,0 +1,46 @@
+@use "../backend" as *;
+
+// ------------------- PROFILE V2 -------------------
+
+// Banner
+.user-profile-modal-v2 :where(#{c(main profile banner)}) {
+    border-radius: cv('hyprcord.radius');
+}
+
+// Inner profile
+#{c(main profile profileContainer)} {
+    border: cv('hyprcord.border');
+}
+
+// Big profile
+.custom-user-profile-theme.user-profile-modal-v2 #{c(main profile modalInner)} {
+    background: var(--hsl-card-shading);
+}
+
+// Big background profile
+#{c(main profile backgroundImage)} {
+    background-size: 100%;
+    opacity: .7;
+    filter: none;
+}
+
+#{c(main profile backgroundImage)}:after {
+    backdrop-filter: none;
+}
+
+// Activities
+#{c(main profile activitiesCard)} {
+    border: cv('hyprcord.border');
+}
+
+// No nitro user
+#{c(main profile modalOuter)}:not(.custom-user-profile-theme) {
+    border: cv('hyprcord.border');
+}
+
+// Nitro user
+#{c(main profile backgroundImage)} {
+    background-image: var(--background-image) !important;
+    mask-image: none;
+    filter: brightness(0.6);
+}

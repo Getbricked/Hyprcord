@@ -1,0 +1,16 @@
+@use "../backend" as *;
+
+// Nameplate in member list
+#{c(main memberList member)} #{c(main profile nameplateContainer)} {
+    left: -4px;
+    width: 101.4%;
+}
+
+// Nameplate in user panel
+#{c(main visualRefresh)} #{c(main global panels)} #{c(main profile nameplateContainer)} {
+    border-radius: inherit;
+    left: -4px;
+    top: 0px;
+    height: 103%;
+    width: 103%;
+}

@@ -1,0 +1,28 @@
+@use "../backend" as *;
+
+// ------------------- SERVER BOOST (NEW) -------------------
+
+// Content Container
+#{c(main serverBoost contentContainer)} {
+    margin-top: cv('hyprcord.margin');
+    border-radius: cv('hyprcord.radius');
+    border: cv('hyprcord.border');
+}
+
+// Active boost
+#{c(main serverBoost activeContainer)} #{c(main serverBoost activeContainer)}-active {
+    border-color: var(--hsl-success-color);
+}
+
+// Emoji/Image for role (Boost level 2)
+#{c(main serverBoost contentWrapper)} {
+    background-color: var(--hsl-popout-shading);
+}
+
+#{c(main serverBoost navButtonActive)} {
+    background-color: var(--hsl-main-color);
+}
+
+#{c(main serverBoost contentWrapper)} #emoji-picker-tab-panel {
+    border: none;
+}

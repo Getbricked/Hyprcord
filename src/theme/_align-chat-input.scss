@@ -1,0 +1,13 @@
+@use "backend" as *;
+
+// ------------------- ALIGN CHAT INPUT -------------------
+
+// DM list
+#{c(main alignChatInput)} #{c(main server container)} {
+    padding-bottom: calc(var(--custom-app-panels-height, 0) + var(--space-xs) - 6px);
+}
+
+// Server list
+#{c(main alignChatInput)} #{c(main guildList wrapper)} {
+    margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--space-xs) - 6px);
+}

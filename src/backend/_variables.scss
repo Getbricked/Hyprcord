@@ -1,0 +1,147 @@
+// ClearVision v7 SCSS Variables https://github.com/ClearVision/ClearVision-v7/blob/master/src/backend/_variables.scss
+
+@use 'sass:map';
+@use 'sass:string';
+
+/// Get a variable from the ClearVision variables map
+/// @param {string} $id identification for a variable
+/// @return {*} variable
+@function cv($id) {
+    $p: 'settings';
+    $s: $id;
+
+    @if string.index($id, '.') {
+        $p: string.slice($id, 0, string.index($id, '.') - 1);
+        $s: string.slice($id, string.index($id, '.') + 1);
+    }
+
+    // @if $p == 'const' {
+    // 	$p: 'constants';
+    // }
+    // @if $p == 'dc' or $p == 'disc' {
+    // 	$p: 'discord';
+    // }
+    $r: map.get($cv, $p);
+
+    @if not $r {
+        @error "#{$p} is not a valid ClearVision set";
+    }
+
+    @while string.index($s, '.') {
+        $r: map.get($r, string.slice($s, 0, string.index($s, '.') - 1));
+
+        @if not $r {
+            @error "Property #{$id} not found in ClearVision #{$p} set";
+        }
+
+        $s: string.slice($s, string.index($s, '.') + 1);
+    }
+
+    $r: map.get($r, $s);
+
+    @if not $r {
+        @error "Property #{$id} not found in ClearVision #{$p} set";
+    }
+
+    @return $r;
+}
+
+// CLEARVISION VARIABLES
+$cv: (
+    // These colors are the hidden "backend" colors.
+    // The default values for these contain calculations involving `var(--saturation-factor,1)`.
+    // Exposed "frontend" values are simply a hex code.
+    color: (main: var(--hsl-main-color),
+        // main accent color, obviously
+        hover: var(--hsl-hover-color),
+        // secondary accent color, used when hovering over (some) things with main accent color
+        success: var(--hsl-success-color),
+        // mainly used for green buttons
+        warning: var(--hsl-warning-color),
+        // best shown when changing someone else's nickname
+        danger: var(--hsl-danger-color),
+        // mainly used for red buttons; Settings > My Account > scroll down to "Account Removal"
+        info: var(--hsl-info-color),
+        // random blue info boxes i guess
+        online: var(--hsl-online-color),
+        // status: online, online on mobile
+        idle: var(--hsl-idle-color),
+        // status: idle
+        dnd: var(--hsl-dnd-color),
+        // status: dnd
+        streaming: var(--hsl-streaming-color),
+        // status: streaming
+        offline: var(--hsl-offline-color),
+        // status: invisible, offline
+    ),
+    // SHADINGS - TO BE USED IN .theme-light AND .theme-dark
+    shading: (bg: var(--hsl-background-shading),
+        // app background
+        percent: var(--background-shading-percent),
+        // shading amount
+        card: var(--hsl-card-shading),
+        cardAlt: var(--background-mod-subtle),
+        // mainly used for embeds, most modals, random things
+        popout: var(--hsl-popout-shading),
+        modal: var(--hsl-modal-shading),
+        // discord vars
+        input: (bg: var(--hsl-input-shading),
+            border: var(--hsl-input-border-shading),
+        ),
+        hover: var(--background-mod-subtle),
+    ),
+    // TEXT COLORS - ALSO TO BE USED IN .theme-light AND .theme-dark
+    text: (normal: var(--text-default),
+        muted: var(--text-muted),
+        strong: var(--text-strong),
+        interactive: var(--interactive-text-normal),
+    ),
+
+    // FONT
+    font: (main: var(--main-font),
+        code: var(--code-font),
+    ),
+
+    // These only have the image, attachment and filter variables.
+    // Default for full background shorthand is as follows:
+    // shorthand: var(img) <position> / <size> <repeat> var(attachment)
+    // -
+    // color: transparent (calculated)
+    // image: (variable)
+    // position: center
+    // size: cover
+    // repeat: no-repeat
+    // attachment: (variable; default fixed)
+    // ---
+    // Filter would use backdrop-filter. Default value is none.
+    bg: ( // APP BACKGROUND - MAIN BACKGROUND YOU SEE EVERYWHERE
+        app: (img: var(--background-image),
+            pos: var(--background-position),
+            size: var(--background-size),
+            attach: var(--background-attachment),
+            filter: var(--background-filter),
+        ),
+        // USER POPOUT BACKGROUND - NON-NITRO PROFILE POPOUT MODAL
+        popout: (img: var(--user-popout-image),
+            pos: var(--user-popout-position),
+            size: var(--user-popout-size),
+            attach: var(--user-popout-attachment),
+            filter: var(--user-popout-filter),
+        ),
+        // USER MODAL BACKGROUND - NON-NITRO PROFILE MODAL
+        modal: (img: var(--user-modal-image),
+            pos: var(--user-modal-position),
+            size: var(--user-modal-size),
+            attach: var(--user-modal-attachment),
+            filter: var(--user-modal-filter),
+        )),
+    // HOME BUTTON - BUTTON ABOVE YOUR SERVERS
+    home: (icon: var(--home-icon),
+        size: var(--home-size),
+    ),
+
+    // BORDERS AND MARGINS
+    hyprcord: (radius: 10px,
+        border: var(--bordersize, 1px) solid var(--hsl-main-color),
+        margin: var(--global-margin, 10px)),
+);

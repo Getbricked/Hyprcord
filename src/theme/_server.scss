@@ -1,0 +1,228 @@
+@use "../backend" as *;
+
+// ------------------- IN SERVER -------------------
+// Chat + Chat header + Member list + Server guide + Channels and roles
+#{c(main server chatContent)},
+#{c(main visualRefresh)} #{c(main server title)},
+#{c(main memberList members)},
+#{c(main server channelsAndRolesBackground)} :is(#{c(main global scrollerBase)}) {
+    border-radius: cv('hyprcord.radius');
+    border: cv('hyprcord.border');
+    margin-top: cv('hyprcord.margin');
+}
+
+// Member list
+#{c(main memberList members)} {
+    margin-left: cv('hyprcord.margin');
+    border: cv('hyprcord.border');
+}
+
+// Rules to submit before enter
+#{c(main server rulesContainer)} {
+    border: cv('hyprcord.border');
+    border-radius: cv('hyprcord.radius');
+    background: cv('shading.card');
+}
+
+// Members
+#{c(main visualRefresh)} #{c(main server membersMainTableContainer)} {
+    border-radius: cv('hyprcord.radius');
+    border: cv('hyprcord.border');
+}
+
+// Server header
+#{c(main server headerContainer)} {
+    border: cv('hyprcord.border');
+    border-top-left-radius: cv('hyprcord.radius');
+    border-top-right-radius: cv('hyprcord.radius');
+    border-bottom: none;
+    width: calc(100% - 2 * var(--bordersize) - 1px);
+    background: cv('shading.bg');
+}
+
+// Server Notice/Events
+#{c(main server noticeContainer)} {
+    border-left: cv('hyprcord.border');
+    border-right: cv('hyprcord.border');
+    width: calc(100% - 2 * var(--bordersize) - 1px);
+}
+
+// Channel list
+#{c(main server container)} #{c(main global scrollerBase)} {
+    border: cv('hyprcord.border');
+    border-top: none;
+    border-bottom-left-radius: cv('hyprcord.radius');
+    border-bottom-right-radius: cv('hyprcord.radius');
+    margin-bottom: calc(8px + var(--global-margin));
+}
+
+// Server's option (right click on Server's header)
+#{c(main modals rootWithShadow)}:not(:has(#{c(main quickswitcher popout)})),
+#{c(main modals modalLegacy)},
+#{c(main modals modal)} {
+    border-radius: cv('hyprcord.radius') !important;
+    border: cv('hyprcord.border') !important;
+}
+
+// NSFW pop up
+#{c(main server content)} #{c(main server nsfwScroller)} {
+    margin-top: cv('hyprcord.margin');
+    border: cv('hyprcord.border');
+    border-radius: cv('hyprcord.radius');
+}
+
+// Boost process bar
+#{c(main serverBoost progressContainer)} {
+    background-color: var(--hsl-card-shading);
+}
+
+// Active threads
+#{c(main server activeThreadsContainer)},
+#{c(main server activeThreadsHeader)} {
+    background: transparent;
+}
+
+// Discover
+#{c(main visualRefresh)} #{c(main server discoverContainerA)} {
+    border-radius: cv('hyprcord.radius');
+    border: cv('hyprcord.border');
+    margin: cv('hyprcord.margin');
+}
+
+#{c(main visualRefresh)} #{c(main server discoverContainerB)} {
+    border-radius: cv('hyprcord.radius');
+    border: cv('hyprcord.border');
+    margin-top: cv('hyprcord.margin');
+}
+
+#{c(main server discoverGradient)},
+#{c(main server discoverGradientBackground)},
+#{c(main visualRefresh)} #{c(main server discoverScroller)},
+#{c(main server discoverBackdrop)} {
+    border-radius: cv('hyprcord.radius');
+}
+
+// Onboard
+#{c(main server onboardMain)} {
+    border-radius: cv('hyprcord.radius');
+    border: cv('hyprcord.border');
+    margin-left: cv('hyprcord.margin');
+    margin-top: cv('hyprcord.margin');
+}
+
+// Onboard questions prompt
+#{c(main server onboardPrompt)} {
+    border: cv('hyprcord.border');
+}
+
+// Onboard background
+#{c(main server onboardFullBorderWithGradient)} {
+    background-color: transparent;
+}
+
+// Onboard prompt question box
+#{c(main server onboardPrompt)} {
+    background-color: cv('shading.card');
+}
+
+// Nav button under prompt questions
+#{c(main server onboardNavButtons)} {
+    background-color: cv('shading.card');
+}
+
+// Rules in onboard
+#{c(main server onboardTermsFieldBody)} {
+    background-color: cv('shading.card');
+    border: cv('hyprcord.border');
+}
+
+// Server tag popout
+#{c(main server tagPopoutContainer)} {
+    background-color: cv('shading.popout');
+    border: cv('hyprcord.border');
+}
+
+// ------------------- SERVER WITH BANNER -------------------
+#{c(main visualRefresh)} #{c(main server header)},
+#{c(main visualRefresh)} #{c(main server bannerVisible)} {
+    border-radius: cv('hyprcord.radius');
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+#{c(main visualRefresh)} #{c(main server animatedContainer)} {
+    border-top-left-radius: cv('hyprcord.radius');
+    border-top-right-radius: cv('hyprcord.radius');
+}
+
+#{c(main server headerEllipseForeground)},
+#{c(main server headerEllipseBackdrop)},
+#{c(main server headerGlass)} {
+    display: none;
+}
+
+// ------------------- OUTSIDE SERVER -------------------
+
+// Separator between DM and Servers
+#{c(main visualRefresh)} #{c(main server guildSeparator)} {
+    background-color: var(--hsl-main-color);
+}
+
+// Server folder
+#{c(main guildList isExpanded)} #{c(main guildList folderGroupBackground)} {
+    background-color: var(--hsl-main-color);
+    opacity: 0.3;
+}
+
+#{c(main guildList folderPreviewWrapper)} {
+    --custom-preview-background: color-mix(in srgb, var(--hsl-main-color), transparent 50%);
+}
+
+#{c(main guildList folderHeader)} {
+    color: var(--hsl-main-color);
+}
+
+// ------------------- Server Settings -------------------
+// Server setting when click on web invitation link
+#{c(main modals inviteContainer)} {
+    border-radius: cv('hyprcord.radius');
+    border: cv('hyprcord.border') !important;
+}
+
+#{c(main server inviteSplash)} {
+    border-radius: cv('hyprcord.radius');
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+#{c(main visualRefresh)} #{c(main settings editProfileContainer)} {
+    border: cv('hyprcord.border');
+}
+
+// Onboard settings
+#{c(main server onboardNotice)},
+#{c(main server onboardReview)},
+#{c(main server onboardingStepContainer)} {
+    background-color: cv('shading.card');
+}
+
+// ------------------- Mod View Plugin VC -------------------
+#{c(main server guildSidebar)} {
+    margin-top: cv('hyprcord.margin');
+}
+
+#{c(main global page)}:has(#{c(main server guildSidebar)}) #{c(main server sidebarContainer)} {
+    margin-top: 0px;
+}
+
+#{c(main server guildSidebar)} #{c(main profile modalOuter)} {
+    border-radius: cv('hyprcord.radius');
+}
+
+#{c(main server sidebarContainer)} {
+    margin-top: cv('hyprcord.margin');
+}
+
+#{c(main server sidebarContainer)} #{c(main profile modalOuter)} {
+    border-radius: cv('hyprcord.radius');
+}

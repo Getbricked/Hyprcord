@@ -1,0 +1,620 @@
+// ClearVision v7 classes function https://github.com/ClearVision/ClearVision-v7/blob/master/src/backend/_classes.scss
+@use 'sass:string';
+@use 'sass:list';
+@use 'sass:map';
+@use 'sass:meta';
+
+////////////////////
+/// VERY IMPORTANT INFO FOR SEARCHING OR ADDING CLASS NAMES
+/// Remove the preceding dot before the class name!
+/// The function below adds that before CSS generation and thus is not needed
+/// Also if you've forked the original project, please commit to it upstream
+////////////////////
+
+/// Get a class from the Classes Map. Code stolen entirely from Zerthox.
+/// Changes to Zerthox's code:
+/// Class list lacks proceeding dot to allow for quick html element copy class list.
+/// Aliasing. You can start a string with "alias " and fill the rest out as if it was #{c(STRING HERE)}.
+/// Lists. You can uses lists for multiple classes to preform the same function. You can use [bracketed lists] for :where() and non-bracketed for :is().
+/// Minor SCSS syntax changes.
+/// Dirty trace. Add a ! to the start of a class to get the used location(s).
+/// Checks for sub-maps and throws error if that's true.
+/// Checks for a hash at front and spits out an ID rather than a class.
+///
+/// NOTE: Deprecated listings have @ at the start and cannot be combined with the dirty trace.
+/// It is strongly advised to use a different class, usually in a comment beside the class.
+/// Certain aliases may also be deprecated in the future.
+@function class($query, $alias: false) {
+    $class: $classes;
+
+    @each $el in $query {
+        $class: map.get($class, '#{$el}');
+
+        @if not $class {
+            @if $alias {
+                @error "Unknown alias \"#{$el}\" in category: #{$query}. Please fix the classes list.";
+            }
+
+            @else {
+                @error "Unknown class or ID \"#{$el}\" in category: #{$query}. Was the classes file not saved?";
+            }
+        }
+    }
+
+    @if meta.type-of($class)==map {
+        @error "Map used as input: #{$query}. Please fix and try again.";
+    }
+
+    @if meta.type-of($class)==string {
+        @return checkString($class, $alias);
+    }
+
+    @else if meta.type-of($class)==list {
+        // stuff for list would go here
+        $list: ':';
+
+        @if list.is-bracketed($class) {
+            $list: $list + 'where(';
+        }
+
+        @else {
+            $list: $list + 'is(';
+        }
+
+        @each $item in $class {
+            $list: $list + checkString($item, $alias) + ',';
+        }
+
+        $list: string.slice($list, 1, -2) + ')'; // remove comma at end and add closing bracket
+        @return $list;
+    }
+}
+
+@function checkString($class, $alias: false) {
+
+    // debug locator string thingy
+    @if string.slice($class, 1, 1)=='!' or string.slice($class, 1, 1)=='@' {
+        @if string.slice($class, 1, 1)=='!' {
+            @warn "[DEBUG] The class, \"#{$class}\", was used.";
+        }
+
+        @else if string.slice($class, 1, 1)=='@' {
+            @warn "[DEPRECATED] The specific selector used for \"#{$class}\" is deprecated and may be removed in the future.";
+        }
+
+        $class: string.slice($class, 2, -1);
+    }
+
+    @if string.slice($class, 1, 1)=='.' {
+        @error "Dot at start of string within list. Please fix and try again.";
+    }
+
+    @if string.slice($class, 1, 6)=='alias ' {
+
+        // force error on already tested aliases to prevent loops
+        @if $alias ==true {
+            @error "Issue caused by \"#{$class}\". Do not point aliases to other aliases as to prevent loops. Please fix this and try again.";
+        }
+
+        $aliasList: (
+        ); // create fake list to be thrown into function again
+    $aliasQuery: string.slice($class, 7, -1); // remove `alias ` from query
+    $spaceIndex: string.index($aliasQuery, $substring: ' '); // finds first space
+
+    @while $spaceIndex !=null {
+        $item: string.slice($aliasQuery, 1, $spaceIndex - 1);
+        $aliasQuery: string.slice($aliasQuery, $spaceIndex + 1, -1);
+        $aliasList: list.append($aliasList, $item, space);
+        $spaceIndex: string.index($aliasQuery, $substring: ' '); // if not found this declared null
+    }
+
+    $aliasList: list.append($aliasList, $aliasQuery, space); // adds last item after @while
+    @return #{class($aliasList, $alias: true)}; // thrown back into the class list as the new query
+}
+
+@if string.slice($class, 1, 1)=='#' {
+    @return $class;
+}
+
+@else {
+    @return '.'+$class;
+}
+}
+
+///extreme lazy shorthand with capital just in case
+@function c($query, $alias: false) {
+    @return class($query, $alias);
+}
+
+@function C($query, $alias: false) {
+    @return class($query, $alias);
+}
+
+/// dump literally every class for debug
+// todo for this: make sure to escape \ as \\ on export
+// todo for this: ensure aliases actually work; just don't dump them into the list
+@function debug_dump_all_classes_yes_i_am_sure() {
+    $fullClassList: '';
+    $l: $classes;
+
+    @each $item in $l {
+
+        // nth($item,1); // category name
+        // type-of(nth($item,2)); // whole map
+        @each $subitem in list.nth($item, 2) {
+            // $subitem should always be a list, don't question it.
+            $fullClassList: $fullClassList + debug_dump_all_classes_in_list('', list.nth($subitem, 2));
+        }
+    }
+
+    // @debug $fullClassList;
+    @return $fullClassList;
+}
+
+@function debug_dump_all_classes_in_list($strOfClasses, $listToDump) {
+    $classesFromList: '';
+
+    @each $class in $listToDump {
+
+        // @debug type-of($class) "|" $class;
+        @if meta.type-of($class)==string {
+            $checkString: debug_checkString($class);
+
+            @if $checkString !='' {
+                $classesFromList: $classesFromList + $checkString + '\A';
+            }
+        }
+
+        @else if meta.type-of($class)==list {
+            // @debug "it's a list.";
+            // skip first item since that'll be for the list identifier
+            $classesFromList: $classesFromList + debug_dump_all_classes_in_list($classesFromList, list.nth($class, 2));
+        }
+    }
+
+    @return $classesFromList;
+}
+
+@function debug_checkString($class) {
+    @if string.slice($class, 1, 1)=='!' or string.slice($class, 1, 1)=='@' {
+        @if string.slice($class, 1, 1)=='@' {
+            @warn "[DEPRECATED] The specific selector used for \"#{$class}\" is deprecated and may be removed in the future.";
+        }
+
+        $class: string.slice($class, 2, -1); // remove `!` or `@`
+    }
+
+    @if string.slice($class, 1, 1)=='.' {
+        @return ''; // despite this actually intending to throw an error, it's better to skip them outright.
+    }
+
+    @if string.slice($class, 1, 6)=='alias ' {
+        @return ''; // ignore all aliases
+    }
+
+    @if string.slice($class, 1, 1)=='#' {
+        @return $class;
+    }
+
+    @else {
+        @return '.'+$class;
+    }
+}
+
+@function debug_dump_all_aliases_yes_i_am_sure() {
+    $fullClassList: '';
+    $l: $classes;
+
+    @each $item in $l {
+
+        // nth($item,1); // category name
+        // type-of(nth($item,2)); // whole map
+        @each $subitem in list.nth($item, 2) {
+            // $subitem should always be a list, don't question it.
+            $fullClassList: $fullClassList + debug_dump_all_aliases_in_list('', list.nth($subitem, 2));
+        }
+    }
+
+    // @debug $fullClassList;
+    @return $fullClassList;
+}
+
+@function debug_dump_all_aliases_in_list($strOfClasses, $listToDump) {
+    $classesFromList: '';
+
+    @each $class in $listToDump {
+
+        // @debug type-of($class) "|" $class;
+        @if meta.type-of($class)==string {
+            $checkString: debug_checkString_alias($class);
+
+            @if $checkString !='' {
+                $classesFromList: $classesFromList + $checkString + '\A';
+            }
+        }
+
+        @else if meta.type-of($class)==list {
+            // @debug "it's a list.";
+            // skip first item since that'll be for the list identifier
+            $classesFromList: $classesFromList + debug_dump_all_aliases_in_list($classesFromList, list.nth($class, 2));
+        }
+    }
+
+    @return $classesFromList;
+}
+
+@function debug_checkString_alias($class, $alias: false) {
+    @if meta.type-of($class)==list {
+        $allClasses: $classes;
+
+        @each $item in $class {
+            $allClasses: map.get($allClasses, '#{$item}');
+
+            @if not $allClasses {
+                @if $alias {
+                    @error "Unknown alias \"#{$item}\" in category: #{$class}. Please fix the classes list.";
+                }
+
+                @else {
+                    @error "Unknown class or ID \"#{$item}\" in category: #{$class}. Was the classes file not saved?";
+                }
+            }
+        }
+
+        $class: $allClasses;
+    }
+
+    @if meta.type-of($class)==string {
+        @if string.slice($class, 1, 1)=='!' {
+            $class: string.slice($class, 2, -1); // remove `!`
+        }
+
+        @if string.slice($class, 1, 1)=='.' {
+            @return ''; // despite this actually intending to throw an error, it's better to skip them outright.
+        }
+
+        @if string.slice($class, 1, 6)=='alias ' {
+
+            // force error on already tested aliases to prevent loops
+            @if $alias ==true {
+                @error "Issue caused by \"#{$class}\". Do not point aliases to other aliases as to prevent loops. Please fix this and try again.";
+            }
+
+            $aliasList: (
+            ); // create fake list to be thrown into function again
+        $aliasQuery: string.slice($class, 7, -1); // remove `alias ` from query
+        $spaceIndex: string.index($aliasQuery, $substring: ' '); // finds first space
+
+        @while $spaceIndex !=null {
+            $item: string.slice($aliasQuery, 1, $spaceIndex - 1);
+            $aliasQuery: string.slice($aliasQuery, $spaceIndex + 1, -1);
+            $aliasList: list.append($aliasList, $item, space);
+            $spaceIndex: string.index($aliasQuery, $substring: ' '); // if not found this declared null
+        }
+
+        $aliasList: list.append($aliasList, $aliasQuery, space); // adds last item after @while
+        // @debug $aliasList;
+        @return #{debug_checkString_alias($aliasList, $alias: true)}; // thrown back into the class list as the new query
+    }
+}
+
+@if $alias ==true {
+    @if string.slice($class, 1, 1)=='#' {
+        @return $class;
+    }
+
+    @else {
+        @return '.'+$class;
+    }
+}
+
+@else {
+    @return ''; // return empty for non-aliases.
+}
+}
+
+$classes: (
+    'main':( // General stuff
+        'visualRefresh': 'visual-refresh',
+        'alignChatInput': 'align-chat-input',
+        'compactMode': 'compact-mode',
+        'themeDark': 'theme-dark',
+        'mouseMode': 'mouse-mode',
+
+
+        'server': ( // Classes in servers
+            'container': '_2637a2609f343032-container',
+            'headerContainer': 'f37cb1984c371ee5-container',
+            'headerThemed': '_9293f6b2fc12398a-themed',
+            'topBar': 'c38106a3f0c3ca76-bar',
+            'topBarShow': 'c38106a3f0c3ca76-show',
+            'guildSeparator': '_252b6afd49fda06f-guildSeparator',
+            'noticeContainer': '_581dd2288501a0d4-container',
+            'content': 'f75fb00fb7356cbe-content',
+            'chatContent': 'f75fb00fb7356cbe-chatContent',
+            'title': 'f75fb00fb7356cbe-title',
+            'bannerVisible': 'f37cb1984c371ee5-bannerVisible',
+            'animatedContainer': 'f37cb1984c371ee5-animatedContainer',
+            'headerEllipseForeground': 'f37cb1984c371ee5-headerEllipseForeground',
+            'headerEllipseBackdrop': 'f37cb1984c371ee5-headerEllipseBackdrop',
+            'headerGlass': 'f37cb1984c371ee5-headerGlass',
+            'guildSidebar': 'f75fb00fb7356cbe-guildSidebar',
+            'sidebarContainer': '_656be05658eed04d-sidebarContainer',
+            'inviteSplash': '_9b0f44488203477c-inviteSplash',
+            'channelsAndRolesBackground': '_7449fa59699cedd9-background',
+            'discoverContainerA': '_551b0894962ff66f-container',
+            'discoverContainerB': 'a592e1970a0ce22c-container',
+            'discoverGradient': 'e9ef783a74d3f83a-gradient',
+            'discoverGradientBackground': 'e9ef783a74d3f83a-gradientBackground',
+            'discoverScroller': '_23746ba3de9452d8-scroller',
+            'discoverBackdrop': '_8a7fc664acf53af6-backdrop',
+            'onboardMain': 'c08b38911b1dcc2f-main',
+            'onboardFullBorderWithGradient': 'c08b38911b1dcc2f-fullBorderWithGradient',
+            'onboardPrompt': 'fe70ca6739eeb5f0-prompt',
+            'onboardNavButtons': 'fe70ca6739eeb5f0-navButtons',
+            'onboardTermsFieldBody': 'fe70ca6739eeb5f0-termsFieldBody',
+            'tagPopoutContainer': 'container_cdb3b1',
+            'nsfwScroller': 'f35c3c1aaf31dfd5-scroller',
+            'winButtons': 'c38106a3f0c3ca76-winButtons',
+            'winButton': 'c38106a3f0c3ca76-winButton',
+            'winButtonClose': 'c38106a3f0c3ca76-winButtonClose',
+            'winButtonMinMax': 'c38106a3f0c3ca76-winButtonMinMax',
+            'membersMainTableContainer': '_09a38002c6c2466d-mainTableContainer',
+            'rulesContainer': 'b962dc319e969a3f-container',
+            'activeThreadsContainer': 'container_a8217b',
+            'activeThreadsHeader': 'header_a8217b',
+            'header': 'f37cb1984c371ee5-header',
+            'onboardNotice': 'a9b45282395ecdfc-notice',
+            'onboardReview': 'a9b45282395ecdfc-review',
+            'onboardingStepContainer': '_28e57b0268546d72-onboardingStepContainer',
+        ),
+
+
+        'guildList': ( // Servers list
+            'wrapper': 'ef3116c2da186559-wrapper',
+            'scroller': 'ef3116c2da186559-scroller',
+            'iconWrapper': '_6e9f8dce4cc18de3-wrapper',
+            'icon': '_6e9f8dce4cc18de3-icon',
+            'selectedWrapper': '_6e9f8dce4cc18de3-selected',
+            'childWrapper': '_6e9f8dce4cc18de3-childWrapper',
+            'folderHeader': '_48112cbe77dc5022-folderHeader',
+            'folderPreviewWrapper': '_48112cbe77dc5022-folderPreviewWrapper',
+            'folderGroupBackground': '_48112cbe77dc5022-folderGroupBackground',
+            'isExpanded': '_48112cbe77dc5022-isExpanded',
+            'tutorialContainer': '_1f388bcaa446c0c8-tutorialContainer',
+            'listItem': '_650eb104245d257b-listItem',
+            'item': '_581051df43c5ebb6-item',
+        ),
+
+        'chatForm': ( // Chat form
+            'form': 'f75fb00fb7356cbe-form',
+            'scrollableContainer': '_740174f3d6a2c8fe-scrollableContainer',
+            'themedBackground': '_740174f3d6a2c8fe-themedBackground',
+            'upload': 'aa605f19898fe32e-upload',
+        ),
+
+        'menus': ( // Menus
+            'menu': 'c1e9c47c23f12ca3-menu',
+            'colorDanger': 'c1e9c47c23f12ca3-colorDanger',
+            'label': 'c1e9c47c23f12ca3-label',
+        ),
+
+        'bar': ( // Bars
+            'newMessages': '_0f481cbbd7530492-newMessagesBar',
+            'jumpToPresent': '_0f481cbbd7530492-jumpToPresentBar',
+            'messagesError': '_0f481cbbd7530492-messagesErrorBar',
+        ),
+
+        'chat': ( // Chat area
+            'chat': 'f75fb00fb7356cbe-chat',
+            'threadSidebarOpen': 'f75fb00fb7356cbe-threadSidebarOpen',
+            'message': '_5126c0cd07f243a0-message',
+            'messageListItem': '_5126c0cd07f243a0-messageListItem',
+            'messageSelected': '_5126c0cd07f243a0-selected',
+            'messageButtonsInner': '_5126c0cd07f243a0-buttonsInner',
+            'systemMessage': '_5126c0cd07f243a0-systemMessage',
+            'mentioned': '_5126c0cd07f243a0-mentioned',
+            'scrollerInner': '_36d072eab2b2e737-scrollerInner',
+            'markup': '_752971923a1e6683-markup',
+            'username': 'c19a557985eb7793-username',
+            'timestamp': 'c19a557985eb7793-timestamp',
+            'messageContent': 'c19a557985eb7793-messageContent',
+            'edited': 'c19a557985eb7793-edited',
+            'hiddenVisually': 'b18fe29d6fe8dd82-hiddenVisually',
+            'hamBanner': '_6a41ee0bd29b83e9-hamBanner',
+            'inviteContainer': '_083ae98ea5145b08-guildInviteContainer',
+            'inviteFooterContent': '_083ae98ea5145b08-footerContent',
+            'typingText': 'b8880176888cc928-text',
+
+            'searchResultsWrap': 'a9e7064fdee8e9b0-searchResultsWrap',
+            'messagesPopoutWrap': 'e8b59c4b335dd2fc-messagesPopoutWrap',
+
+            'divider': ('divider': '_908e20001ad67812-divider',
+                'content': '_908e20001ad67812-content',
+                'unreadPill': '_908e20001ad67812-unreadPill',
+            ),
+
+            'spoiler': ('content': '_299eb87491f4b6d1-spoilerContent',
+                'markdownContent': '_299eb87491f4b6d1-spoilerMarkdownContent',
+                'hidden': '_299eb87491f4b6d1-hidden',
+            ),
+
+            'reactions': ('wrapper': 'c0e32c5cffed3d9f-wrapper',
+                'isBurstReactionPicker': 'c0e32c5cffed3d9f-isBurstReactionPicker',
+            ),
+        ),
+
+        'expressionPicker': ( // Emoji/Sticker/GIF picker
+            'contentWrapper': '_084343c4f11eaaab-contentWrapper',
+        ),
+
+        'thread': ('browser': 'd98031d9a3e08b09-browser',
+            'modal': 'modal__9a792',
+            'container': '_01ae244280823725-container',
+            'layerContainer': '_59d0d7075b521375-layerContainer',
+            'submitContainer': 'fb64c9a451c49797-submitContainer',
+        ),
+
+        'friendsDM': ( // Friends / DM list
+            'privateChannels': 'e6b7699ce8339e1c-privateChannels',
+            'headerText': '_99e7cad8d4c55236-headerText',
+            'interactive': '_972a0d22c8afa7f0-interactive',
+            'interactiveSelected': '_972a0d22c8afa7f0-interactiveSelected',
+            'linkButtonIcon': '_972a0d22c8afa7f0-linkButtonIcon',
+            'layout': '_20a53846fe2e8513-layout',
+            'name': '_20a53846fe2e8513-name',
+            'peopleUsername': '_0a06ed6ea040aa1b-username',
+            'peopleText': 'sub_0a06ed6ea040aa1b-text',
+            'nowPlayingColumn': '_133bf5eea8e33a34-nowPlayingColumn',
+            'peopleColumn': '_133bf5eea8e33a34-peopleColumn',
+        ),
+
+        'channels': ( // Channel list entries
+            'name': '_2ea32c412048f708-name',
+            'wrapper': '_2ea32c412048f708-wrapper',
+            'modeSelected': '_2ea32c412048f708-modeSelected',
+            'link': '_2ea32c412048f708-link',
+            'iconContainer': '_2ea32c412048f708-iconContainer',
+            'icon': '_2ea32c412048f708-icon',
+        ),
+
+        'memberList': ('members': 'c8ffbb79449f399c-members',
+            'membersGroup': 'c8ffbb79449f399c-membersGroup',
+            'member': '_5d473ecff348c314-member',
+            'memberInner': '_5d473ecff348c314-memberInner',
+            'username': '_5d473ecff348c314-username',
+            'nameContainer': '_703b91fc872193e8-nameContainer',
+            'usernameInner': '_703b91fc872193e8-username',
+            'clanTag': '_5d473ecff348c314-clanTag',
+            'ownerIcon': '_5d473ecff348c314-ownerIcon',
+            'threeColorGradient': 'e5de7811b2777bfa-threeColorGradient',
+            'twoColorGradient': 'e5de7811b2777bfa-twoColorGradient',
+        ),
+
+        'header': ( // Channel header
+            'container': '_9293f6b2fc12398a-container',
+        ),
+
+        'embedsMedia': ( // Embeds & media viewers
+            'embedFull': '_623de82e76ad7f82-embedFull',
+            'embedMedia': '_623de82e76ad7f82-embedMedia',
+            'inlineMediaEmbed': '_623de82e76ad7f82-inlineMediaEmbed',
+            'mosaicItem': '_6c706db0523bd9a7-mosaicItem',
+            'discordInviteWrapper': 'd5f3cd116f175f35-wrapper',
+            'nonVisualMediaItem': 'f4758a8d6346d18b-nonVisualMediaItem',
+            'originalLink': 'af017ab847f75d02-originalLink',
+
+            'mediaPreview': ('topBar': '_6088c3df6d10c76d-topBar',
+                'closeButton': '_6088c3df6d10c76d-closeButton',
+                'mediaArea': 'e035781d3e5b07da-mediaArea',
+                'zoomed': 'zoomed_a22bfd',
+                'media': 'a22bfd0da01d94fe-media',
+                'imageWrapper': 'af017ab847f75d02-imageWrapper',
+                'actionButtons': 'cc1819cb49c2d109-actionButtons',
+            ),
+            'tagServerPreview': 'd3846c099147bad3-container',
+            'emojiServerPopout': '_0f481cbbd7530492-popoutContainer',
+            'voiceMessage': ('rippleContainer': 'a8e786485f0c32f8-rippleContainer',
+                'container': 'a8e786485f0c32f8-container',
+                'playing': 'a8e786485f0c32f8-playing',
+            ),
+        ),
+
+        'voiceCall': ('wrapper': 'cb9592ad77576717-wrapper',
+            'minimum': 'cb9592ad77576717-minimum',
+            'videoWrapper': '_6981dc6d72610110-videoWrapper',
+            'borderRadius': '_6341f5794d35fb69-borderRadius',
+            'tileContainer': '_71eb2d6ae9535ae3-tileContainer',
+            'soundboardPicker': '_09f65b4b8a3f8d26-picker',
+            'drawerSizingWrapper': '_9c62c6ed231468c4-drawerSizingWrapper',
+            'buttonSection': '_1405b3b8e8eb5fd0-buttonSection',
+            'stageContainer': '_9aed46c13a1e115c-container',
+            'callContainer': 'cb9592ad77576717-callContainer',
+            'quickSelectPopout': 'ebaca56eb4bb23eb-quickSelectPopout',
+            'noBorder': '_2f4f7eb58b61c328-noBorder',
+            'callContent': 'callContent_cb9592',
+            'wrapperSidebarOpen': 'cb9592ad77576717-sidebarOpen',
+            'colorable': 'f1ceaca61b18918e-colorable',
+            'disconnect': 'f1ceaca61b18918e-disconnect',
+        ),
+
+        'profile': ('statusOuter': 'ab86098b36386ff7-outer',
+            'statusInner': 'ab86098b36386ff7-inner',
+            'nameplateContainer': '_4bbc6dc06e75ad52-container',
+            'modalOuter': 'c0bea05627c5dc35-outer',
+            'modalInner': 'c0bea05627c5dc35-inner',
+            'banner': '_68edb95846a37624-banner',
+            'profileContainer': '_9c3bea41fd465666-profile',
+            'backgroundImage': '_9c3bea41fd465666-backgroundImage',
+            'activitiesCard': '_39ec2e3dfb4fd2f2-card',
+        ),
+
+        'settings': ('sidebarRegion': '_23e6b439306f125a-sidebarRegion',
+            'contentRegion': '_23e6b439306f125a-contentRegion',
+            'standardSidebarView': '_23e6b439306f125a-standardSidebarView',
+            'editProfileContainer': 'editProfileContainer__7bf69',
+        ),
+
+        'notice': ('base': '_6e2b9359c6f84cfd-notice',
+        ),
+
+        'shop': ('shopScroll': '_084152b107f71237-shopScroll',
+            'shopScrollAlt': '_1feb0fca744244ab-shopScroll',
+            'shop': '_6db1d32c47b6ad72-shop',
+            'mainPageScroller': 'ca1a02dcad190ff8-mainPageScroller',
+        ),
+
+        'quest': ('claimedRootContainer': 'claimedRootContainer_acca35',
+            'headerContainer': 'headerContainer_acca35',
+            'headerBackground': 'headerBackground_acca35',
+        ),
+
+        'serverBoost': ('contentContainer': '_8946359d8adb1488-contentContainer',
+            'activeContainer': '_5573a546299c96e8-container',
+            'progressContainer': '_0d0f9ddd12a3ace3-progressContainer',
+            'navButtonActive': 'navButtonActive_d507dd',
+            'contentWrapper': 'd507dd94ed2580e5-contentWrapper',
+        ),
+
+        'forum': ('container': 'f369dba7416c67f0-container',
+            'noticeHeader': '_34c2c51cfce1632e-header',
+            'chatHeaderBar': 'a5700d36f7c29ded-chatHeaderBar',
+            'uploadInput': '_9443936bd3681b09-uploadInput',
+            'newBadge': 'faa96b2163f6a142-newBadge',
+        ),
+
+        'global': ('layers': '_960e4207cea8323e-layers',
+            'content': '_5e434347c823b592-content',
+            'panels': '_5e434347c823b592-panels',
+            'activityPanel': '_5dec784a68542d60-panel',
+            'sidebarList': '_5e434347c823b592-sidebarList',
+            'guilds': '_5e434347c823b592-guilds',
+            'page': '_5e434347c823b592-page',
+            'scrollerBase': 'd125d22cdfd32cfe-scrollerBase',
+            'contentOverlay': 'contentOverlay__3f6fc',
+            'voicePanelWrapper': 'e131a99484292a19-wrapper',
+            'voicePanelContainer': 'e131a99484292a19-container',
+            'voiceButton': 'e131a99484292a19-button',
+            'voiceButtonColor': 'e131a99484292a19-buttonColor',
+            'voiceButtonActive': 'e131a99484292a19-buttonActive',
+            'soundButton': '_9be63f0b86033228-soundButton',
+            'oldPanelButtonChevron': '_37e49614b9f110a9-buttonChevron',
+            'oldPanelButtons': '_37e49614b9f110a9-buttons',
+            'oldPanelButton': '_67645e1530f1195d-button',
+        ),
+
+        'quickswitcher': ('popout': 'ac6cb02cd15b4b3b-quickswitcher',
+        ),
+
+        'popouts': ('recentMentionsPopout': '_957962c2bd49881b-recentMentionsPopout',
+            'serverTagContainer': 'container_cdb3b1',
+        ),
+
+        'modals': ('rootWithShadow': '_49fc18ba07c5025f-rootWithShadow',
+            'modalLegacy': 'modal_a8217b',
+            'modal': 'modal__62141',
+            'inviteContainer': 'container__9b0f4',
+            'leavingContainer': '_8a031a135bfcb9ba-container',
+        ),
+    ),
+);

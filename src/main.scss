@@ -1,0 +1,14 @@
+@use 'backend' as *;
+@use 'theme';
+
+// ------------------- GLOBAL VARIABLES -------------------
+:root {
+    --columns: 1;
+    --guildsize: 57;
+    --aligndms: 0;
+
+    --global-margin: 20px;
+
+    --bordersize: 1px;
+    --border: var(--bordersize, 1px) solid var(--hsl-main-color);
+}

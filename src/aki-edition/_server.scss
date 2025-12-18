@@ -1,0 +1,59 @@
+@use "../backend" as *;
+
+// --------------------- Server ---------------------
+
+// Channel text
+.theme-dark #{c(main channels name)} {
+    text-shadow: #000000 0px 0px 1px;
+}
+
+// Server list
+#{c(main visualRefresh)} #{c(main guildList scroller)} {
+    background: transparent;
+    margin-bottom: 0px !important;
+}
+
+// DM + Server channel
+#{c(main global sidebarList)} #{c(main global scrollerBase)} {
+    background: transparent;
+}
+
+// Top bar
+#{c(main server topBar)} {
+    background: transparent;
+}
+
+// Round servers icon
+#{c(main guildList icon)} {
+    border-radius: 50%;
+}
+
+// Server hover + selected
+#{c(main guildList wrapper)}#{c(main guildList selectedWrapper)} #{c(main guildList icon)} {
+    border-radius: 10px;
+    transition: border-radius 0.5s ease;
+}
+
+// Hide pill for home
+#{c(main guildList tutorialContainer)} #{c(main guildList listItem)} #{c(main guildList item)} {
+    display: none;
+}
+
+// Selected channel
+#{c(main channels wrapper)}#{c(main channels modeSelected)} #{c(main channels link)}::before {
+    background: linear-gradient(to right, var(--hsl-main-color), transparent);
+}
+
+// New badge in forum
+#{c(main forum newBadge)} {
+    color: var(--text-normal);
+}
+
+// Channel title
+:is(.theme-dark, .theme-light) #{c(main server headerThemed)} {
+    background: transparent;
+}
+
+#{c(main server headerContainer)} {
+    background: transparent;
+}

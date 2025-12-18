@@ -1,47 +1,26 @@
 /**
- * @name ClearVision V7 Aki + Hyprcord
+ * @name ClearVision V7 Hyprcord Aki Edition
  * @author Aki
  * @version 7.0.1
  * @description ClearVision V7 + Hyprland.
  * @website https://clearvision.github.io
  * @invite dHaSxn3
  */
-
-/* -------------------- IMPORT ClearVision-Aki -------------------- */
-@import url(https://getbricked.github.io/ClearVision-Aki/Themes/main.css);
-
-/* User Pop Up */
-@import url(https://getbricked.github.io/ClearVision-Aki/Themes/User_Pop.css);
-
-/* Nameplate */
-@import url(https://getbricked.github.io/ClearVision-Aki/Themes/Nameplate.css);
-
-/* Settings */
-@import url(https://getbricked.github.io/ClearVision-Aki/Themes/Settings.css);
-
-/* -------------------- IMPORT Hyprcord -------------------- */
-@import url(https://getbricked.github.io/Hyprcord/Hyprcord.css);
-
-/* Chat Panel */
-@import url(https://getbricked.github.io/Hyprcord/Aki-Edition/Chat_Panel.css);
-
-/* User Panel */
-@import url(https://getbricked.github.io/Hyprcord/Aki-Edition/User_Panel.css);
-
-/* Server */
-@import url(https://getbricked.github.io/Hyprcord/Aki-Edition/Server.css);
-
-/* DM */
-@import url(https://getbricked.github.io/Hyprcord/Aki-Edition/DM.css);
-
-/* Member List */
-@import url(https://getbricked.github.io/Hyprcord/Aki-Edition/Member_List.css);
-
+/* ServerColumns addon */
+@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/ServerColumns/ServerColumns.css");
+/* IMPORT SOURCE (Themes) */
+@import url("https://getbricked.github.io/Hyprcord/main.css");
+/* IMPORT AKI EDITION */
+@import url("https://getbricked.github.io/Hyprcord/aki.css");
 /* SETTINGS */
 :root {
-    /* Background image */
-    --background-image: url(https://i.imgur.com/zU7YY60.jpeg);
-    --global-margin: 20px;
-    --guildsize: 57;
-    --bordersize: 2px;
+  /* Tweak in case using ServerColumn addon (only work for 1 column) */
+  --columns: 1;
+  --guildsize: 57;
+  --aligndms: 0;
+  /* Global margin for everything default is 20px */
+  --global-margin: 20px;
+  /* The size and style of border (default is 1px and var(--bordersize, 1px) solid var(--hsl-main-color) */
+  --bordersize: 2px;
+  --border: var(--bordersize, 1px) solid var(--hsl-main-color);
 }

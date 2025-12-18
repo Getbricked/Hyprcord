@@ -1,0 +1,143 @@
+@use "backend" as *;
+
+// ------------------- CHAT -------------------
+
+// Chat input
+#{c(main visualRefresh)} {
+    #{c(main chatForm form)} {
+        padding-left: cv('hyprcord.margin');
+        padding-right: cv('hyprcord.margin');
+    }
+}
+
+// Right click on msg
+#{c(main menus menu)} {
+    border-radius: cv('hyprcord.radius');
+    border: cv('hyprcord.border') !important;
+}
+
+// Jump to present bar
+#{c(main bar jumpToPresent)} {
+    background: cv('shading.popout');
+    border: cv('hyprcord.border');
+    border-radius: cv('hyprcord.radius');
+}
+
+// On hover msg
+#{c(main chat message)}#{c(main chat messageSelected)} #{c(main chat messageButtonsInner)},
+#{c(main mouseMode)} #{c(main chat message)}:hover #{c(main chat messageButtonsInner)} {
+    border: cv('hyprcord.border');
+    border-radius: cv('hyprcord.radius');
+}
+
+// Emoji + GIF + Stickers Box
+#{c(main visualRefresh)} {
+    #{c(main expressionPicker contentWrapper)} {
+        border: cv('hyprcord.border');
+        border-radius: cv('hyprcord.radius');
+    }
+}
+
+// Emoji
+#{c(main expressionPicker contentWrapper)} #emoji-picker-tab-panel {
+    border: none;
+}
+
+// Reaction emoji
+#{c(main chat reactions wrapper)},
+#{c(main chat reactions wrapper)}#{c(main chat reactions isBurstReactionPicker)} {
+    border: cv('hyprcord.border');
+    border-radius: cv('hyprcord.radius');
+}
+
+// Chat contents
+#{c(main chat scrollerInner)} {
+    padding-left: calc(var(--global-margin) - var(--space-xs));
+}
+
+// Search result panel
+#{c(main visualRefresh)} #{c(main chat searchResultsWrap)} {
+    margin-top: cv('hyprcord.margin');
+    margin-left: cv('hyprcord.margin');
+    border-radius: cv('hyprcord.radius');
+    border: cv('hyprcord.border');
+}
+
+// Notice
+#{c(main visualRefresh)} #{c(main notice base)} {
+    border-radius: cv('hyprcord.radius');
+    margin-top: cv('hyprcord.margin');
+    border: cv('hyprcord.border');
+    margin-left: cv('hyprcord.margin');
+}
+
+// Upload attachment in chat input
+#{c(main chatForm upload)} {
+    border-radius: cv('hyprcord.radius');
+    border: cv('hyprcord.border') !important;
+}
+
+// Pinned message
+#{c(main visualRefresh)} #{c(main chat messagesPopoutWrap)} {
+    border-radius: cv('hyprcord.radius');
+    border: cv('hyprcord.border');
+}
+
+// ------------------- THREAD -------------------
+// Thread in chat
+#{c(main visualRefresh)} #{c(main thread browser)} {
+    border-radius: cv('hyprcord.radius');
+    border: cv('hyprcord.border');
+}
+
+// Thread full screen
+#{c(main visualRefresh)} #{c(main thread modal)} {
+    border: cv('hyprcord.border');
+}
+
+// Create a new thread
+#{c(main visualRefresh)} #{c(main thread container)}:not(:has(#{c(main thread layerContainer)})) {
+    border-radius: cv('hyprcord.radius');
+    border: cv('hyprcord.border');
+    margin-top: cv('hyprcord.margin');
+}
+
+#{c(main visualRefresh)} #{c(main thread container)}:not(:has(#{c(main thread layerContainer)})) #{c(main header container)} {
+    margin-left: cv('hyprcord.margin');
+    width: calc(100% - 2 * var(--global-margin));
+}
+
+#{c(main thread container)} #{c(main thread submitContainer)} {
+    padding-top: cv('hyprcord.margin');
+    padding-bottom: cv('hyprcord.margin');
+    padding-left: calc(var(--global-margin) - 8px);
+}
+
+// Message requests spam
+#{c(main chat hamBanner)} {
+    background-color: cv('shading.card');
+    margin-top: cv('hyprcord.margin');
+    border-radius: cv('hyprcord.radius');
+    border: cv('hyprcord.border');
+}
+
+// Edited timestamp adjustments
+#{c(main chat edited)} {
+    display: none;
+}
+
+#{c(main chat message)}:not(#{c(main chat systemMessage)}) #{c(main chat messageContent)} #{c(main chat timestamp)}>#{c(main chat hiddenVisually)} {
+    height: auto;
+    clip: unset;
+    clip-path: unset;
+    position: unset;
+    font-size: 0.625rem;
+}
+
+#{c(main chat messageContent)} #{c(main chat timestamp)}>#{c(main chat hiddenVisually)}::before {
+    content: "(edited ";
+}
+
+#{c(main chat messageContent)} #{c(main chat timestamp)}>#{c(main chat hiddenVisually)}::after {
+    content: ")";
+}

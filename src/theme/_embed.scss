@@ -1,0 +1,99 @@
+@use "../backend" as *;
+
+// ------------------- EMBED -------------------
+// VC Shiki Code
+#{c(main visualRefresh)} #{c(main chat markup)} code {
+    border-radius: cv('hyprcord.radius');
+    border: cv('hyprcord.border');
+    background: color-mix(in srgb, var(--hsl-main-color), transparent 95%);
+}
+
+.vc-shiki-root {
+    background-color: transparent !important;
+}
+
+// Copy button of shiki code
+.vc-shiki-btn {
+    background-color: transparent !important;
+}
+
+// Media item
+#{c(main embedsMedia nonVisualMediaItem)} {
+    background: color-mix(in srgb, var(--hsl-main-color), transparent 80%);
+    border-radius: cv('hyprcord.radius');
+}
+
+// Voice message
+#{c(main embedsMedia voiceMessage rippleContainer)},
+#{c(main visualRefresh)} #{c(main embedsMedia voiceMessage container)},
+#{c(main embedsMedia voiceMessage playing)} {
+    border-radius: 6px;
+    border: none;
+}
+
+// Link embed
+#{c(main visualRefresh)} #{c(main embedsMedia embedFull)} {
+    border: cv('hyprcord.border') !important;
+    border-radius: cv('hyprcord.radius');
+    background: var(--hsl-card-shading);
+}
+
+// Discord embed
+#{c(main visualRefresh)} #{c(main embedsMedia discordInviteWrapper)} {
+    border-radius: cv('hyprcord.radius');
+    border: cv('hyprcord.border');
+}
+
+// Image global
+#{c(main embedsMedia embedMedia)} {
+    border-radius: cv('hyprcord.radius');
+}
+
+// Image inline and in grid
+#{c(main embedsMedia inlineMediaEmbed)} #{c(main embedsMedia originalLink)},
+#{c(main embedsMedia mosaicItem)} {
+    border: cv('hyprcord.border') !important;
+    box-sizing: border-box !important;
+    border-radius: cv('hyprcord.radius');
+}
+
+// ------------------- MEDIA PREVIEW -------------------
+// Top bar (under windows bar)
+#{c(main embedsMedia mediaPreview topBar)} {
+    position: relative;
+    top: calc(var(--global-margin) * 2);
+}
+
+// Tool buttons
+#{c(main embedsMedia mediaPreview actionButtons)},
+#{c(main embedsMedia mediaPreview closeButton)} {
+    border: cv('hyprcord.border');
+}
+
+// The picture
+#{c(main embedsMedia mediaPreview mediaArea)} {
+    position: relative;
+    top: calc(var(--global-margin) + 10px);
+    border: cv('hyprcord.border');
+    border-radius: cv('hyprcord.radius');
+}
+
+#{c(main embedsMedia mediaPreview zoomed)} {
+    border: cv('hyprcord.border');
+    border-radius: cv('hyprcord.radius');
+}
+
+#{c(main embedsMedia mediaPreview media)} {
+    border-radius: cv('hyprcord.radius');
+}
+
+// Image Preview
+#{c(main embedsMedia mediaPreview mediaArea)} img {
+    border-radius: cv('hyprcord.radius');
+}
+
+// Tag server preview + Emoji server preview
+#{c(main embedsMedia tagServerPreview)},
+#{c(main visualRefresh)} #{c(main embedsMedia emojiServerPopout)} {
+    border: cv('hyprcord.border');
+}

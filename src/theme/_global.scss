@@ -1,0 +1,156 @@
+@use "../backend" as *;
+
+// ------------------- GLOBAL -------------------
+
+// Global margin (outside margin)
+#{c(main visualRefresh)} #app-mount #{c(main global layers)} {
+    margin: cv('hyprcord.margin');
+}
+
+// Content margin (everything except top bar)
+#{c(main global content)} {
+    margin-top: 4px;
+}
+
+// Top bar
+#app-mount:not(:has(#{c(main server topBarShow)})) #{c(main server topBar)} {
+    border: cv('hyprcord.border');
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: cv('hyprcord.radius');
+    margin: 0px !important;
+}
+
+#{c(main server topBar)} {
+    background: var(--hsl-background-shading);
+}
+
+// User panel
+#{c(main visualRefresh)} #{c(main global panels)} {
+    border-radius: cv('hyprcord.radius');
+    border: cv('hyprcord.border');
+    padding: 0px;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: calc(100% - var(--global-margin)) !important;
+    z-index: 0;
+}
+
+// Server List
+#{c(main visualRefresh)} #{c(main guildList scroller)} {
+    background: var(--hsl-background-shading);
+    border-radius: cv('hyprcord.radius');
+    border: cv('hyprcord.border') !important;
+    margin-top: cv('hyprcord.margin') !important;
+    margin-bottom: cv('hyprcord.margin') !important;
+}
+
+// Ctrl + K (Search bar)
+#{c(main visualRefresh)} #{c(main quickswitcher popout)} {
+    border: cv('hyprcord.border');
+}
+
+// Border user profile
+#{c(main profile modalOuter)} {
+    border: cv('hyprcord.border');
+}
+
+// Inbox (on top bar)
+#{c(main visualRefresh)} #{c(main popouts recentMentionsPopout)} {
+    border-radius: cv('hyprcord.radius');
+    border: cv('hyprcord.border');
+}
+
+// Inbox mentions
+#{c(main chat messagesPopoutWrap)} {
+    border: none;
+}
+
+// Vencord notification
+.vc-notification-root {
+    border: cv('hyprcord.border');
+}
+
+// DM
+#{c(main friendsDM privateChannels)} {
+    border: none;
+    border-radius: 8px;
+}
+
+// DM + Channel list
+#{c(main visualRefresh)} #{c(main friendsDM privateChannels)},
+#{c(main visualRefresh)} #{c(main server container)} {
+    border-radius: cv('hyprcord.radius');
+    margin: cv('hyprcord.margin');
+    margin-bottom: 0px;
+    background: transparent;
+}
+
+#{c(main friendsDM privateChannels)} #{c(main global scrollerBase)} {
+    border: cv('hyprcord.border');
+    border-radius: cv('hyprcord.radius');
+    margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--global-margin));
+}
+
+#{c(main global sidebarList)} #{c(main global scrollerBase)} {
+    background: var(--hsl-background-shading);
+}
+
+// "Leaving discord" dialog when click on a link
+#{c(main modals leavingContainer)} {
+    background: var(--hsl-background-shading);
+    border: cv('hyprcord.border');
+}
+
+// ------------------- WINDOWS BUTTON -------------------
+#{c(main server winButtons)} {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px;
+    background: none;
+}
+
+#{c(main server winButton)} {
+    & {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+// Close button (red)
+#{c(main server winButtonClose)} {
+    background: #ff5f57;
+}
+
+// Minimize button (yellow)
+#{c(main server winButtonMinMax)}:nth-child(1) {
+    background: #ffbd2e;
+}
+
+// Maximize button (green)
+#{c(main server winButtonMinMax)}:nth-child(2) {
+    background: #28c940;
+}
+
+// Hide the Windows-style icons
+#{c(main server winButton)} svg {
+    display: none;
+}
+
+// User's status
+#{c(main profile statusOuter)} {
+    background: var(--hsl-card-shading);
+}
+
+#{c(main profile statusInner)} {
+    background: transparent;
+}

@@ -1,0 +1,40 @@
+@use "../backend" as *;
+
+// --------------------- DM ---------------------
+
+// Friends List Header Fix
+#{c(main visualRefresh)} #{c(main friendsDM headerText)} {
+    display: flex;
+    text-transform: uppercase;
+    font-size: 14.5px;
+    font-weight: 700;
+    align-items: center;
+}
+
+// DM Username Color and Size
+#{c(main friendsDM linkButtonIcon)},
+#{c(main friendsDM name)} {
+    font-size: 14px;
+    text-shadow: #000000 0px 0px 2px;
+    font-weight: 700;
+    transition: all 0.15s ease-in-out;
+    overflow: hidden;
+}
+
+// Friends List size
+#{c(main friendsDM peopleUsername)} {
+    font-size: 15px;
+}
+
+#{c(main friendsDM peopleText)} {
+    color: white;
+}
+
+#{c(main global contentOverlay)} {
+    background: var(--hsl-popout-shading) !important;
+}
+
+// Selected Interactive in DM
+#{c(main visualRefresh)} #{c(main friendsDM interactive)}#{c(main friendsDM interactiveSelected)}::before {
+    background: linear-gradient(to right, var(--hsl-main-color), transparent);
+}
