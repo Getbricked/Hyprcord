@@ -1,0 +1,6 @@
+/* Remove all except friends */
+:where(.visual-refresh) ._972a0d22c8afa7f0-channel:not(._972a0d22c8afa7f0-dm) ._972a0d22c8afa7f0-link:not([href="/channels/@me"]):not([href="/message-requests"]),
+/* Remove the dividers */
+.visual-refresh .e6b7699ce8339e1c-sectionDivider {
+    display: none;
+}
