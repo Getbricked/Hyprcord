@@ -1,0 +1,28 @@
+/**
+ * @name ClearVision V7 Hyprcord Aki Edition
+ * @author Aki
+ * @version 7.0.1
+ * @description ClearVision V7 + Hyprland.
+ * @website https://clearvision.github.io
+ * @invite dHaSxn3
+ */
+/* IMPORT CLEARVISION V7 Aki */
+@import url("https://getbricked.github.io/Hyprcord/CV7-Aki.css");
+/* ServerColumns addon */
+@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/ServerColumns/ServerColumns.css");
+/* IMPORT SOURCE (Themes) */
+@import url("https://getbricked.github.io/Hyprcord/main.css");
+/* IMPORT AKI EDITION */
+@import url("https://getbricked.github.io/Hyprcord/aki.css");
+/* SETTINGS */
+:root {
+  /* Tweak in case using ServerColumn addon (only work for 1 column) */
+  --columns: 1;
+  --guildsize: 57;
+  --aligndms: 0;
+  /* Global margin for everything default is 20px */
+  --global-margin: 20px;
+  /* The size and style of border (default is 1px and var(--bordersize, 1px) solid var(--hsl-main-color) */
+  --bordersize: 2px;
+  --border: var(--bordersize, 1px) solid var(--hsl-main-color);
+}
