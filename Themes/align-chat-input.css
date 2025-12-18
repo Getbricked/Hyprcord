@@ -1,9 +1,0 @@
-/* DM list */
-.align-chat-input ._2637a2609f343032-container {
-    padding-bottom: calc(var(--custom-app-panels-height, 0) + var(--space-xs) - 6px);
-}
-
-/* Server list */
-.align-chat-input .ef3116c2da186559-wrapper {
-    margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--space-xs) - 6px);
-}
