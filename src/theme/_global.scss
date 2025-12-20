@@ -44,11 +44,6 @@
     margin-bottom: cv('hyprcord.margin') !important;
 }
 
-// Ctrl + K (Search bar)
-#{c(main visualRefresh)} #{c(main quickswitcher popout)} {
-    border: cv('hyprcord.border');
-}
-
 // Border user profile
 #{c(main profile modalOuter)} {
     border: cv('hyprcord.border');
@@ -97,7 +92,6 @@
 
 // "Leaving discord" dialog when click on a link
 #{c(main modals leavingContainer)} {
-    background: var(--hsl-background-shading);
     border: cv('hyprcord.border');
 }
 
