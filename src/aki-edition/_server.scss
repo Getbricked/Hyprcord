@@ -13,6 +13,12 @@
     margin-bottom: 0px !important;
 }
 
+// ------------------- SERVER WITH BANNER -------------------
+#{c(main visualRefresh)} #{c(main server header)},
+#{c(main visualRefresh)} #{c(main server bannerVisible)} {
+    background: transparent;
+}
+
 // DM + Server channel
 #{c(main global sidebarList)} #{c(main global scrollerBase)} {
     background: transparent;
