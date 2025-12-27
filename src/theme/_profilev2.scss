@@ -14,7 +14,7 @@
 
 // Big profile
 .custom-user-profile-theme.user-profile-modal-v2 #{c(main profile modalInner)} {
-    background: var(--hsl-card-shading);
+    background: cv('shading.card');
 }
 
 // Big background profile

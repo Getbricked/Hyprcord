@@ -11,16 +11,16 @@
 
 // Active boost
 #{c(main serverBoost activeContainer)} #{c(main serverBoost activeContainer)}-active {
-    border-color: var(--hsl-success-color);
+    border-color: cv('color.success');
 }
 
 // Emoji/Image for role (Boost level 2)
 #{c(main serverBoost contentWrapper)} {
-    background-color: var(--hsl-popout-shading);
+    background-color: cv('shading.popout');
 }
 
 #{c(main serverBoost navButtonActive)} {
-    background-color: var(--hsl-main-color);
+    background-color: cv('color.main');
 }
 
 #{c(main serverBoost contentWrapper)} #emoji-picker-tab-panel {

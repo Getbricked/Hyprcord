@@ -21,7 +21,7 @@
 }
 
 #{c(main server topBar)} {
-    background: var(--hsl-background-shading);
+    background: cv('shading.card');
 }
 
 // User panel
@@ -37,7 +37,7 @@
 
 // Server List
 #{c(main visualRefresh)} #{c(main guildList scroller)} {
-    background: var(--hsl-background-shading);
+    background: cv('shading.bg');
     border-radius: cv('hyprcord.radius');
     border: cv('hyprcord.border') !important;
     margin-top: cv('hyprcord.margin') !important;
@@ -87,7 +87,7 @@
 }
 
 #{c(main global sidebarList)} #{c(main global scrollerBase)} {
-    background: var(--hsl-background-shading);
+    background: cv('shading.bg');
 }
 
 // "Leaving discord" dialog when click on a link
@@ -142,7 +142,7 @@
 
 // User's status
 #{c(main profile statusOuter)} {
-    background: var(--hsl-card-shading);
+    background: cv('shading.card');
 }
 
 #{c(main profile statusInner)} {

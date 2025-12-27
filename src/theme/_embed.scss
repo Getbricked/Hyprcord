@@ -5,7 +5,7 @@
 #{c(main visualRefresh)} #{c(main chat markup)} code {
     border-radius: cv('hyprcord.radius');
     border: cv('hyprcord.border');
-    background: color-mix(in srgb, var(--hsl-main-color), transparent 95%);
+    background: color-mix(in srgb, cv('color.main'), transparent 95%);
 }
 
 .vc-shiki-root {
@@ -19,7 +19,7 @@
 
 // Media item
 #{c(main embedsMedia nonVisualMediaItem)} {
-    background: color-mix(in srgb, var(--hsl-main-color), transparent 80%);
+    background: color-mix(in srgb, cv('color.main'), transparent 80%);
     border-radius: cv('hyprcord.radius');
 }
 
@@ -35,7 +35,7 @@
 #{c(main visualRefresh)} #{c(main embedsMedia embedFull)} {
     border: cv('hyprcord.border') !important;
     border-radius: cv('hyprcord.radius');
-    background: var(--hsl-card-shading);
+    background: cv('shading.card');
 }
 
 // Discord embed

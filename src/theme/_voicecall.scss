@@ -14,7 +14,7 @@
 }
 
 #{c(main voiceCall callContainer)} {
-    background: var(--hsl-card-shading) !important;
+    background: cv('shading.card') !important;
 }
 
 // Fullscreen mode
@@ -73,7 +73,7 @@
 
 // Button in voice call
 #{c(main voiceCall buttonSection)} {
-    background: var(--hsl-card-shading);
+    background: cv('shading.card');
     border: cv('hyprcord.border');
 }
 
@@ -84,7 +84,7 @@
 
 // Change voice chat region
 .theme-dark #{c(main voiceCall quickSelectPopout)} {
-    background: var(--hsl-popout-shading);
+    background: cv('shading.popout');
     border: cv('hyprcord.border');
     border-radius: cv('hyprcord.radius');
 }

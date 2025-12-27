@@ -73,7 +73,7 @@
 
 // Boost process bar
 #{c(main serverBoost progressContainer)} {
-    background-color: var(--hsl-card-shading);
+    background-color: cv('shading.card');
 }
 
 // Active threads
@@ -146,6 +146,7 @@
 #{c(main visualRefresh)} #{c(main server header)},
 #{c(main visualRefresh)} #{c(main server bannerVisible)} {
     border-radius: cv('hyprcord.radius');
+    background: cv('shading.bg');
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
 }
@@ -165,21 +166,21 @@
 
 // Separator between DM and Servers
 #{c(main visualRefresh)} #{c(main server guildSeparator)} {
-    background-color: var(--hsl-main-color);
+    background-color: cv('color.main');
 }
 
 // Server folder
 #{c(main guildList isExpanded)} #{c(main guildList folderGroupBackground)} {
-    background-color: var(--hsl-main-color);
+    background-color: cv('color.main');
     opacity: 0.3;
 }
 
 #{c(main guildList folderPreviewWrapper)} {
-    --custom-preview-background: color-mix(in srgb, var(--hsl-main-color), transparent 50%);
+    --custom-preview-background: color-mix(in srgb, cv('color.main'), transparent 50%);
 }
 
 #{c(main guildList folderHeader)} {
-    color: var(--hsl-main-color);
+    color: cv('color.main');
 }
 
 // ------------------- Server Settings -------------------
