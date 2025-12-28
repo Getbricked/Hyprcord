@@ -10,5 +10,5 @@
     --global-margin: 20px;
 
     --bordersize: 1px;
-    --border: var(--bordersize, 1px) solid var(--hsl-main-color);
+    --border: cv('hyprcord.bordersize') solid cv('color.main');
 }

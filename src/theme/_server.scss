@@ -151,6 +151,13 @@
     border-bottom-right-radius: 0px;
 }
 
+// Events container in server
+#{c(main server eventsContainer)} {
+    border-left: cv('hyprcord.border');
+    border-right: cv('hyprcord.border');
+    width: calc(100% - 2 * cv('hyprcord.bordersize') - 1px);
+}
+
 #{c(main visualRefresh)} #{c(main server animatedContainer)} {
     border-top-left-radius: cv('hyprcord.radius');
     border-top-right-radius: cv('hyprcord.radius');

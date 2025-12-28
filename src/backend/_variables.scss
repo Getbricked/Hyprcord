@@ -143,5 +143,8 @@ $cv: (
     // BORDERS AND MARGINS
     hyprcord: (radius: 10px,
         border: var(--bordersize, 1px) solid var(--hsl-main-color),
-        margin: var(--global-margin, 10px)),
+        margin: var(--global-margin, 10px),
+        bordersize: var(--bordersize, 1px),
+    ),
+
 );
