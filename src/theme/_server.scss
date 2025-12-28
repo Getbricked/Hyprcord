@@ -183,7 +183,7 @@
 }
 
 #{c(main guildList folderPreviewWrapper)} {
-    --custom-preview-background: color-mix(in srgb, cv('color.main'), transparent 50%);
+    --custom-preview-background: color-mix(in srgb, var(--hsl-main-color), transparent 50%);
 }
 
 #{c(main guildList folderHeader)} {
