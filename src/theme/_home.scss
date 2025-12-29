@@ -14,6 +14,11 @@
     height: calc(100% - var(--global-margin) - var(--bordersize) * 2);
 }
 
+// Profile effects
+#{c(main profile profileEffects)} {
+    border-radius: cv('hyprcord.radius');
+}
+
 // ------------------- FRIENDS -------------------
 // Now playing + Friend list
 #{c(main friendsDM nowPlayingColumn)},
