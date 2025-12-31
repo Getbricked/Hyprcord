@@ -148,3 +148,10 @@
 #{c(main profile statusInner)} {
     background: transparent;
 }
+
+// Searchbar popout
+#{c(main popouts searchbarPopout)} {
+    background: cv('shading.popout');
+    border: cv('hyprcord.border');
+    margin-top: calc(cv('hyprcord.margin') / 2);
+}
