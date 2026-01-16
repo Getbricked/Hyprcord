@@ -32,12 +32,6 @@
     background: linear-gradient(to right, var(--hsl-main-color), transparent) !important;
 }
 
-// Selected user with gradient color
-#{c(main memberList nameContainer)}:has(#{c(main memberList threeColorGradient)}),
-#{c(main memberList nameContainer)}:has(#{c(main memberList twoColorGradient)}) {
-    background: linear-gradient(to right, rgba(255, 255, 255, 0.6), transparent) !important;
-}
-
 // Fix tag on username
 #{c(main memberList usernameInner)} {
     overflow: hidden;
