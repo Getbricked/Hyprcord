@@ -185,4 +185,10 @@
     #{c(main profile nameplateContainer)}:has(img[src$="aurora_winter_fox/static.png"]) {
         background: linear-gradient(270deg, rgba(1, 49, 194, 0.1) 0%, rgba(1, 49, 194, 0.4) 100%) !important;
     }
+
+    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="dream_waves/asset.webm"]),
+    #{c(main profile nameplateContainer)}:has(img[src$="aurora_winter_fox/static.png"]) {
+        background: linear-gradient(270deg, rgba(1, 49, 194, 0.1) 0%, rgba(1, 49, 194, 0.4) 100%) !important;
+    }
+
 }
