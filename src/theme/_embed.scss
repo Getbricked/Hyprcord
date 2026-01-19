@@ -1,11 +1,17 @@
 @use "../backend" as *;
 
 // ------------------- EMBED -------------------
-// VC Shiki Code
+
+// ``Text``
 #{c(main visualRefresh)} #{c(main chat markup)} code {
+    border-radius: 0px;
+}
+
+// VC Shiki Code
+#{c(main visualRefresh)} #{c(main chat markup)} .vc-shiki-code {
     border-radius: cv('hyprcord.radius');
     border: cv('hyprcord.border');
-    background: color-mix(in srgb, cv('color.main'), transparent 95%);
+    background: color-mix(in srgb, cv('color.main'), transparent 85%);
 }
 
 .vc-shiki-root {

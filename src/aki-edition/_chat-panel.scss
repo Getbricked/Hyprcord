@@ -18,11 +18,6 @@
     --message-mentioned-background-hover: rgba(255, 229, 84, 0.15);
 }
 
-// Inline code `` ``
-#{c(main visualRefresh)} #{c(main chat markup)} code.inline {
-    background: rgba(0, 0, 0, 1);
-}
-
 // User display in chat
 #{c(main chat username)},
 #{c(main chat markup)} strong {
