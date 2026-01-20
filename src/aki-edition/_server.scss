@@ -35,7 +35,7 @@
 }
 
 // Server hover + selected
-#{c(main guildList wrapper)}#{c(main guildList selectedWrapper)} #{c(main guildList icon)} {
+#{c(main guildList selectedWrapper)} #{c(main guildList icon)} {
     border-radius: 10px;
     transition: border-radius 0.5s ease;
 }
