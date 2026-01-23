@@ -32,8 +32,8 @@
 
 // Old User Panel
 #{c(main visualRefresh)} #{c(main global panels)} {
-    width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) - 2 * var(--global-margin)) !important;
-    left: calc(var(--global-margin) + 1px * var(--guildsize) + 2 * calc(10px * var(--guildsize) / 50)) !important;
+    width: calc(var(--custom-guild-sidebar-width) - var(--custom-guild-list-width) - 2 * cv('hyprcord.margin') - cv('hyprcord.bordersize')) !important;
+    left: calc(cv('hyprcord.margin') + 1px * var(--guildsize) + 2 * calc(10px * var(--guildsize) / 50)) !important;
     background: transparent;
 }
 

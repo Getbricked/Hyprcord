@@ -53,7 +53,7 @@
     border-top: none;
     border-bottom-left-radius: cv('hyprcord.radius');
     border-bottom-right-radius: cv('hyprcord.radius');
-    margin-bottom: calc(8px + var(--global-margin));
+    margin-bottom: calc(2*var(--space-4) + cv('hyprcord.margin') + cv('hyprcord.bordersize'));
 }
 
 // Server's option (right click on Server's header)
