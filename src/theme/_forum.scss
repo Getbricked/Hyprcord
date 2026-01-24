@@ -3,31 +3,31 @@
 // ------------------- FORUM -------------------
 
 // Forum container + header
-#{c(main visualRefresh)} #{c(main forum container)},
-#{c(main visualRefresh)} #{c(main header container)} {
+#{c(main visualRefresh)} #{c(forum container)},
+#{c(main visualRefresh)} #{c(header container)} {
     border-radius: cv('hyprcord.radius');
     border: cv('hyprcord.border');
     margin-top: cv('hyprcord.margin');
 }
 
 // Left side
-#{c(main visualRefresh)} #{c(main chat chat)}#{c(main chat threadSidebarOpen)} {
+#{c(main visualRefresh)} #{c(chat chat)}#{c(chat threadSidebarOpen)} {
     margin-right: calc(var(--global-margin) - var(--chat-resize-handle-width) - 1px);
 }
 
 // Forum Notice
-#{c(main visualRefresh)} #{c(main forum noticeHeader)} {
+#{c(main visualRefresh)} #{c(forum noticeHeader)} {
     background: linear-gradient(360deg, cv('color.main') -100%, transparent);
     border-radius: cv('hyprcord.radius');
 }
 
 // Pinned thread in forum
-#{c(main visualRefresh)} #{c(main forum chatHeaderBar)} {
+#{c(main visualRefresh)} #{c(forum chatHeaderBar)} {
     border-radius: cv('hyprcord.radius');
     background: color-mix(in srgb, cv('color.main') 30%, transparent);
 }
 
 // New thread image upload button
-#{c(main visualRefresh)} #{c(main forum uploadInput)} {
+#{c(main visualRefresh)} #{c(forum uploadInput)} {
     background-color: var(--background-secondary-alt);
 }

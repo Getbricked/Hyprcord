@@ -3,54 +3,54 @@
 // ------------------- VOICE CALL -------------------
 
 // Title
-#{c(main visualRefresh)} #{c(main voiceCall wrapper)} #{c(main server title)} {
+#{c(main visualRefresh)} #{c(voiceCall wrapper)} #{c(server title)} {
     border: none;
     margin: 0px;
 }
 
 // Call in DM
-#{c(main voiceCall wrapper)}#{c(main voiceCall minimum)} {
+#{c(voiceCall wrapper)}#{c(voiceCall minimum)} {
     background: transparent;
 }
 
-#{c(main voiceCall callContainer)} {
+#{c(voiceCall callContainer)} {
     background: cv('shading.card') !important;
 }
 
 // Fullscreen mode
-#{c(main voiceCall callContainer)} {
+#{c(voiceCall callContainer)} {
     border: cv('hyprcord.border') !important;
     border-radius: 8px;
     margin-top: cv('hyprcord.margin');
 }
 
 // Header
-#{c(main visualRefresh)} #{c(main voiceCall wrapper)} #{c(main header container)} {
+#{c(main visualRefresh)} #{c(voiceCall wrapper)} #{c(header container)} {
     border-radius: cv('hyprcord.radius');
     border: none;
     margin-top: cv('hyprcord.margin');
 }
 
 // Hide user
-#{c(main voiceCall wrapper)}:has(#{c(main voiceCall noBorder)}) #{c(main voiceCall videoWrapper)} {
+#{c(voiceCall wrapper)}:has(#{c(voiceCall noBorder)}) #{c(voiceCall videoWrapper)} {
     border: none;
 }
 
 // Picture in picture + Fullscreen mode
-#{c(main voiceCall borderRadius)},
-#{c(main voiceCall videoWrapper)} {
+#{c(voiceCall borderRadius)},
+#{c(voiceCall videoWrapper)} {
     border-radius: 8px;
     border: cv('hyprcord.border');
 }
 
 // Stage
-#{c(main server chatContent)}:has(#{c(main voiceCall stageContainer)}) {
+#{c(server chatContent)}:has(#{c(voiceCall stageContainer)}) {
     margin-top: cv('hyprcord.margin');
     border-radius: cv('hyprcord.radius');
     border: cv('hyprcord.border') !important;
 }
 
-#{c(main voiceCall stageContainer)} {
+#{c(voiceCall stageContainer)} {
     margin-top: calc(2 * var(--global-margin));
     border-radius: cv('hyprcord.radius');
     border: cv('hyprcord.border');
@@ -58,46 +58,46 @@
     padding-right: 10px;
 }
 
-#{c(main voiceCall tileContainer)} {
+#{c(voiceCall tileContainer)} {
     margin-top: calc(var(--global-margin) / 2);
     border-radius: cv('hyprcord.radius');
     border: cv('hyprcord.border');
 }
 
 // Soundboard + Activities
-#{c(main voiceCall soundboardPicker)},
-#{c(main voiceCall drawerSizingWrapper)} {
+#{c(voiceCall soundboardPicker)},
+#{c(voiceCall drawerSizingWrapper)} {
     border-radius: cv('hyprcord.radius');
     border: cv('hyprcord.border');
 }
 
 // Button in voice call
-#{c(main voiceCall buttonSection)} {
+#{c(voiceCall buttonSection)} {
     background: cv('shading.card');
     border: cv('hyprcord.border');
 }
 
-#{c(main voiceCall colorable)}#{c(main voiceCall disconnect)} {
+#{c(voiceCall colorable)}#{c(voiceCall disconnect)} {
     border: cv('hyprcord.border') !important;
     border-radius: 12px !important;
 }
 
 // Change voice chat region
-.theme-dark #{c(main voiceCall quickSelectPopout)} {
+.theme-dark #{c(voiceCall quickSelectPopout)} {
     background: cv('shading.popout');
     border: cv('hyprcord.border');
     border-radius: cv('hyprcord.radius');
 }
 
 // Empty voice call
-#{c(main voiceCall wrapper)}#{c(main voiceCall wrapperSidebarOpen)} {
+#{c(voiceCall wrapper)}#{c(voiceCall wrapperSidebarOpen)} {
 
-    #{c(main voiceCall callContainer)},
-    #{c(main voiceCall callContent)} {
+    #{c(voiceCall callContainer)},
+    #{c(voiceCall callContent)} {
         border-radius: cv('hyprcord.radius');
     }
 }
 
-#{c(main thread container)} {
+#{c(thread container)} {
     padding-left: calc(var(--global-margin) - var(--chat-resize-handle-width) - 2px);
 }

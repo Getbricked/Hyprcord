@@ -3,26 +3,26 @@
 // ------------------- SERVER BOOST (NEW) -------------------
 
 // Content Container
-#{c(main serverBoost contentContainer)} {
+#{c(serverBoost contentContainer)} {
     margin-top: cv('hyprcord.margin');
     border-radius: cv('hyprcord.radius');
     border: cv('hyprcord.border');
 }
 
 // Active boost
-#{c(main serverBoost activeContainer)} #{c(main serverBoost activeContainer)}-active {
+#{c(serverBoost activeContainer)} #{c(serverBoost activeContainer)}-active {
     border-color: cv('color.success');
 }
 
 // Emoji/Image for role (Boost level 2)
-#{c(main serverBoost contentWrapper)} {
+#{c(serverBoost contentWrapper)} {
     background-color: cv('shading.popout');
 }
 
-#{c(main serverBoost navButtonActive)} {
+#{c(serverBoost navButtonActive)} {
     background-color: cv('color.main');
 }
 
-#{c(main serverBoost contentWrapper)} #emoji-picker-tab-panel {
+#{c(serverBoost contentWrapper)} #emoji-picker-tab-panel {
     border: none;
 }

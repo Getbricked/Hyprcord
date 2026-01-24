@@ -1,0 +1,34 @@
+@use "backend" as *;
+
+// WRAPPER
+#{c(activity wrapper)} {
+    background: transparent;
+}
+
+// ACTIVITY PANEL
+#{c(activity panelContainer)} {
+    border-radius: cv('hyprcord.radius');
+    border: cv('hyprcord.border');
+    margin-top: cv('hyprcord.margin');
+}
+
+// ACTIVITY CONTAINER
+#{c(activity container)} {
+    border-radius: cv('hyprcord.radius');
+}
+
+// ACTIVITY BUTTON
+#{c(activity button)} {
+    border-radius: cv('hyprcord.radius');
+    background: cv('shading.card');
+}
+
+// ACTIVITY APP
+#{c(activity app iframe)} {
+    border-top-left-radius: cv('hyprcord.radius');
+    border-top-right-radius: cv('hyprcord.radius');
+}
+
+#{c(activity app tile)} {
+    background: transparent;
+}

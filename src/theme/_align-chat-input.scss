@@ -3,11 +3,11 @@
 // ------------------- ALIGN CHAT INPUT -------------------
 
 // DM list
-#{c(main alignChatInput)} #{c(main server container)} {
+#{c(main alignChatInput)} #{c(server container)} {
     padding-bottom: calc(var(--custom-app-panels-height, 0) + var(--space-xs) - 6px);
 }
 
 // Server list
-#{c(main alignChatInput)} #{c(main guildList wrapper)} {
+#{c(main alignChatInput)} #{c(guildList wrapper)} {
     margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--space-xs) - 6px);
 }

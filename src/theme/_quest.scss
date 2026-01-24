@@ -3,13 +3,13 @@
 // ------------------- QUEST -------------------
 
 // Claim reward
-#{c(main quest claimedRootContainer)} {
+#{c(quest claimedRootContainer)} {
     border: cv('hyprcord.border');
     border-radius: cv('hyprcord.radius');
 }
 
-#{c(main quest headerContainer)},
-#{c(main quest headerBackground)} {
+#{c(quest headerContainer)},
+#{c(quest headerBackground)} {
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
 }

@@ -3,43 +3,43 @@
 // ------------------- PROFILE V2 -------------------
 
 // Banner
-.user-profile-modal-v2 :where(#{c(main profile banner)}) {
+.user-profile-modal-v2 :where(#{c(profile banner)}) {
     border-radius: cv('hyprcord.radius');
 }
 
 // Inner profile
-#{c(main profile profileContainer)} {
+#{c(profile profileContainer)} {
     border: cv('hyprcord.border');
 }
 
 // Big profile
-.custom-user-profile-theme.user-profile-modal-v2 #{c(main profile modalInner)} {
+.custom-user-profile-theme.user-profile-modal-v2 #{c(profile modalInner)} {
     background: cv('shading.card');
 }
 
 // Big background profile
-#{c(main profile backgroundImage)} {
+#{c(profile backgroundImage)} {
     background-size: 100%;
     opacity: .7;
     filter: none;
 }
 
-#{c(main profile backgroundImage)}:after {
+#{c(profile backgroundImage)}:after {
     backdrop-filter: none;
 }
 
 // Activities
-#{c(main profile activitiesCard)} {
+#{c(profile activitiesCard)} {
     border: cv('hyprcord.border');
 }
 
 // No nitro user
-#{c(main profile modalOuter)}:not(.custom-user-profile-theme) {
+#{c(profile modalOuter)}:not(.custom-user-profile-theme) {
     border: cv('hyprcord.border');
 }
 
 // Nitro user
-#{c(main profile backgroundImage)} {
+#{c(profile backgroundImage)} {
     background-image: var(--background-image) !important;
     mask-image: none;
     filter: brightness(0.6);

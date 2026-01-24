@@ -3,7 +3,7 @@
 // --------------------- Member List ---------------------
 
 // Role groups
-#{c(main memberList membersGroup)} {
+#{c(memberList membersGroup)} {
     background: rgba(32, 181, 255, 0.025);
     color: var(--hsl-main-color);
     margin: auto;
@@ -11,33 +11,33 @@
 }
 
 // DM + Channel list
-#{c(main visualRefresh)} #{c(main friendsDM privateChannels)},
-#{c(main visualRefresh)} #{c(main server container)} {
+#{c(main visualRefresh)} #{c(friendsDM privateChannels)},
+#{c(main visualRefresh)} #{c(server container)} {
     background: transparent !important;
 }
 
 // Usernames in servers
-#{c(main memberList username)} {
+#{c(memberList username)} {
     font-size: 15px;
     font-weight: 600;
 }
 
 // Selected user with role color
-#{c(main memberList nameContainer)}[style^="color:"]:after {
+#{c(memberList nameContainer)}[style^="color:"]:after {
     background: linear-gradient(to right, currentColor, transparent) !important;
 }
 
 // Selected user with no role color
-#{c(main memberList nameContainer)}:after {
+#{c(memberList nameContainer)}:after {
     background: linear-gradient(to right, var(--hsl-main-color), transparent) !important;
 }
 
 // Fix tag on username
-#{c(main memberList usernameInner)} {
+#{c(memberList usernameInner)} {
     overflow: hidden;
 }
 
 // Tag and Owner only on hover
-#{c(main memberList memberInner)} :not(.selected, :hover) :is(#{c(main memberList clanTag)}, #{c(main memberList ownerIcon)}) {
+#{c(memberList memberInner)} :not(.selected, :hover) :is(#{c(memberList clanTag)}, #{c(memberList ownerIcon)}) {
     display: none;
 }

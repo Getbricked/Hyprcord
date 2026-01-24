@@ -22,6 +22,8 @@
 
     /* Global margin for everything default is 20px */
     --global-margin: 20px;
+    /* The size of border radius (default is 10px) */
+    --global-radius: 10px;
 
     /* The size and style of border (default is 1px and var(--bordersize, 1px) solid var(--hsl-main-color) */
     --bordersize: 1px;

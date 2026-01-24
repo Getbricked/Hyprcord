@@ -4,59 +4,59 @@
 
 // Chat input
 #{c(main visualRefresh)} {
-    #{c(main chatForm form)} {
+    #{c(chatForm form)} {
         padding-left: cv('hyprcord.margin');
         padding-right: cv('hyprcord.margin');
     }
 }
 
 // Right click on msg
-#{c(main menus menu)} {
+#{c(menus menu)} {
     border-radius: cv('hyprcord.radius');
     border: cv('hyprcord.border') !important;
 }
 
 // Jump to present bar
-#{c(main bar jumpToPresent)} {
+#{c(bar jumpToPresent)} {
     background: cv('shading.popout');
     border: cv('hyprcord.border');
     border-radius: cv('hyprcord.radius');
 }
 
 // On hover msg
-#{c(main chat message)}#{c(main chat messageSelected)} #{c(main chat messageButtonsInner)},
-#{c(main mouseMode)} #{c(main chat message)}:hover #{c(main chat messageButtonsInner)} {
+#{c(chat message)}#{c(chat messageSelected)} #{c(chat messageButtonsInner)},
+#{c(main mouseMode)} #{c(chat message)}:hover #{c(chat messageButtonsInner)} {
     border: cv('hyprcord.border');
     border-radius: cv('hyprcord.radius');
 }
 
 // Emoji + GIF + Stickers Box
 #{c(main visualRefresh)} {
-    #{c(main expressionPicker contentWrapper)} {
+    #{c(expressionPicker contentWrapper)} {
         border: cv('hyprcord.border');
         border-radius: cv('hyprcord.radius');
     }
 }
 
 // Emoji
-#{c(main expressionPicker contentWrapper)} #emoji-picker-tab-panel {
+#{c(expressionPicker contentWrapper)} #emoji-picker-tab-panel {
     border: none;
 }
 
 // Reaction emoji
-#{c(main chat reactions wrapper)},
-#{c(main chat reactions wrapper)}#{c(main chat reactions isBurstReactionPicker)} {
+#{c(chat reactions wrapper)},
+#{c(chat reactions wrapper)}#{c(chat reactions isBurstReactionPicker)} {
     border: cv('hyprcord.border');
     border-radius: cv('hyprcord.radius');
 }
 
 // Chat contents
-#{c(main chat scrollerInner)} {
+#{c(chat scrollerInner)} {
     padding-left: calc(var(--global-margin) - var(--space-xs));
 }
 
 // Search result panel
-#{c(main visualRefresh)} #{c(main chat searchResultsWrap)} {
+#{c(main visualRefresh)} #{c(chat searchResultsWrap)} {
     margin-top: cv('hyprcord.margin');
     margin-left: cv('hyprcord.margin');
     border-radius: cv('hyprcord.radius');
@@ -64,7 +64,7 @@
 }
 
 // Notice
-#{c(main visualRefresh)} #{c(main notice base)} {
+#{c(main visualRefresh)} #{c(notice base)} {
     border-radius: cv('hyprcord.radius');
     margin-top: cv('hyprcord.margin');
     border: cv('hyprcord.border');
@@ -72,49 +72,49 @@
 }
 
 // Upload attachment in chat input
-#{c(main chatForm upload)} {
+#{c(chatForm upload)} {
     border-radius: cv('hyprcord.radius');
     border: cv('hyprcord.border') !important;
 }
 
 // Pinned message
-#{c(main visualRefresh)} #{c(main chat messagesPopoutWrap)} {
+#{c(main visualRefresh)} #{c(chat messagesPopoutWrap)} {
     border-radius: cv('hyprcord.radius');
     border: cv('hyprcord.border');
 }
 
 // ------------------- THREAD -------------------
 // Thread in chat
-#{c(main visualRefresh)} #{c(main thread browser)} {
+#{c(main visualRefresh)} #{c(thread browser)} {
     border-radius: cv('hyprcord.radius');
     border: cv('hyprcord.border');
 }
 
 // Thread full screen
-#{c(main visualRefresh)} #{c(main thread modal)} {
+#{c(main visualRefresh)} #{c(thread modal)} {
     border: cv('hyprcord.border');
 }
 
 // Create a new thread
-#{c(main visualRefresh)} #{c(main thread container)}:not(:has(#{c(main thread layerContainer)})) {
+#{c(main visualRefresh)} #{c(thread container)}:not(:has(#{c(thread layerContainer)})) {
     border-radius: cv('hyprcord.radius');
     border: cv('hyprcord.border');
     margin-top: cv('hyprcord.margin');
 }
 
-#{c(main visualRefresh)} #{c(main thread container)}:not(:has(#{c(main thread layerContainer)})) #{c(main header container)} {
+#{c(main visualRefresh)} #{c(thread container)}:not(:has(#{c(thread layerContainer)})) #{c(header container)} {
     margin-left: cv('hyprcord.margin');
     width: calc(100% - 2 * var(--global-margin));
 }
 
-#{c(main thread container)} #{c(main thread submitContainer)} {
+#{c(thread container)} #{c(thread submitContainer)} {
     padding-top: cv('hyprcord.margin');
     padding-bottom: cv('hyprcord.margin');
     padding-left: calc(var(--global-margin) - 8px);
 }
 
 // Message requests spam
-#{c(main chat hamBanner)} {
+#{c(chat hamBanner)} {
     background-color: cv('shading.card');
     margin-top: cv('hyprcord.margin');
     border-radius: cv('hyprcord.radius');
@@ -122,11 +122,11 @@
 }
 
 // Edited timestamp adjustments
-#{c(main chat edited)} {
+#{c(chat edited)} {
     display: none;
 }
 
-#{c(main chat message)}:not(#{c(main chat systemMessage)}) #{c(main chat messageContent)} #{c(main chat timestamp)}>#{c(main chat hiddenVisually)} {
+#{c(chat message)}:not(#{c(chat systemMessage)}) #{c(chat messageContent)} #{c(chat timestamp)}>#{c(chat hiddenVisually)} {
     height: auto;
     clip: unset;
     clip-path: unset;
@@ -134,10 +134,10 @@
     font-size: 0.625rem;
 }
 
-#{c(main chat messageContent)} #{c(main chat timestamp)}>#{c(main chat hiddenVisually)}::before {
+#{c(chat messageContent)} #{c(chat timestamp)}>#{c(chat hiddenVisually)}::before {
     content: "(edited ";
 }
 
-#{c(main chat messageContent)} #{c(main chat timestamp)}>#{c(main chat hiddenVisually)}::after {
+#{c(chat messageContent)} #{c(chat timestamp)}>#{c(chat hiddenVisually)}::after {
     content: ")";
 }

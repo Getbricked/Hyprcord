@@ -1,10 +1,12 @@
+@use "../backend" as *;
+
 /* Server setting when click on web invitation link */
-.visual-refresh .editProfileContainer__7bf69 {
+#{c(main visualRefresh)} .editProfileContainer__7bf69 {
     background: var(--card-shading);
 }
 
 /* No separator in settings */
-.visual-refresh .separator_aa8da2 {
+#{c(main visualRefresh)} .separator_aa8da2 {
     display: none;
 }
 

@@ -3,27 +3,27 @@
 /* --------------------------- GLOBAL --------------------------- */
 
 /* Nameplate size (member list) */
-#{c(main memberList member)} #{c(main profile nameplateContainer)} {
+#{c(memberList member)} #{c(profile nameplateContainer)} {
     left: 7px;
     width: 97%;
 }
 
 /* Clearer nameplate (mostly for member list) */
-#{c(main profile nameplateVideoContainer)},
-#{c(main profile nameplateImg)} {
+#{c(profile nameplateVideoContainer)},
+#{c(profile nameplateImg)} {
     mask-image: none !important;
 }
 
 /* --------------------------- USER PANEL --------------------------- */
-#{c(main global panels)}:has(#{c(main global activityPanel)}) #{c(main profile nameplateContainer)},
-#{c(main global panels)}:has(#{c(main global voicePanelContainer)}) #{c(main profile nameplateContainer)} {
+#{c(global panels)}:has(#{c(global activityPanel)}) #{c(profile nameplateContainer)},
+#{c(global panels)}:has(#{c(global voicePanelContainer)}) #{c(profile nameplateContainer)} {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: inherit;
     border-bottom-left-radius: inherit;
 }
 
-#{c(main global panels)} #{c(main profile nameplateContainer)} {
+#{c(global panels)} #{c(profile nameplateContainer)} {
     border-radius: inherit;
     left: -4px;
     top: -2px;
@@ -32,162 +32,164 @@
 }
 
 /* Remove border for VC panel and activity panel */
-#{c(main visualRefresh)} #{c(main global panels)}:has(#{c(main profile nameplateContainer)}) #{c(main global voicePanelWrapper)},
-#{c(main visualRefresh)} #{c(main global panels)}:has(#{c(main profile nameplateContainer)}) #{c(main global activityPanel)} {
-    border-bottom: 0px solid rgba(225, 240, 253, 0.123);
+:is(#{c(global activityPanel)}, #{c(global voicePanelWrapper)}) {
+    #{c(main visualRefresh)} #{c(global panels)}:has(#{c(profile nameplateContainer)}) & {
+        border-bottom: 0px solid rgba(225, 240, 253, 0.123);
+    }
 }
 
+
 /* Add border when VC panel and activity panel both appear */
-#{c(main visualRefresh)} #{c(main global panels)}:has(#{c(main global voicePanelContainer)}) #{c(main global activityPanel)} {
+#{c(main visualRefresh)} #{c(global panels)}:has(#{c(global voicePanelContainer)}) #{c(global activityPanel)} {
     border-bottom: 1px solid rgba(225, 240, 253, 0.123);
 }
 
 /* Clearer nameplate display globally */
-#{c(main profile nameplateImg)},
+#{c(profile nameplateImg)},
 /* on member list */
-#{c(main profile nameplateImg)}#{c(main profile nameplateHover)},
-#{c(main profile nameplateImg)}#{c(main profile nameplateSelected)},
+#{c(profile nameplateImg)}#{c(profile nameplateHover)},
+#{c(profile nameplateImg)}#{c(profile nameplateSelected)},
 /* on store */
-#{c(main profile nameplateImg)}#{c(main profile nameplatePreview)},
+#{c(profile nameplateImg)}#{c(profile nameplatePreview)},
 /* on user panel */
-#{c(main profile nameplateImg)}#{c(main profile nameplateAccount)},
-#{c(main profile nameplateImg)}#{c(main profile nameplateAccount)}#{c(main profile nameplateHover)},
+#{c(profile nameplateImg)}#{c(profile nameplateAccount)},
+#{c(profile nameplateImg)}#{c(profile nameplateAccount)}#{c(profile nameplateHover)},
 /* on dm */
-#{c(main profile nameplateImg)}#{c(main profile nameplateChannel)}#{c(main profile nameplateSelected)},
-#{c(main profile nameplateImg)}#{c(main profile nameplateChannel)}#{c(main profile nameplateHover)} {
+#{c(profile nameplateImg)}#{c(profile nameplateChannel)}#{c(profile nameplateSelected)},
+#{c(profile nameplateImg)}#{c(profile nameplateChannel)}#{c(profile nameplateHover)} {
     opacity: 1;
 }
 
 /* --------------------------- SPECIFIC NAMEPLATE --------------------------- */
 #{c(main themeDark)} {
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="twilight/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="twilight/static.png"]),
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="twilight/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="twilight/static.png"]),
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="sword_of_legend/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="sword_of_legend/static.png"]),
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="sword_of_legend/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="sword_of_legend/static.png"]),
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="sun_and_moon/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="sun_and_moon/static.png"]),
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="sun_and_moon/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="sun_and_moon/static.png"]),
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="blue_mana/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="blue_mana/static.png"]) {
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="blue_mana/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="blue_mana/static.png"]) {
         background: linear-gradient(270deg, rgba(1, 49, 194, 0.1) 0%, rgba(1, 49, 194, 0.4) 100%) !important;
     }
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="cherry_blossoms/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="cherry_blossoms/static.png"]),
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="cherry_blossoms/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="cherry_blossoms/static.png"]),
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="oasis/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="oasis/static.png"]),
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="oasis/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="oasis/static.png"]),
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="cozy_cat/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="cozy_cat/static.png"]) {
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="cozy_cat/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="cozy_cat/static.png"]) {
         background: linear-gradient(270deg, rgba(137, 58, 153, 0.1) 0%, rgba(137, 58, 153, 0.4) 100%) !important;
     }
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="spirit_of_spring/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="spirit_of_spring/static.png"]),
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="spirit_of_spring/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="spirit_of_spring/static.png"]),
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="koi_pond/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="koi_pond/static.png"]),
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="koi_pond/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="koi_pond/static.png"]),
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="touch_grass/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="touch_grass/static.png"]),
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="touch_grass/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="touch_grass/static.png"]),
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="under_the_sea/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="under_the_sea/static.png"]) {
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="under_the_sea/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="under_the_sea/static.png"]) {
         background: linear-gradient(270deg, rgba(0, 128, 183, 0.1) 0%, rgba(0, 128, 183, 0.4) 100%) !important;
     }
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="cityscape/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="cityscape/static.png"]),
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="cityscape/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="cityscape/static.png"]),
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="cat_beans/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="cat_beans/static.png"]),
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="cat_beans/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="cat_beans/static.png"]),
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="vengeance/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="vengeance/static.png"]),
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="vengeance/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="vengeance/static.png"]),
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="black_mana/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="black_mana/static.png"]),
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="black_mana/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="black_mana/static.png"]),
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="glitch/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="glitch/static.png"]),
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="glitch/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="glitch/static.png"]),
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="spirit_moon/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="spirit_moon/static.png"]) {
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="spirit_moon/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="spirit_moon/static.png"]) {
         background: linear-gradient(270deg, rgba(115, 11, 200, 0.1) 0%, rgba(115, 11, 200, 0.4) 100%) !important;
     }
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="angels/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="angels/static.png"]),
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="angels/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="angels/static.png"]),
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="bonsai/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="bonsai/static.png"]),
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="bonsai/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="bonsai/static.png"]),
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="pixie_dust/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="pixie_dust/static.png"]) {
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="pixie_dust/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="pixie_dust/static.png"]) {
         background: linear-gradient(270deg, rgba(220, 62, 151, 0.1) 0%, rgba(220, 62, 151, 0.4) 100%) !important;
     }
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="aurora/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="aurora/static.png"]),
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="aurora/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="aurora/static.png"]),
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="starfall_tides/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="starfall_tides/static.png"]) {
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="starfall_tides/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="starfall_tides/static.png"]) {
         background: linear-gradient(270deg, rgba(8, 100, 96, 0.1) 0%, rgba(8, 100, 96, 0.4) 100%) !important;
     }
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="white_mana/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="white_mana/static.png"]) {
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="white_mana/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="white_mana/static.png"]) {
         background: linear-gradient(270deg, rgba(220, 62, 151, 0.1) 0%, rgba(220, 62, 151, 0.4) 100%) !important;
     }
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="red_mana/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="red_mana/static.png"]) {
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="red_mana/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="red_mana/static.png"]) {
         background: linear-gradient(270deg, rgba(144, 0, 7, 0.1) 0%, rgba(144, 0, 7, 0.4) 100%) !important;
     }
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="green_mana/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="green_mana/static.png"]) {
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="green_mana/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="green_mana/static.png"]) {
         background: linear-gradient(270deg, rgba(4, 123, 32, 0.1) 0%, rgba(4, 123, 32, 0.4) 100%) !important;
     }
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="moonlit_charm/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="moonlit_charm/static.png"]) {
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="moonlit_charm/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="moonlit_charm/static.png"]) {
         background: linear-gradient(270deg, rgba(1, 49, 194, 0.1) 0%, rgba(1, 49, 194, 0.4) 100%) !important;
     }
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="starfall_tides_nightshade/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="starfall_tides_nightshade/static.png"]) {
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="starfall_tides_nightshade/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="starfall_tides_nightshade/static.png"]) {
         background: linear-gradient(270deg, rgba(137, 58, 153, 0.1) 0%, rgba(137, 58, 153, 0.4) 100%) !important;
     }
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="starfall_tides_rose/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="starfall_tides_rose/static.png"]),
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="im_watching_yooooou_treat/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="im_watching_yooooou_treat/static.png"]) {
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="starfall_tides_rose/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="starfall_tides_rose/static.png"]),
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="im_watching_yooooou_treat/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="im_watching_yooooou_treat/static.png"]) {
         background: linear-gradient(270deg, rgba(220, 62, 151, 0.1) 0%, rgba(220, 62, 151, 0.4) 100%) !important;
     }
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="nitro_rocketfuel_nameplate/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="nitro_rocketfuel_nameplate/static.png"]) {
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="nitro_rocketfuel_nameplate/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="nitro_rocketfuel_nameplate/static.png"]) {
         background: linear-gradient(270deg, rgba(115, 11, 200, 0.1) 0%, rgba(115, 11, 200, 0.4) 100%) !important;
     }
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="arctic_winter_frost/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="arctic_winter_frost/static.png"]) {
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="arctic_winter_frost/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="arctic_winter_frost/static.png"]) {
         background: linear-gradient(270deg, rgba(1, 49, 194, 0.1) 0%, rgba(1, 49, 194, 0.4) 100%) !important;
     }
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="aurora_winter_fox/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="aurora_winter_fox/static.png"]) {
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="aurora_winter_fox/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="aurora_winter_fox/static.png"]) {
         background: linear-gradient(270deg, rgba(1, 49, 194, 0.1) 0%, rgba(1, 49, 194, 0.4) 100%) !important;
     }
 
-    #{c(main profile nameplateContainer)}:has(#{c(main profile nameplateVideoContainer)} video[src$="dream_waves/asset.webm"]),
-    #{c(main profile nameplateContainer)}:has(img[src$="aurora_winter_fox/static.png"]) {
+    #{c(profile nameplateContainer)}:has(#{c(profile nameplateVideoContainer)} video[src$="dream_waves/asset.webm"]),
+    #{c(profile nameplateContainer)}:has(img[src$="aurora_winter_fox/static.png"]) {
         background: linear-gradient(270deg, rgba(1, 49, 194, 0.1) 0%, rgba(1, 49, 194, 0.4) 100%) !important;
     }
 

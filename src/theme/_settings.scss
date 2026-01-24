@@ -3,24 +3,24 @@
 // ------------------- SETTINGS -------------------
 
 // Sidebar
-#{c(main visualRefresh)} #{c(main settings sidebarRegion)} {
+#{c(main visualRefresh)} #{c(settings sidebarRegion)} {
     margin-right: cv('hyprcord.margin');
 }
 
 // Content + Sidebar
-#{c(main settings contentRegion)},
-#{c(main visualRefresh)} #{c(main settings sidebarRegion)} {
+#{c(settings contentRegion)},
+#{c(main visualRefresh)} #{c(settings sidebarRegion)} {
     border-radius: cv('hyprcord.radius');
     border: cv('hyprcord.border');
 }
 
 // Global
-#{c(main visualRefresh)} #{c(main settings standardSidebarView)} {
+#{c(main visualRefresh)} #{c(settings standardSidebarView)} {
     margin-top: calc(var(--global-margin) + var(--custom-app-top-bar-height) + 4px);
 }
 
 // Top bar
-#app-mount:has(#{c(main server topBarShow)})>#{c(main server topBar)} {
+#app-mount:has(#{c(server topBarShow)})>#{c(server topBar)} {
     border: cv('hyprcord.border');
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: cv('hyprcord.radius');
