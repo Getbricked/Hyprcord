@@ -106,3 +106,7 @@ typings/
 # Manually held back
 public-unminified/
 screenshots/
+
+# Python stuff
+.venv/
+scripts/

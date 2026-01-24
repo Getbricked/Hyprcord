@@ -125,7 +125,7 @@
 }
 
 /* User activity color */
-.b0dfc2ed9c57037d-overflow strong {
+.overflow_b0dfc2 strong {
     color: var(--main-color);
 }
 
@@ -133,11 +133,11 @@
 
 /* Gradient top banner for non-nitro only */
 /* Need to keep banner on top for it to work.... */
-.c0bea05627c5dc35-outer:not(.custom-user-profile-theme) .c0bea05627c5dc35-inner ._68edb95846a37624-mask {
+.outer_c0bea0:not(.custom-user-profile-theme) .inner_c0bea0 .mask__68edb {
     mask: linear-gradient(black -5%, 0%, transparent);
 }
 
 /* Remove outer padding + remove custom nitro background for nitro user */
-.c0bea05627c5dc35-outer.custom-user-profile-theme {
+.outer_c0bea0.custom-user-profile-theme {
     padding: 0;
 }
