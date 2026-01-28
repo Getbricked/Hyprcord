@@ -75,6 +75,7 @@
 #{c(voiceCall buttonSection)} {
     background: cv('shading.card');
     border: cv('hyprcord.border');
+    border-radius: cv('hyprcord.radius');
 }
 
 #{c(voiceCall colorable)}#{c(voiceCall disconnect)} {
