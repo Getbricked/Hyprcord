@@ -2,6 +2,10 @@
 
 // --------------------- Server ---------------------
 
+// Channel text
+.theme-dark #{c(channels name)} {
+    text-shadow: #000000 0px 0px 1px;
+}
 
 // Server list
 #{c(main visualRefresh)} #{c(guildList scroller)} {
