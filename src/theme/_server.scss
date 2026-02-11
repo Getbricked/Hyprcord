@@ -190,6 +190,12 @@
     color: cv('color.main');
 }
 
+// Remove mask shading
+#{c(guildList wrapper)} {
+    mask: none;
+    -webkit-mask: none;
+}
+
 // ------------------- Server Settings -------------------
 // Server setting when click on web invitation link
 #{c(modals inviteContainer)} {
