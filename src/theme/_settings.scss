@@ -18,3 +18,9 @@
 #{c(main visualRefresh)} #{c(settings standardSidebarView)} {
     margin-top: calc(var(--global-margin) + var(--custom-app-top-bar-height) + 4px);
 }
+
+// Top Bar
+#{c(server topBarShow)} {
+    height: 10px;
+    margin: cv('hyprcord.margin');
+}

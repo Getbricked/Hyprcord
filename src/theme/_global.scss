@@ -13,15 +13,12 @@
 }
 
 // Top bar
-#app-mount #{c(server topBar)} {
+#{c(server topBar)} {
     border: cv('hyprcord.border');
+    background: cv('shading.card');
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: cv('hyprcord.radius');
-    margin: 0px !important;
-}
-
-#{c(server topBar)} {
-    background: cv('shading.card');
+    margin: 0px;
 }
 
 // User panel
