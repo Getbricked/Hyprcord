@@ -98,3 +98,8 @@
     margin: 0;
     top: 0 !important;
 }
+
+/* Mentioned msg */
+:is(.messageListItem__5126c, .quotedChatMessage__5126c) .mentioned__5126c {
+    background: rgba(255, 229, 84, 0.15);
+}
