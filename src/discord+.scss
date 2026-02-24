@@ -103,3 +103,6 @@
 :is(.messageListItem__5126c, .quotedChatMessage__5126c) .mentioned__5126c {
     background: var(--background-mentioned);
 }
+.mentioned__5126c:before {
+    display: none;
+}
