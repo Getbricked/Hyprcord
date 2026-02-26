@@ -1,0 +1,53 @@
+/**
+ * @name ClearVision V7 Hyprcord Aki Edition
+ * @author Aki
+ * @version 7.0.1
+ * @description ClearVision V7 + Hyprland + RadialStatus + DiscordPlus Chat.
+ * @website https://clearvision.github.io
+ * @invite dHaSxn3
+ */
+/* IMPORT CLEARVISION V7 Aki */
+@import url("https://getbricked.github.io/Hyprcord/CV7-Aki.css");
+/* ServerColumns addon */
+@import url("https://mwittrien.github.io/BetterDiscordAddons/Themes/ServerColumns/ServerColumns.css");
+/* IMPORT SOURCE (Themes) */
+@import url("https://getbricked.github.io/Hyprcord/main.css");
+/* IMPORT AKI EDITION */
+@import url("https://getbricked.github.io/Hyprcord/aki.css");
+/* Remove top bar */
+@import url("https://getbricked.github.io/Hyprcord/no-top-bar.css");
+/* Radial Status */
+@import url("https://discordstyles.github.io/RadialStatus/RadialStatus.css");
+/* Discord+ special for Hyprvision */
+@import url("https://getbricked.github.io/Hyprcord/discord+.css");
+/* SETTINGS */
+:root {
+  /* Tweak in case using ServerColumn addon (only work for 1 column) */
+  --columns: 1;
+  --guildsize: 57;
+  --aligndms: 0;
+  /* Global margin for everything default is 20px */
+  --global-margin: 20px;
+  /* The size of border radius (default is 10px) */
+  --global-radius: 10px;
+  /* The size and style of border (default is 1px and var(--bordersize, 1px) solid var(--hsl-main-color) */
+  --bordersize: 2px;
+  --border: var(--bordersize, 1px) solid var(--hsl-main-color);
+  /* Radial Status */
+  --rs-small-spacing: 2px; /* Gap between avatar and status for members list/dms | MUST end in px */
+  --rs-medium-spacing: 3px; /* Gap between avatar and status for User popout | MUST end in px */
+  --rs-large-spacing: 4px; /* Gap between avatar and status for User profiles | MUST end in px */
+  --rs-small-width: 2px; /* Thickness of status border for members list/dms | MUST end in px */
+  --rs-medium-width: 3px; /* Thickness of status border for User popout | MUST end in px */
+  --rs-large-width: 4px; /* Thickness of status border for User profile | MUST end in px */
+  --rs-avatar-shape: 50%; /* 50% for round - 0% for square */
+  --rs-online-color: #43b581; /* Colour for online status */
+  --rs-idle-color: #faa61a; /* Colour for idle status */
+  --rs-dnd-color: #f04747; /* Colour for dnd status */
+  --rs-offline-color: #636b75; /* Colour for offline status */
+  --rs-streaming-color: #643da7; /* Colour for streaming status */
+  --rs-invisible-color: #747f8d; /* Colour for invisible status - Note: this will only show for your own invisibility */
+  --rs-self-speaking-color: #57d39b; /* Colour for speaking ring in the bottom left while in a voice chat/call */
+  --rs-phone-color: var(--rs-online-color); /* Colour of the ring & phone icon  */
+  --rs-phone-visible: block; /* Visibility of the phone icon next to a users avatar. | block = visible | none = hidden */
+}
