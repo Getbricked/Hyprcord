@@ -20,8 +20,11 @@
 @import url("https://discordstyles.github.io/RadialStatus/RadialStatus.css");
 /* Discord+ special for Hyprvision */
 @import url("https://getbricked.github.io/Hyprcord/discord+.css");
+/* On hover animation */
+@import url("https://getbricked.github.io/Hyprcord/utils.css");
 /* SETTINGS */
 :root {
+  --background-image: transparent;
   /* Tweak in case using ServerColumn addon (only work for 1 column) */
   --columns: 1;
   --guildsize: 57;
