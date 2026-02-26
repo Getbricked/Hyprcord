@@ -49,8 +49,20 @@
 }
 
 // Old buttons on panel
-#{c(global oldPanelButtonChevron)} {
-    display: none !important;
+#{c(global audioButtonParent)} #{c(global oldPanelButtonChevron)} {
+    display: none;
+}
+
+#app-mount #{c(global audioButton)} {
+    border-radius: var(--radius-sm);
+}
+
+#{c(main themeDark)} #{c(global plateMuted)} {
+    --icon-voice-muted: hsla(0, 0%, 100%, .9);
+}
+
+#{c(global plateMuted)} {
+    background: rgb(from var(--hsl-danger-color) r g b / 90%) !important;
 }
 
 #{c(global oldPanelButtons)} {

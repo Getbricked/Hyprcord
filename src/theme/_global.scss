@@ -7,6 +7,13 @@
     margin: cv('hyprcord.margin');
 }
 
+// Global transparency
+#{c(global app)},
+#app-mount,
+body {
+    background: transparent;
+}
+
 // Content margin (everything except top bar)
 #{c(global content)} {
     margin-top: 4px;
