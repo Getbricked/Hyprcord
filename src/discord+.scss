@@ -117,6 +117,11 @@
 
 .chatContent_f75fb0 .messagesWrapper__36d07 .divider__908e2:has(.content__908e2) {
     justify-content: right;
+    height: 0px;
+
+    & .unreadPill__908e2 {
+        top: -7px;
+    }
 }
 
 .chatContent_f75fb0 .messagesWrapper__36d07 .divider__908e2 .unreadPill__908e2 {
