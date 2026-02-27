@@ -103,6 +103,36 @@
 :is(.messageListItem__5126c, .quotedChatMessage__5126c) .mentioned__5126c {
     background: var(--background-mentioned);
 }
+
 .mentioned__5126c:before {
     display: none;
+}
+
+/* Divider */
+.chatContent_f75fb0 .messagesWrapper__36d07 .divider__908e2 {
+    border-top: none;
+    height: 2px;
+    justify-content: center;
+}
+
+.chatContent_f75fb0 .messagesWrapper__36d07 .divider__908e2:has() {
+    justify-content: right;
+}
+
+.chatContent_f75fb0 .messagesWrapper__36d07 .divider__908e2 .unreadPill__908e2 {
+    border-radius: 10px;
+    font-size: 12.5px;
+    padding: 2px 10px;
+    right: auto;
+    top: -5px;
+    box-shadow: 0 0 4px 1px white;
+}
+
+.chatContent_f75fb0 .messagesWrapper__36d07 .divider__908e2 .unreadPill__908e2 .unreadPillCap__908e2 {
+    display: none;
+}
+
+.content__908e2 {
+    color: var(--hsl-main-color);
+    text-shadow: 2px 2px 10px black;
 }
