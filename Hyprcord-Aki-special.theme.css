@@ -69,4 +69,10 @@
     --rs-phone-color: var(--rs-online-color); /* Colour of the ring & phone icon  */
 
     --rs-phone-visible: block; /* Visibility of the phone icon next to a users avatar. | block = visible | none = hidden */
+
+    /* Discord+ msg */
+    --msg-spacing-ui: 10px;
+    --msg-icon-avatar: 45px;
+    --msg-background-color: rgba(0, 0, 0, 0.3);
+    --msg-border: 1px solid rgba(179, 179, 179, 0.35);
 }

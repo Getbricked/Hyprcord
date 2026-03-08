@@ -1,14 +1,14 @@
 // Discord+ message separation 
 // Source: https://github.com/PlusInsta/discord-plus
-
-
+@use "backend" as *;
 
 /* Discord+ message separation */
 :root {
-    --dplus-spacing-ui: 10px;
-    --dplus-icon-avatar-chat: 45px;
     --global-radius: 10px;
+    --msg-spacing-ui: 10px;
+    --msg-icon-avatar: 45px;
     --msg-background-color: rgba(0, 0, 0, 0.3);
+    --msg-border: 1px solid rgba(179, 179, 179, 0.35);
 }
 
 .group-spacing-0 {
@@ -28,116 +28,122 @@
 }
 
 .group-spacing-24 {
-    --group-spacing: var(--dplus-spacing-ui);
+    --group-spacing: var(--msg-spacing-ui);
 }
 
 /* Spacing */
-:is(.messageListItem__5126c, .quotedChatMessage__5126c, .flash__03436):has(+ .messageListItem__5126c .groupStart__5126c, + .flash__03436 .groupStart__5126c, + .scrollerSpacer__36d07, + .divider__5126c) .groupStart__5126c:has(.avatar_c19a55:not(.compact_c19a55)) {
-    min-height: calc(var(--dplus-spacing-ui) * 2 + var(--dplus-icon-avatar-chat));
+:is(#{c(chat messageListItem)},
+    #{c(chat quotedChatMessage)},
+    #{c(chat flash)}):has(+ #{c(chat messageListItem)} #{c(chat groupStart)},
+    + #{c(chat flash)} #{c(chat groupStart)},
+    + #{c(chat scrollerSpacer)}, + #{c(chat divider divider)}) #{c(chat groupStart)}:has(#{c(chat avatar)}:not(#{c(chat compact)})) {
+    min-height: calc(var(--msg-spacing-ui) * 2 + var(--msg-icon-avatar));
     padding-top: 0;
     padding-bottom: 0;
 }
 
-.cozy_c19a55.wrapper_c19a55 {
-    padding-left: calc(var(--dplus-icon-avatar-chat) + var(--dplus-spacing-ui) * 2);
+#{c(chat cozy)}#{c(chat wrapper)} {
+    padding-left: calc(var(--msg-icon-avatar) + var(--msg-spacing-ui) * 2);
 }
 
-:not(.divider__5126c)+.messageListItem__5126c:has(.groupStart__5126c),
-.messageListItem__5126c+.flash__03436:has(.avatar_c19a55) {
+:not(#{c(chat divider divider)})+#{c(chat messageListItem)}:has(#{c(chat groupStart)}),
+#{c(chat messageListItem)}+#{c(chat flash)}:has(#{c(chat avatar)}) {
     margin-top: var(--group-spacing);
 }
 
-:is(.messageListItem__5126c, .quotedChatMessage__5126c) .message__5126c {
+:is(#{c(chat messageListItem)}, #{c(chat quotedChatMessage)}) #{c(chat message)} {
     background: var(--msg-background-color);
 }
 
-/* Border */
-.messagesWrapper__36d07 {
-    --border: 1px solid rgba(179, 179, 179, 0.35);
-}
-
 /* Start of a group msg */
-.messageListItem__5126c .groupStart__5126c,
-.flash__03436.groupStart__5126c,
-.quotedChatMessage__5126c .groupStart__5126c {
+#{c(chat messageListItem)} #{c(chat groupStart)},
+#{c(chat flash)}#{c(chat groupStart)},
+#{c(chat quotedChatMessage)} #{c(chat groupStart)} {
     border-radius: var(--global-radius) var(--global-radius) 0 0;
-    border: var(--border);
+    border: var(--msg-border);
     border-bottom: none;
     margin-top: 0;
 }
 
 /* Middle of a group msg */
-.message__5126c {
+#{c(chat message)} {
     border-radius: 0;
-    border-left: var(--border);
-    border-right: var(--border);
+    border-left: var(--msg-border);
+    border-right: var(--msg-border);
 }
 
 
 /* End of a group of msg */
-:is(.messageListItem__5126c, .flash__03436):has(+ .messageListItem__5126c .groupStart__5126c, + .divider__5126c, + .scrollerSpacer__36d07, + .flash__03436 .groupStart__5126c) .message__5126c {
+:is(#{c(chat messageListItem)}, #{c(chat flash)}):has(+ #{c(chat messageListItem)} #{c(chat groupStart)}, + #{c(chat divider divider)}, + #{c(chat scrollerSpacer)}, + #{c(chat flash)} #{c(chat groupStart)}) #{c(chat message)} {
     border-radius: 0 0 var(--global-radius) var(--global-radius);
-    border: var(--border);
+    border: var(--msg-border);
     border-top: none;
 }
 
 /* Not sure what this is urgh */
-:is(.messageListItem__5126c, .flash__03436):has(+ .messageListItem__5126c .groupStart__5126c, + .divider__5126c, + .scrollerSpacer__36d07, + .flash__03436 .groupStart__5126c) .groupStart__5126c,
-.divider__5126c+ :is(.messageListItem__5126c, .flash__03436):has(+ .messageListItem__5126c .groupStart__5126c) .message__5126c {
+:is(#{c(chat messageListItem)}, #{c(chat flash)}):has(+ #{c(chat messageListItem)} #{c(chat groupStart)}, + #{c(chat divider divider)}, + #{c(chat scrollerSpacer)}, + #{c(chat flash)} #{c(chat groupStart)}) #{c(chat groupStart)},
+#{c(chat divider divider)}+ :is(#{c(chat messageListItem)}, #{c(chat flash)}):has(+ #{c(chat messageListItem)} #{c(chat groupStart)}) #{c(chat message)} {
     border-radius: var(--global-radius);
-    border: var(--border) !important;
+    border: var(--msg-border) !important;
 }
 
 /* New divider */
-.divider__5126c.beforeGroup__5126c,
-.divider__5126c.hasContent__5126c {
+#{c(chat divider divider)}#{c(chat beforeGroup)},
+#{c(chat divider divider)}#{c(chat hasContent)} {
     margin-top: var(--group-spacing) !important;
 }
 
-.divider__5126c:not(.hasContent__908e2) {
+#{c(chat divider divider)}:not(#{c(chat divider hasContent)}) {
     margin: 0;
     top: 0 !important;
 }
 
 /* Mentioned msg */
-:is(.messageListItem__5126c, .quotedChatMessage__5126c) .mentioned__5126c {
+:is(#{c(chat messageListItem)}, #{c(chat quotedChatMessage)}) #{c(chat mentioned)} {
     background: var(--background-mentioned);
 }
 
-.mentioned__5126c:before {
+#{c(chat mentioned)}:before {
     display: none;
 }
 
 /* Divider */
-.chatContent_f75fb0 .messagesWrapper__36d07 .divider__908e2 {
+#{c(server chatContent)} #{c(chat messageWrapper)} #{c(chat divider divider)} {
     border-top: none;
     height: 2px;
     justify-content: center;
 }
 
-.chatContent_f75fb0 .messagesWrapper__36d07 .divider__908e2:has(.content__908e2) {
+#{c(server chatContent)} #{c(chat messageWrapper)} #{c(chat divider divider)}:has(#{c(chat divider content)}) {
     justify-content: right;
     height: 0px;
 
-    & .unreadPill__908e2 {
+    & #{c(chat divider unreadPill)} {
         top: -7px;
     }
 }
 
-.chatContent_f75fb0 .messagesWrapper__36d07 .divider__908e2 .unreadPill__908e2 {
+#{c(server chatContent)} #{c(chat messageWrapper)} #{c(chat divider divider)} #{c(chat divider unreadPill)} {
     border-radius: 10px;
-    font-size: 12.5px;
+    font-size: 11px;
     padding: 2px 10px;
     right: auto;
     top: -5px;
     box-shadow: 0 0 4px 1px white;
 }
 
-.chatContent_f75fb0 .messagesWrapper__36d07 .divider__908e2 .unreadPill__908e2 .unreadPillCap__908e2 {
+#{c(server chatContent)} #{c(chat messageWrapper)} #{c(chat divider divider)} #{c(chat divider unreadPill)} #{c(chat divider unreadPillCap)} {
     display: none;
 }
 
-.content__908e2 {
+#{c(chat divider content)} {
     color: var(--hsl-main-color);
     text-shadow: 2px 2px 10px black;
+}
+
+// Transparency stuff 
+#{c(server chatContent)},
+#{c(server nsfwScroller)},
+#{c(memberList members)} {
+    background: transparent;
 }
