@@ -8,7 +8,7 @@
     --dplus-spacing-ui: 10px;
     --dplus-icon-avatar-chat: 45px;
     --global-radius: 10px;
-    --msg-color: rgba(0, 0, 0, 0);
+    --msg-background-color: rgba(0, 0, 0, 0.3);
 }
 
 .group-spacing-0 {
@@ -48,7 +48,7 @@
 }
 
 :is(.messageListItem__5126c, .quotedChatMessage__5126c) .message__5126c {
-    background: var(--msg-color);
+    background: var(--msg-background-color);
 }
 
 /* Border */
