@@ -6,6 +6,8 @@
 
 This theme is inspired by **Jugom** and the **Hyprland window manager**.
 
+Give me a cup of coffee: [Ko-fi](https://ko-fi.com/abnf)
+
 ## Previews
 
 ![Hyprcord](Screenshots/hyprcord.png)
@@ -223,3 +225,4 @@ Above is default border style, you can customize it by changing the `--bordersiz
 ## Advanced Customization
 
 For further customization, fork the repository and tailor it to your preferences.
+
