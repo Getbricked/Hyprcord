@@ -19,9 +19,13 @@
 
 // Fullscreen mode
 #{c(voiceCall callContainer)} {
-    border: cv('hyprcord.border') !important;
+    border: cv('hyprcord.border');
     border-radius: 8px;
     margin-top: cv('hyprcord.margin');
+}
+
+#{c(voiceCall fullScreen)} {
+    border: none;
 }
 
 // Header
