@@ -49,7 +49,7 @@ body {
 }
 
 // Border user profile
-#{c(profile modalOuter)} {
+#{c(profile layoutContainer)} #{c(profile modalOuter)} {
     border: cv('hyprcord.border');
 }
 
