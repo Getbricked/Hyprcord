@@ -44,7 +44,7 @@ body {
     background: cv('shading.bg');
     border-radius: cv('hyprcord.radius');
     // border: cv('hyprcord.border') !important;
-    box-shadow: inset 0 0 0 cv('hyprcord.bordersize') cv('color.main');
+    box-shadow: cv('hyprcord.boxshadow');
     contain: layout paint;
     margin-top: cv('hyprcord.margin') !important;
     margin-bottom: cv('hyprcord.margin') !important;
@@ -89,7 +89,7 @@ body {
 
 #{c(friendsDM privateChannels)} #{c(global scrollerBase)} {
     // border: cv('hyprcord.border');
-    box-shadow: inset 0 0 0 cv('hyprcord.bordersize') cv('color.main');
+    box-shadow: cv('hyprcord.boxshadow');
     contain: layout paint;
     border-radius: cv('hyprcord.radius');
     margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--global-margin));
