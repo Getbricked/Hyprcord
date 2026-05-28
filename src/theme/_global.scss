@@ -43,7 +43,9 @@ body {
 #{c(main visualRefresh)} #{c(guildList scroller)} {
     background: cv('shading.bg');
     border-radius: cv('hyprcord.radius');
-    border: cv('hyprcord.border') !important;
+    // border: cv('hyprcord.border') !important;
+    box-shadow: inset 0 0 0 cv('hyprcord.bordersize') cv('color.main');
+    contain: layout paint;
     margin-top: cv('hyprcord.margin') !important;
     margin-bottom: cv('hyprcord.margin') !important;
 }
@@ -73,7 +75,6 @@ body {
 // DM
 #{c(friendsDM privateChannels)} {
     border: none;
-    border-radius: 8px;
 }
 
 // DM + Channel list
@@ -83,10 +84,13 @@ body {
     margin: cv('hyprcord.margin');
     margin-bottom: 0px;
     background: transparent;
+    contain: layout;
 }
 
 #{c(friendsDM privateChannels)} #{c(global scrollerBase)} {
-    border: cv('hyprcord.border');
+    // border: cv('hyprcord.border');
+    box-shadow: inset 0 0 0 cv('hyprcord.bordersize') cv('color.main');
+    contain: layout paint;
     border-radius: cv('hyprcord.radius');
     margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--global-margin));
 }
