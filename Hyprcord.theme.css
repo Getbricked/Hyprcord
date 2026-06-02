@@ -12,7 +12,7 @@
 @import url("https://getbricked.github.io/Hyprcord/main.css");
 /* SETTINGS */
 :root {
-  /* Tweak in case using ServerColumn addon (only work for 1 column) */
+  /* Tweak in case using ServerColumn addon (multiple columns is now available) */
   --columns: 1;
   --guildsize: 57;
   --aligndms: 0;
