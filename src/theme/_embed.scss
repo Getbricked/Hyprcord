@@ -9,8 +9,7 @@
 
 // VC Shiki Code
 #{c(main visualRefresh)} #{c(chat markup)} .vc-shiki-code {
-    border-radius: cv('hyprcord.radius');
-    border: cv('hyprcord.border');
+    @include panel($border: true, $radius: true);
     background: color-mix(in srgb, cv('color.main'), transparent 85%);
 }
 
@@ -46,8 +45,7 @@
 
 // Discord embed
 #{c(main visualRefresh)} #{c(embedsMedia discordInviteWrapper)} {
-    border-radius: cv('hyprcord.radius');
-    border: cv('hyprcord.border');
+    @include panel($border: true, $radius: true);
 }
 
 // Image global
@@ -73,20 +71,18 @@
 // Tool buttons
 #{c(embedsMedia mediaPreview actionButtons)},
 #{c(embedsMedia mediaPreview closeButton)} {
-    border: cv('hyprcord.border');
+    @include panel($border: true);
 }
 
 // The picture
 #{c(embedsMedia mediaPreview mediaArea)} {
     position: relative;
     top: calc(var(--global-margin) + 10px);
-    border: cv('hyprcord.border');
-    border-radius: cv('hyprcord.radius');
+    @include panel($border: true, $radius: true);
 }
 
 #{c(embedsMedia mediaPreview zoomed)} {
-    border: cv('hyprcord.border');
-    border-radius: cv('hyprcord.radius');
+    @include panel($border: true, $radius: true);
 }
 
 #{c(embedsMedia mediaPreview media)} {
@@ -101,5 +97,5 @@
 // Tag server preview + Emoji server preview
 #{c(embedsMedia tagServerPreview)},
 #{c(main visualRefresh)} #{c(embedsMedia emojiServerPopout)} {
-    border: cv('hyprcord.border');
+    @include panel($border: true);
 }

@@ -4,9 +4,7 @@
 
 // Content Container
 #{c(serverBoost contentContainer)} {
-    margin-top: cv('hyprcord.margin');
-    border-radius: cv('hyprcord.radius');
-    border: cv('hyprcord.border');
+    @include panel($border: true, $radius: true, $margin: top);
 }
 
 // Active boost

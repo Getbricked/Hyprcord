@@ -1,8 +1,6 @@
 @use "../backend" as *;
 
 #{c(search resultsWrap)} {
-    border-radius: cv('hyprcord.radius');
-    border: cv('hyprcord.border');
-    margin-top: cv('hyprcord.margin');
+    @include panel($border: true, $radius: true, $margin: top);
     margin-left: cv('hyprcord.margin');
 }

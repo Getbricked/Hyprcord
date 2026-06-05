@@ -30,8 +30,7 @@ body {
 
 // User panel
 #{c(main visualRefresh)} #{c(global panels)} {
-    border-radius: cv('hyprcord.radius');
-    border: cv('hyprcord.border');
+    @include panel($border: true, $radius: true);
     padding: 0px;
     padding-left: 5px;
     padding-right: 5px;
@@ -53,13 +52,12 @@ body {
 // Border user profile
 #{c(profile layoutContainer)} #{c(profile modalOuter)},
 #{c(profile modalOuter)} {
-    border: cv('hyprcord.border');
+    @include panel($border: true);
 }
 
 // Inbox (on top bar)
 #{c(main visualRefresh)} #{c(popouts recentMentionsPopout)} {
-    border-radius: cv('hyprcord.radius');
-    border: cv('hyprcord.border');
+    @include panel($border: true, $radius: true);
 }
 
 // Inbox mentions
@@ -69,7 +67,7 @@ body {
 
 // Vencord notification
 .vc-notification-root {
-    border: cv('hyprcord.border');
+    @include panel($border: true);
 }
 
 // DM
@@ -101,7 +99,7 @@ body {
 
 // "Leaving discord" dialog when click on a link
 #{c(modals leavingContainer)} {
-    border: cv('hyprcord.border');
+    @include panel($border: true);
 }
 
 // ------------------- WINDOWS BUTTON -------------------
@@ -161,6 +159,6 @@ body {
 // Searchbar popout
 #{c(popouts searchbarPopout)} {
     background: cv('shading.popout');
-    border: cv('hyprcord.border');
+    @include panel($border: true);
     margin-top: calc(cv('hyprcord.margin') / 2);
 }

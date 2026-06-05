@@ -4,8 +4,7 @@
 
 // Claim reward
 #{c(quest claimedRootContainer)} {
-    border: cv('hyprcord.border');
-    border-radius: cv('hyprcord.radius');
+    @include panel($border: true, $radius: true);
 }
 
 #{c(quest headerContainer)},

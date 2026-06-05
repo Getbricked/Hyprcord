@@ -4,12 +4,12 @@
 
 // Banner
 .user-profile-modal-v2 :where(#{c(profile banner)}) {
-    border-radius: cv('hyprcord.radius');
+    @include panel($radius: true);
 }
 
 // Inner profile
 #{c(profile profileContainer)} {
-    border: cv('hyprcord.border');
+    @include panel($border: true);
 }
 
 // Big profile
@@ -30,12 +30,12 @@
 
 // Activities
 #{c(profile activitiesCard)} {
-    border: cv('hyprcord.border');
+    @include panel($border: true);
 }
 
 // No nitro user
 #{c(profile modalOuter)}:not(.custom-user-profile-theme) {
-    border: cv('hyprcord.border');
+    @include panel($border: true);
 }
 
 // Nitro user

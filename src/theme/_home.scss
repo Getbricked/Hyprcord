@@ -3,29 +3,25 @@
 // ------------------- DIRECT MESSAGE -------------------
 // Show User Profile
 #{c(server content)} #{c(profile modalInner)} {
-    border-radius: cv('hyprcord.radius');
+    @include panel($radius: true);
 }
 
 #{c(server content)} #{c(profile modalOuter)} {
-    border-radius: cv('hyprcord.radius');
-    border: cv('hyprcord.border');
-    margin-top: cv('hyprcord.margin');
+    @include panel($border: true, $radius: true, $margin: top);
     margin-left: cv('hyprcord.margin');
     height: calc(100% - var(--global-margin) - var(--bordersize) * 2);
 }
 
 // Profile effects
 #{c(profile profileEffects)} {
-    border-radius: cv('hyprcord.radius');
+    @include panel($radius: true);
 }
 
 // ------------------- FRIENDS -------------------
 // Now playing + Friend list
 #{c(friendsDM nowPlayingColumn)},
 #{c(main visualRefresh)} #{c(friendsDM peopleColumn)} {
-    border-radius: cv('hyprcord.radius');
-    border: cv('hyprcord.border');
-    margin-top: cv('hyprcord.margin');
+    @include panel($border: true, $radius: true, $margin: top);
 }
 
 // Friend list
@@ -38,9 +34,7 @@
 #{c(shop mainPageScroller)},
 #{c(main visualRefresh)} #{c(shop shop)},
 #{c(shop mainPageScroller)} {
-    border-radius: cv('hyprcord.radius');
-    margin-top: cv('hyprcord.margin');
-    border: cv('hyprcord.border');
+    @include panel($border: true, $radius: true, $margin: top);
 }
 
 #{c(main visualRefresh)} #{c(shop shop)} {
