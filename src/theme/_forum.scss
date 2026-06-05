@@ -5,9 +5,7 @@
 // Forum container + header
 #{c(main visualRefresh)} #{c(forum container)},
 #{c(main visualRefresh)} #{c(header container)} {
-    border-radius: cv('hyprcord.radius');
-    border: cv('hyprcord.border');
-    margin-top: cv('hyprcord.margin');
+    @include panel($border: true, $radius: true, $margin: top);
 }
 
 // Left side
@@ -18,12 +16,12 @@
 // Forum Notice
 #{c(main visualRefresh)} #{c(forum noticeHeader)} {
     background: linear-gradient(360deg, cv('color.main') -100%, transparent);
-    border-radius: cv('hyprcord.radius');
+    @include panel($radius: true);
 }
 
 // Pinned thread in forum
 #{c(main visualRefresh)} #{c(forum chatHeaderBar)} {
-    border-radius: cv('hyprcord.radius');
+    @include panel($radius: true);
     background: color-mix(in srgb, cv('color.main') 30%, transparent);
 }
 

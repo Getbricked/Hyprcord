@@ -10,8 +10,7 @@
 // Content + Sidebar
 #{c(settings contentRegion)},
 #{c(main visualRefresh)} #{c(settings sidebarRegion)} {
-    border-radius: cv('hyprcord.radius');
-    border: cv('hyprcord.border');
+    @include panel($border: true, $radius: true);
 }
 
 // Global

@@ -6,28 +6,24 @@
 #{c(main visualRefresh)} #{c(server title)},
 #{c(memberList members)},
 #{c(server channelsAndRolesBackground)} :is(#{c(global scrollerBase)}) {
-    border-radius: cv('hyprcord.radius');
-    border: cv('hyprcord.border');
-    margin-top: cv('hyprcord.margin');
+    @include panel($border: true, $radius: true, $margin: top);
 }
 
 // Member list
 #{c(memberList members)} {
+    @include panel($border: true);
     margin-left: cv('hyprcord.margin');
-    border: cv('hyprcord.border');
 }
 
 // Rules to submit before enter
 #{c(server rulesContainer)} {
-    border: cv('hyprcord.border');
-    border-radius: cv('hyprcord.radius');
+    @include panel($border: true, $radius: true);
     background: cv('shading.card');
 }
 
 // Members
 #{c(main visualRefresh)} #{c(server membersMainTableContainer)} {
-    border-radius: cv('hyprcord.radius');
-    border: cv('hyprcord.border');
+    @include panel($border: true, $radius: true);
 }
 
 // Server header
@@ -66,9 +62,7 @@
 
 // NSFW pop up
 #{c(server content)} #{c(server nsfwScroller)} {
-    margin-top: cv('hyprcord.margin');
-    border: cv('hyprcord.border');
-    border-radius: cv('hyprcord.radius');
+    @include panel($border: true, $radius: true, $margin: top);
 }
 
 // Boost process bar
@@ -84,15 +78,11 @@
 
 // Discover
 #{c(main visualRefresh)} #{c(server discoverContainerA)} {
-    border-radius: cv('hyprcord.radius');
-    border: cv('hyprcord.border');
-    margin: cv('hyprcord.margin');
+    @include panel($border: true, $radius: true, $margin: all);
 }
 
 #{c(main visualRefresh)} #{c(server discoverContainerB)} {
-    border-radius: cv('hyprcord.radius');
-    border: cv('hyprcord.border');
-    margin-top: cv('hyprcord.margin');
+    @include panel($border: true, $radius: true, $margin: top);
 }
 
 #{c(server discoverGradient)},
@@ -104,9 +94,7 @@
 
 // Onboard
 #{c(server onboardMain)} {
-    border-radius: cv('hyprcord.radius');
-    border: cv('hyprcord.border');
-    margin-left: cv('hyprcord.margin');
+    @include panel($border: true, $radius: true, $margin: left);
     margin-top: cv('hyprcord.margin');
 }
 
@@ -139,7 +127,7 @@
 // Server tag popout
 #{c(server tagPopoutContainer)} {
     background-color: cv('shading.popout');
-    border: cv('hyprcord.border');
+    @include panel($border: true);
 }
 
 // ------------------- SERVER WITH BANNER -------------------
@@ -210,7 +198,7 @@
 }
 
 #{c(main visualRefresh)} #{c(settings editProfileContainer)} {
-    border: cv('hyprcord.border');
+    @include panel($border: true);
 }
 
 // Onboard settings
@@ -230,7 +218,7 @@
 }
 
 #{c(server guildSidebar)} #{c(profile modalOuter)} {
-    border-radius: cv('hyprcord.radius');
+    @include panel($radius: true);
 }
 
 #{c(server sidebarContainer)} {
@@ -238,5 +226,5 @@
 }
 
 #{c(server sidebarContainer)} #{c(profile modalOuter)} {
-    border-radius: cv('hyprcord.radius');
+    @include panel($radius: true);
 }

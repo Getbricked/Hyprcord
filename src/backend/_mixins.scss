@@ -1,0 +1,13 @@
+@use 'variables' as *;
+
+@mixin panel($border: false, $radius: false, $margin: false) {
+  @if $border { border: cv('hyprcord.border'); }
+  @if $radius { border-radius: cv('hyprcord.radius'); }
+  @if $margin {
+    @if $margin == top or $margin == true { margin-top: cv('hyprcord.margin'); }
+    @else if $margin == left { margin-left: cv('hyprcord.margin'); }
+    @else if $margin == right { margin-right: cv('hyprcord.margin'); }
+    @else if $margin == bottom { margin-bottom: cv('hyprcord.margin'); }
+    @else if $margin == all { margin: cv('hyprcord.margin'); }
+  }
+}

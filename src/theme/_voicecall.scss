@@ -21,7 +21,7 @@
 #{c(voiceCall callContainer)} {
     border: cv('hyprcord.border');
     border-radius: 8px;
-    margin-top: cv('hyprcord.margin');
+    @include panel($margin: top);
 }
 
 #{c(voiceCall fullScreen)} {
@@ -30,9 +30,8 @@
 
 // Header
 #{c(main visualRefresh)} #{c(voiceCall wrapper)} #{c(header container)} {
-    border-radius: cv('hyprcord.radius');
+    @include panel($radius: true, $margin: top);
     border: none;
-    margin-top: cv('hyprcord.margin');
 }
 
 // Hide user
@@ -44,7 +43,7 @@
 #{c(voiceCall borderRadius)},
 #{c(voiceCall videoWrapper)} {
     border-radius: 8px;
-    border: cv('hyprcord.border');
+    @include panel($border: true);
 }
 
 // Stage
@@ -55,31 +54,27 @@
 }
 
 #{c(voiceCall stageContainer)} {
+    @include panel($border: true, $radius: true);
     margin-top: calc(2 * var(--global-margin));
-    border-radius: cv('hyprcord.radius');
-    border: cv('hyprcord.border');
     padding-left: 10px;
     padding-right: 10px;
 }
 
 #{c(voiceCall tileContainer)} {
+    @include panel($border: true, $radius: true);
     margin-top: calc(var(--global-margin) / 2);
-    border-radius: cv('hyprcord.radius');
-    border: cv('hyprcord.border');
 }
 
 // Soundboard + Activities
 #{c(voiceCall soundboardPicker)},
 #{c(voiceCall drawerSizingWrapper)} {
-    border-radius: cv('hyprcord.radius');
-    border: cv('hyprcord.border');
+    @include panel($border: true, $radius: true);
 }
 
 // Button in voice call
 #{c(voiceCall buttonSection)} {
     background: cv('shading.card');
-    border: cv('hyprcord.border');
-    border-radius: cv('hyprcord.radius');
+    @include panel($border: true, $radius: true);
 }
 
 #{c(voiceCall colorable)}#{c(voiceCall disconnect)} {
@@ -90,8 +85,7 @@
 // Change voice chat region
 .theme-dark #{c(voiceCall quickSelectPopout)} {
     background: cv('shading.popout');
-    border: cv('hyprcord.border');
-    border-radius: cv('hyprcord.radius');
+    @include panel($border: true, $radius: true);
 }
 
 // Empty voice call
@@ -99,7 +93,7 @@
 
     #{c(voiceCall callContainer)},
     #{c(voiceCall callContent)} {
-        border-radius: cv('hyprcord.radius');
+        @include panel($radius: true);
     }
 }
 
