@@ -32,11 +32,10 @@
 }
 
 /* Spacing */
-:is(#{c(chat messageListItem)},
-    #{c(chat quotedChatMessage)},
-    #{c(chat flash)}):has(+ #{c(chat messageListItem)} #{c(chat groupStart)},
-    + #{c(chat flash)} #{c(chat groupStart)},
-    + #{c(chat scrollerSpacer)}, + #{c(chat divider divider)}) #{c(chat groupStart)}:has(#{c(chat avatar)}:not(#{c(chat compact)})) {
+:is(#{c(chat messageListItem)}, #{c(chat quotedChatMessage)}, #{c(chat flash)}):has(+ #{c(chat messageListItem)} #{c(chat groupStart)}) #{c(chat groupStart)}:has(#{c(chat avatar)}:not(#{c(chat compact)})),
+:is(#{c(chat messageListItem)}, #{c(chat quotedChatMessage)}, #{c(chat flash)}):has(+ #{c(chat flash)} #{c(chat groupStart)}) #{c(chat groupStart)}:has(#{c(chat avatar)}:not(#{c(chat compact)})),
+:is(#{c(chat messageListItem)}, #{c(chat quotedChatMessage)}, #{c(chat flash)}):has(+ #{c(chat scrollerSpacer)}) #{c(chat groupStart)}:has(#{c(chat avatar)}:not(#{c(chat compact)})),
+:is(#{c(chat messageListItem)}, #{c(chat quotedChatMessage)}, #{c(chat flash)}):has(+ #{c(chat divider divider)}) #{c(chat groupStart)}:has(#{c(chat avatar)}:not(#{c(chat compact)})) {
     min-height: calc(var(--msg-spacing-ui) * 2 + var(--msg-icon-avatar));
     padding-top: 0;
     padding-bottom: 0;
@@ -74,14 +73,20 @@
 
 
 /* End of a group of msg */
-:is(#{c(chat messageListItem)}, #{c(chat flash)}):has(+ #{c(chat messageListItem)} #{c(chat groupStart)}, + #{c(chat divider divider)}, + #{c(chat scrollerSpacer)}, + #{c(chat flash)} #{c(chat groupStart)}) #{c(chat message)} {
+:is(#{c(chat messageListItem)}, #{c(chat flash)}):has(+ #{c(chat messageListItem)} #{c(chat groupStart)}) #{c(chat message)},
+:is(#{c(chat messageListItem)}, #{c(chat flash)}):has(+ #{c(chat divider divider)}) #{c(chat message)},
+:is(#{c(chat messageListItem)}, #{c(chat flash)}):has(+ #{c(chat scrollerSpacer)}) #{c(chat message)},
+:is(#{c(chat messageListItem)}, #{c(chat flash)}):has(+ #{c(chat flash)} #{c(chat groupStart)}) #{c(chat message)} {
     border-radius: 0 0 var(--global-radius) var(--global-radius);
     border: var(--msg-border);
     border-top: none;
 }
 
 /* Not sure what this is urgh */
-:is(#{c(chat messageListItem)}, #{c(chat flash)}):has(+ #{c(chat messageListItem)} #{c(chat groupStart)}, + #{c(chat divider divider)}, + #{c(chat scrollerSpacer)}, + #{c(chat flash)} #{c(chat groupStart)}) #{c(chat groupStart)},
+:is(#{c(chat messageListItem)}, #{c(chat flash)}):has(+ #{c(chat messageListItem)} #{c(chat groupStart)}) #{c(chat groupStart)},
+:is(#{c(chat messageListItem)}, #{c(chat flash)}):has(+ #{c(chat divider divider)}) #{c(chat groupStart)},
+:is(#{c(chat messageListItem)}, #{c(chat flash)}):has(+ #{c(chat scrollerSpacer)}) #{c(chat groupStart)},
+:is(#{c(chat messageListItem)}, #{c(chat flash)}):has(+ #{c(chat flash)} #{c(chat groupStart)}) #{c(chat groupStart)},
 #{c(chat divider divider)}+ :is(#{c(chat messageListItem)}, #{c(chat flash)}):has(+ #{c(chat messageListItem)} #{c(chat groupStart)}) #{c(chat message)} {
     border-radius: var(--global-radius);
     border: var(--msg-border) !important;
