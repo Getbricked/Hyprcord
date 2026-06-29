@@ -6,6 +6,8 @@
 
 This theme is inspired by **Jugom** and the **Hyprland window manager**.
 
+![Wizzie](Screenshots/Wizzie-nixOS.png)
+
 Give me a cup of coffee: [Ko-fi](https://ko-fi.com/abnf)
 
 ## Previews
