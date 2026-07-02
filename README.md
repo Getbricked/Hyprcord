@@ -1,18 +1,20 @@
-<div align="center">
+<div align="center" markdown="1">
 
 # ClearVision Hyprcord - Customized by Aki
 
 **Original Theme Repository**: [ClearVision v7](https://github.com/ClearVision/ClearVision-v7)
 
+**Hyprcord Github**: [Hyprcord](https://github.com/Getbricked/Hyprcord)
+
 This theme is inspired by **Jugom** and the **Hyprland window manager**.
 
-![Wizzie](Screenshots/Wizzie-nixOS.png)
+![Wizzie](https://getbricked.github.io/Hyprcord/Screenshots/Wizzie-nixOS.png)
 
 Give me a cup of coffee: [Ko-fi](https://ko-fi.com/abnf)
 
 ## Previews
 
-![Hyprcord](Screenshots/hyprcord.png)
+![Hyprcord](https://getbricked.github.io/Hyprcord/Screenshots/hyprcord.png)
 
 </div>
 
@@ -86,9 +88,9 @@ Above is default border style, you can customize it by changing the `--bordersiz
 ```
 
 ## Special Edition
-<div align="center">
+<div align="center" markdown="1">
 
-![Special](Screenshots/special.png)
+![Special](https://getbricked.github.io/Hyprcord/Screenshots/special.png)
 
 </div>
 

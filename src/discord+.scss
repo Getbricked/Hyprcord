@@ -47,7 +47,7 @@
 
 :not(#{c(chat divider divider)})+#{c(chat messageListItem)}:has(#{c(chat groupStart)}),
 #{c(chat messageListItem)}+#{c(chat flash)}:has(#{c(chat avatar)}) {
-    margin-top: var(--group-spacing);
+    padding-top: var(--group-spacing);
 }
 
 :is(#{c(chat messageListItem)}, #{c(chat quotedChatMessage)}) #{c(chat message)} {
@@ -95,7 +95,7 @@
 /* New divider */
 #{c(chat divider divider)}#{c(chat beforeGroup)},
 #{c(chat divider divider)}#{c(chat hasContent)} {
-    margin-top: var(--group-spacing) !important;
+    padding-top: var(--group-spacing) !important;
 }
 
 #{c(chat divider divider)}:not(#{c(chat divider hasContent)}) {
