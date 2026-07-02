@@ -4,6 +4,8 @@
 
 **Original Theme Repository**: [ClearVision v7](https://github.com/ClearVision/ClearVision-v7)
 
+**Hyprcord Github**: [Hyprcord](https://github.com/Getbricked/Hyprcord)
+
 This theme is inspired by **Jugom** and the **Hyprland window manager**.
 
 ![Wizzie](https://getbricked.github.io/Hyprcord/Screenshots/Wizzie-nixOS.png)
