@@ -26,5 +26,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
           publish_branch: main
+          enable_jekyll: true
+          keep_files: true
 
           
