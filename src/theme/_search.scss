@@ -1,4 +1,4 @@
-@use "../backend" as *;
+@use "backend" as *;
 
 #{c(search resultsWrap)} {
     @include panel($border: true, $radius: true, $margin: top);

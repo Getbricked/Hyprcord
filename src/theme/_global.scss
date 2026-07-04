@@ -1,4 +1,4 @@
-@use "../backend" as *;
+@use "backend" as *;
 
 // ------------------- GLOBAL -------------------
 
@@ -68,33 +68,6 @@ body {
 // Vencord notification
 .vc-notification-root {
     @include panel($border: true);
-}
-
-// DM
-#{c(friendsDM privateChannels)} {
-    border: none;
-}
-
-// DM + Channel list
-#{c(main visualRefresh)} #{c(friendsDM privateChannels)},
-#{c(main visualRefresh)} #{c(server container)} {
-    border-radius: cv('hyprcord.radius');
-    margin: cv('hyprcord.margin');
-    margin-bottom: 0px;
-    background: transparent;
-    contain: layout;
-}
-
-#{c(friendsDM privateChannels)} #{c(global scrollerBase)} {
-    // border: cv('hyprcord.border');
-    box-shadow: cv('hyprcord.boxshadow');
-    contain: layout paint;
-    border-radius: cv('hyprcord.radius');
-    margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--global-margin));
-}
-
-#{c(global sidebarList)} #{c(global scrollerBase)} {
-    background: cv('shading.bg');
 }
 
 // "Leaving discord" dialog when click on a link

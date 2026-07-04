@@ -1,4 +1,4 @@
-@use "../backend" as *;
+@use "backend" as *;
 
 // Nameplate in member list
 #{c(memberList member)} #{c(profile nameplateContainer)} {
