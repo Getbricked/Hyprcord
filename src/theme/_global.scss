@@ -24,7 +24,7 @@ body {
     border: cv('hyprcord.border');
     background: cv('shading.card');
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: cv('hyprcord.radius');
+    @include panel($radius: true);
     margin: 0px;
 }
 
@@ -41,7 +41,7 @@ body {
 // Server List
 #{c(main visualRefresh)} #{c(guildList scroller)} {
     background: cv('shading.bg');
-    border-radius: cv('hyprcord.radius');
+    @include panel($radius: true);
     // border: cv('hyprcord.border') !important;
     box-shadow: cv('hyprcord.boxshadow');
     contain: layout paint;
@@ -53,6 +53,10 @@ body {
 #{c(profile layoutContainer)} #{c(profile modalOuter)},
 #{c(profile modalOuter)} {
     @include panel($border: true);
+}
+
+#{c(profile layoutContainer)} #{c(profile modalOuter)} {
+    border-left: none;
 }
 
 // Inbox (on top bar)

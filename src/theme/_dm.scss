@@ -8,7 +8,7 @@
 // DM + Channel list
 #{c(main visualRefresh)} #{c(friendsDM privateChannels)},
 #{c(main visualRefresh)} #{c(server container)} {
-    border-radius: cv('hyprcord.radius');
+    @include panel($radius: true);
     margin: cv('hyprcord.margin');
     margin-bottom: 0px;
     background: transparent;
@@ -19,7 +19,7 @@
     // border: cv('hyprcord.border');
     box-shadow: cv('hyprcord.boxshadow');
     contain: layout paint;
-    border-radius: cv('hyprcord.radius');
+    @include panel($radius: true);
     margin-bottom: calc(var(--custom-app-panels-height, 0) + var(--global-margin));
 }
 

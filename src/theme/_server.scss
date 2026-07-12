@@ -89,7 +89,7 @@
 #{c(server discoverGradientBackground)},
 #{c(main visualRefresh)} #{c(server discoverScroller)},
 #{c(server discoverBackdrop)} {
-    border-radius: cv('hyprcord.radius');
+    @include panel($radius: true);
 }
 
 // Onboard
@@ -133,7 +133,7 @@
 // ------------------- SERVER WITH BANNER -------------------
 #{c(main visualRefresh)} #{c(server header)},
 #{c(main visualRefresh)} #{c(server bannerVisible)} {
-    border-radius: cv('hyprcord.radius');
+    @include panel($radius: true);
     background: cv('shading.bg');
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
@@ -187,12 +187,12 @@
 // ------------------- Server Settings -------------------
 // Server setting when click on web invitation link
 #{c(modals inviteContainer)} {
-    border-radius: cv('hyprcord.radius');
+    @include panel($radius: true);
     border: cv('hyprcord.border') !important;
 }
 
 #{c(server inviteSplash)} {
-    border-radius: cv('hyprcord.radius');
+    @include panel($radius: true);
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
 }

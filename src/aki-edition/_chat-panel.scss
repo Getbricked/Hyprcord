@@ -36,7 +36,7 @@
 
 // New chat top bar
 #{c(main visualRefresh)} #{c(bar newMessages)} {
-    border-radius: cv('hyprcord.radius');
+    @include panel($radius: true);
     background: linear-gradient(360deg, var(--hsl-main-color), transparent);
     border: none;
 }

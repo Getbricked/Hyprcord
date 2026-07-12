@@ -12,7 +12,7 @@
 
 // Right click on msg
 #{c(menus menu)} {
-    border-radius: cv('hyprcord.radius');
+    @include panel($radius: true);
     border: cv('hyprcord.border') !important;
 }
 
@@ -65,7 +65,7 @@
 
 // Upload attachment in chat input
 #{c(chatForm upload)} {
-    border-radius: cv('hyprcord.radius');
+    @include panel($radius: true);
     border: cv('hyprcord.border') !important;
 }
 

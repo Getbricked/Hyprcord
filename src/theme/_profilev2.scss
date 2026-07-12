@@ -44,3 +44,9 @@
     mask-image: none;
     filter: brightness(0.6);
 }
+
+// Profile modal editing panel
+#{c(profile panel)} {
+    @include panel($border: true);
+    border-right: none;
+}

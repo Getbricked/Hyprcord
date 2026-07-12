@@ -25,7 +25,7 @@
 // Media item
 #{c(embedsMedia nonVisualMediaItem)} {
     background: color-mix(in srgb, cv('color.main'), transparent 80%);
-    border-radius: cv('hyprcord.radius');
+    @include panel($radius: true);
 }
 
 // Voice message
@@ -39,7 +39,7 @@
 // Link embed
 #{c(main visualRefresh)} #{c(embedsMedia embedFull)} {
     border: cv('hyprcord.border') !important;
-    border-radius: cv('hyprcord.radius');
+    @include panel($radius: true);
     background: cv('shading.card');
 }
 
@@ -50,7 +50,7 @@
 
 // Image global
 #{c(embedsMedia embedMedia)} {
-    border-radius: cv('hyprcord.radius');
+    @include panel($radius: true);
 }
 
 // Image inline and in grid
@@ -58,7 +58,7 @@
 #{c(embedsMedia mosaicItem)} {
     border: cv('hyprcord.border') !important;
     box-sizing: border-box !important;
-    border-radius: cv('hyprcord.radius');
+    @include panel($radius: true);
 }
 
 // ------------------- MEDIA PREVIEW -------------------
@@ -86,12 +86,12 @@
 }
 
 #{c(embedsMedia mediaPreview media)} {
-    border-radius: cv('hyprcord.radius');
+    @include panel($radius: true);
 }
 
 // Image Preview
 #{c(embedsMedia mediaPreview mediaArea)} img {
-    border-radius: cv('hyprcord.radius');
+    @include panel($radius: true);
 }
 
 // Tag server preview + Emoji server preview
