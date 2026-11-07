@@ -124,21 +124,3 @@
 .vc-shiki-container {
     background-color: rgba(0, 0, 0, 0) !important;
 }
-
-/* User activity color */
-.overflow_b0dfc2 strong {
-    color: var(--main-color);
-}
-
-/* ------------------------------ USER-POP ------------------------------ */
-
-/* Gradient top banner for non-nitro only */
-/* Need to keep banner on top for it to work.... */
-.outer_c0bea0:not(.custom-user-profile-theme) .inner_c0bea0 .mask__68edb {
-    mask: linear-gradient(black -5%, 0%, transparent);
-}
-
-/* Remove outer padding + remove custom nitro background for nitro user */
-.outer_c0bea0.custom-user-profile-theme {
-    padding: 0;
-}

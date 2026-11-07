@@ -73,3 +73,21 @@ button#{c(global oldPanelButton)},
 span#{c(global oldPanelButton)} {
     width: 20px;
 }
+
+/* User activity color */
+#{c(profile overflow)} strong {
+    color: cv('color.main')
+}
+
+/* ------------------------------ USER-POP ------------------------------ */
+
+/* Gradient top banner for non-nitro only */
+/* Need to keep banner on top for it to work.... */
+#{c(profile modalOuter)}:not(.custom-user-profile-theme) #{c(profile modalInner)} #{c(profile banner)} {
+    mask: linear-gradient(black -5%, 0%, transparent);
+}
+
+/* Remove outer padding + remove custom nitro background for nitro user */
+#{c(profile modalOuter)}.custom-user-profile-theme {
+    padding: 0;
+}
