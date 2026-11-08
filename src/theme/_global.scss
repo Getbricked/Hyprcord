@@ -55,10 +55,6 @@ body {
     @include panel($border: true);
 }
 
-#{c(profile layoutContainer)} #{c(profile modalOuter)} {
-    border-left: none;
-}
-
 // Inbox (on top bar)
 #{c(main visualRefresh)} #{c(popouts recentMentionsPopout)} {
     @include panel($border: true, $radius: true);
